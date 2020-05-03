@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "slothcraft:blocks/wip",
+    "up": "slothcraft:blocks/wip",
+    "north": "slothcraft:blocks/wip",
+    "east": "slothcraft:blocks/wip",
+    "south": "slothcraft:blocks/wip",
+    "west": "slothcraft:blocks/wip",
+    "particle": "slothcraft:blocks/wip"
+  }
+}

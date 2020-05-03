@@ -24,8 +24,18 @@ public class GearMoldItemItem extends SlothCraftElements.ModElement {
 	}
 	public static class ItemCustom extends Item {
 		public ItemCustom() {
-			super(new Item.Properties().group(SlothCraftGearsCreativeTabItemGroup.tab).maxStackSize(1));
+			super(new Item.Properties().group(SlothCraftGearsCreativeTabItemGroup.tab).maxDamage(64));
 			setRegistryName("gearmolditem");
+		}
+
+		@Override
+		public boolean hasContainerItem() {
+			return true;
+		}
+
+		@Override
+		public ItemStack getContainerItem(ItemStack itemStack) {
+			return new ItemStack(this);
 		}
 
 		@Override
@@ -35,7 +45,7 @@ public class GearMoldItemItem extends SlothCraftElements.ModElement {
 
 		@Override
 		public int getUseDuration(ItemStack itemstack) {
-			return 64;
+			return 0;
 		}
 
 		@Override
