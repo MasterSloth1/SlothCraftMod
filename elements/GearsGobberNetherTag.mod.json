@@ -1,0 +1,16 @@
+{
+  "_fv": 6,
+  "_type": "tag",
+  "definition": {
+    "type": "Items",
+    "items": [
+      {
+        "value": "CUSTOM:GobberNetherGearItem"
+      }
+    ],
+    "blocks": [],
+    "functions": [],
+    "name": "gears/gobber/nether",
+    "namespace": "forge"
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "_fv": 6,
+  "_type": "tag",
+  "definition": {
+    "type": "Items",
+    "items": [
+      {
+        "value": "CUSTOM:GobberEndGearItem"
+      }
+    ],
+    "blocks": [],
+    "functions": [],
+    "name": "gears/gobber/end",
+    "namespace": "forge"
+  }
+}
