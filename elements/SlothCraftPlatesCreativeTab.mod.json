@@ -1,0 +1,11 @@
+{
+  "_fv": 7,
+  "_type": "tab",
+  "definition": {
+    "name": "Sloth Craft Plates",
+    "icon": {
+      "value": "CUSTOM:AluminumGearItem"
+    },
+    "showSearch": true
+  }
+}

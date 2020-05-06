@@ -37,7 +37,7 @@ import net.minecraft.world.World;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.tileentity.TileEntity;
-import net.minecraft.tileentity.LockableLootTileEntity;
+import net.minecraft.tileentity.LockableTileEntity;
 import net.minecraft.tags.ItemTags;
 import net.minecraft.item.ItemStack;
 
@@ -73,8 +73,8 @@ public class GearsMakerBlockUpdateTickProcedure extends SlothCraftElements.ModEl
 		if ((((new Object() {
 			public int getAmount(BlockPos pos, int sltid) {
 				TileEntity inv = world.getTileEntity(pos);
-				if (inv instanceof LockableLootTileEntity) {
-					ItemStack stack = ((LockableLootTileEntity) inv).getStackInSlot(sltid);
+				if (inv instanceof LockableTileEntity) {
+					ItemStack stack = ((LockableTileEntity) inv).getStackInSlot(sltid);
 					if (stack != null)
 						return stack.getCount();
 				}
@@ -84,31 +84,31 @@ public class GearsMakerBlockUpdateTickProcedure extends SlothCraftElements.ModEl
 				.getOrCreate(new ResourceLocation(("forge:ingots/aluminum").toLowerCase(java.util.Locale.ENGLISH))).contains((new Object() {
 					public ItemStack getItemStack(BlockPos pos, int sltid) {
 						TileEntity inv = world.getTileEntity(pos);
-						if (inv instanceof LockableLootTileEntity)
-							return ((LockableLootTileEntity) inv).getStackInSlot(sltid);
+						if (inv instanceof LockableTileEntity)
+							return ((LockableTileEntity) inv).getStackInSlot(sltid);
 						return ItemStack.EMPTY;
 					}
 				}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (0))).getItem())) && (((new Object() {
 					public ItemStack getItemStack(BlockPos pos, int sltid) {
 						TileEntity inv = world.getTileEntity(pos);
-						if (inv instanceof LockableLootTileEntity)
-							return ((LockableLootTileEntity) inv).getStackInSlot(sltid);
+						if (inv instanceof LockableTileEntity)
+							return ((LockableTileEntity) inv).getStackInSlot(sltid);
 						return ItemStack.EMPTY;
 					}
 				}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (1))).getItem() == new ItemStack(StoneGearItemItem.block, (int) (1))
 						.getItem()) && (((new Object() {
 							public ItemStack getItemStack(BlockPos pos, int sltid) {
 								TileEntity inv = world.getTileEntity(pos);
-								if (inv instanceof LockableLootTileEntity)
-									return ((LockableLootTileEntity) inv).getStackInSlot(sltid);
+								if (inv instanceof LockableTileEntity)
+									return ((LockableTileEntity) inv).getStackInSlot(sltid);
 								return ItemStack.EMPTY;
 							}
 						}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (2)))
 								.getItem() == new ItemStack(GearMoldItemItem.block, (int) (1)).getItem()) && (((new Object() {
 									public int getAmount(BlockPos pos, int sltid) {
 										TileEntity inv = world.getTileEntity(pos);
-										if (inv instanceof LockableLootTileEntity) {
-											ItemStack stack = ((LockableLootTileEntity) inv).getStackInSlot(sltid);
+										if (inv instanceof LockableTileEntity) {
+											ItemStack stack = ((LockableTileEntity) inv).getStackInSlot(sltid);
 											if (stack != null)
 												return stack.getCount();
 										}
@@ -117,26 +117,26 @@ public class GearsMakerBlockUpdateTickProcedure extends SlothCraftElements.ModEl
 								}.getAmount(new BlockPos((int) x, (int) y, (int) z), (int) (3))) == 0) || ((new Object() {
 									public ItemStack getItemStack(BlockPos pos, int sltid) {
 										TileEntity inv = world.getTileEntity(pos);
-										if (inv instanceof LockableLootTileEntity)
-											return ((LockableLootTileEntity) inv).getStackInSlot(sltid);
+										if (inv instanceof LockableTileEntity)
+											return ((LockableTileEntity) inv).getStackInSlot(sltid);
 										return ItemStack.EMPTY;
 									}
 								}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (3)))
 										.getItem() == new ItemStack(AluminumGearItemItem.block, (int) (1)).getItem()))))))) {
 			{
 				TileEntity inv = world.getTileEntity(new BlockPos((int) x, (int) y, (int) z));
-				if (inv instanceof LockableLootTileEntity)
-					((LockableLootTileEntity) inv).decrStackSize((int) (0), (int) (4));
+				if (inv instanceof LockableTileEntity)
+					((LockableTileEntity) inv).decrStackSize((int) (0), (int) (4));
 			}
 			{
 				TileEntity inv = world.getTileEntity(new BlockPos((int) x, (int) y, (int) z));
-				if (inv instanceof LockableLootTileEntity)
-					((LockableLootTileEntity) inv).decrStackSize((int) (1), (int) (1));
+				if (inv instanceof LockableTileEntity)
+					((LockableTileEntity) inv).decrStackSize((int) (1), (int) (1));
 			}
 			{
 				TileEntity inv = world.getTileEntity(new BlockPos((int) x, (int) y, (int) z));
-				if (inv != null && (inv instanceof LockableLootTileEntity)) {
-					ItemStack stack = ((LockableLootTileEntity) inv).getStackInSlot((int) (2));
+				if (inv != null && (inv instanceof LockableTileEntity)) {
+					ItemStack stack = ((LockableTileEntity) inv).getStackInSlot((int) (2));
 					if (stack != null) {
 						if (stack.attemptDamageItem((int) 1, new Random(), null)) {
 							stack.shrink(1);
@@ -147,27 +147,27 @@ public class GearsMakerBlockUpdateTickProcedure extends SlothCraftElements.ModEl
 			}
 			{
 				TileEntity inv = world.getTileEntity(new BlockPos((int) x, (int) y, (int) z));
-				if (inv != null && (inv instanceof LockableLootTileEntity)) {
+				if (inv != null && (inv instanceof LockableTileEntity)) {
 					ItemStack _setstack = new ItemStack(AluminumGearItemItem.block, (int) (1));
-					_setstack.setCount(((new Object() {
+					_setstack.setCount((int) ((new Object() {
 						public int getAmount(BlockPos pos, int sltid) {
 							TileEntity inv = world.getTileEntity(pos);
-							if (inv instanceof LockableLootTileEntity) {
-								ItemStack stack = ((LockableLootTileEntity) inv).getStackInSlot(sltid);
+							if (inv instanceof LockableTileEntity) {
+								ItemStack stack = ((LockableTileEntity) inv).getStackInSlot(sltid);
 								if (stack != null)
 									return stack.getCount();
 							}
 							return 0;
 						}
 					}.getAmount(new BlockPos((int) x, (int) y, (int) z), (int) (3))) + 1));
-					((LockableLootTileEntity) inv).setInventorySlotContents((int) (3), _setstack);
+					((LockableTileEntity) inv).setInventorySlotContents((int) (3), _setstack);
 				}
 			}
 		} else if ((((new Object() {
 			public int getAmount(BlockPos pos, int sltid) {
 				TileEntity inv = world.getTileEntity(pos);
-				if (inv instanceof LockableLootTileEntity) {
-					ItemStack stack = ((LockableLootTileEntity) inv).getStackInSlot(sltid);
+				if (inv instanceof LockableTileEntity) {
+					ItemStack stack = ((LockableTileEntity) inv).getStackInSlot(sltid);
 					if (stack != null)
 						return stack.getCount();
 				}
@@ -177,31 +177,31 @@ public class GearsMakerBlockUpdateTickProcedure extends SlothCraftElements.ModEl
 				.getOrCreate(new ResourceLocation(("forge:gems/amethyst").toLowerCase(java.util.Locale.ENGLISH))).contains((new Object() {
 					public ItemStack getItemStack(BlockPos pos, int sltid) {
 						TileEntity inv = world.getTileEntity(pos);
-						if (inv instanceof LockableLootTileEntity)
-							return ((LockableLootTileEntity) inv).getStackInSlot(sltid);
+						if (inv instanceof LockableTileEntity)
+							return ((LockableTileEntity) inv).getStackInSlot(sltid);
 						return ItemStack.EMPTY;
 					}
 				}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (0))).getItem())) && (((new Object() {
 					public ItemStack getItemStack(BlockPos pos, int sltid) {
 						TileEntity inv = world.getTileEntity(pos);
-						if (inv instanceof LockableLootTileEntity)
-							return ((LockableLootTileEntity) inv).getStackInSlot(sltid);
+						if (inv instanceof LockableTileEntity)
+							return ((LockableTileEntity) inv).getStackInSlot(sltid);
 						return ItemStack.EMPTY;
 					}
 				}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (1))).getItem() == new ItemStack(StoneGearItemItem.block, (int) (1))
 						.getItem()) && (((new Object() {
 							public ItemStack getItemStack(BlockPos pos, int sltid) {
 								TileEntity inv = world.getTileEntity(pos);
-								if (inv instanceof LockableLootTileEntity)
-									return ((LockableLootTileEntity) inv).getStackInSlot(sltid);
+								if (inv instanceof LockableTileEntity)
+									return ((LockableTileEntity) inv).getStackInSlot(sltid);
 								return ItemStack.EMPTY;
 							}
 						}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (2)))
 								.getItem() == new ItemStack(GearMoldItemItem.block, (int) (1)).getItem()) && (((new Object() {
 									public int getAmount(BlockPos pos, int sltid) {
 										TileEntity inv = world.getTileEntity(pos);
-										if (inv instanceof LockableLootTileEntity) {
-											ItemStack stack = ((LockableLootTileEntity) inv).getStackInSlot(sltid);
+										if (inv instanceof LockableTileEntity) {
+											ItemStack stack = ((LockableTileEntity) inv).getStackInSlot(sltid);
 											if (stack != null)
 												return stack.getCount();
 										}
@@ -210,26 +210,26 @@ public class GearsMakerBlockUpdateTickProcedure extends SlothCraftElements.ModEl
 								}.getAmount(new BlockPos((int) x, (int) y, (int) z), (int) (3))) == 0) || ((new Object() {
 									public ItemStack getItemStack(BlockPos pos, int sltid) {
 										TileEntity inv = world.getTileEntity(pos);
-										if (inv instanceof LockableLootTileEntity)
-											return ((LockableLootTileEntity) inv).getStackInSlot(sltid);
+										if (inv instanceof LockableTileEntity)
+											return ((LockableTileEntity) inv).getStackInSlot(sltid);
 										return ItemStack.EMPTY;
 									}
 								}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (3)))
 										.getItem() == new ItemStack(AmethystGearItemItem.block, (int) (1)).getItem()))))))) {
 			{
 				TileEntity inv = world.getTileEntity(new BlockPos((int) x, (int) y, (int) z));
-				if (inv instanceof LockableLootTileEntity)
-					((LockableLootTileEntity) inv).decrStackSize((int) (0), (int) (4));
+				if (inv instanceof LockableTileEntity)
+					((LockableTileEntity) inv).decrStackSize((int) (0), (int) (4));
 			}
 			{
 				TileEntity inv = world.getTileEntity(new BlockPos((int) x, (int) y, (int) z));
-				if (inv instanceof LockableLootTileEntity)
-					((LockableLootTileEntity) inv).decrStackSize((int) (1), (int) (1));
+				if (inv instanceof LockableTileEntity)
+					((LockableTileEntity) inv).decrStackSize((int) (1), (int) (1));
 			}
 			{
 				TileEntity inv = world.getTileEntity(new BlockPos((int) x, (int) y, (int) z));
-				if (inv != null && (inv instanceof LockableLootTileEntity)) {
-					ItemStack stack = ((LockableLootTileEntity) inv).getStackInSlot((int) (2));
+				if (inv != null && (inv instanceof LockableTileEntity)) {
+					ItemStack stack = ((LockableTileEntity) inv).getStackInSlot((int) (2));
 					if (stack != null) {
 						if (stack.attemptDamageItem((int) 1, new Random(), null)) {
 							stack.shrink(1);
@@ -240,27 +240,27 @@ public class GearsMakerBlockUpdateTickProcedure extends SlothCraftElements.ModEl
 			}
 			{
 				TileEntity inv = world.getTileEntity(new BlockPos((int) x, (int) y, (int) z));
-				if (inv != null && (inv instanceof LockableLootTileEntity)) {
+				if (inv != null && (inv instanceof LockableTileEntity)) {
 					ItemStack _setstack = new ItemStack(AmethystGearItemItem.block, (int) (1));
-					_setstack.setCount(((new Object() {
+					_setstack.setCount((int) ((new Object() {
 						public int getAmount(BlockPos pos, int sltid) {
 							TileEntity inv = world.getTileEntity(pos);
-							if (inv instanceof LockableLootTileEntity) {
-								ItemStack stack = ((LockableLootTileEntity) inv).getStackInSlot(sltid);
+							if (inv instanceof LockableTileEntity) {
+								ItemStack stack = ((LockableTileEntity) inv).getStackInSlot(sltid);
 								if (stack != null)
 									return stack.getCount();
 							}
 							return 0;
 						}
 					}.getAmount(new BlockPos((int) x, (int) y, (int) z), (int) (3))) + 1));
-					((LockableLootTileEntity) inv).setInventorySlotContents((int) (3), _setstack);
+					((LockableTileEntity) inv).setInventorySlotContents((int) (3), _setstack);
 				}
 			}
 		} else if ((((new Object() {
 			public int getAmount(BlockPos pos, int sltid) {
 				TileEntity inv = world.getTileEntity(pos);
-				if (inv instanceof LockableLootTileEntity) {
-					ItemStack stack = ((LockableLootTileEntity) inv).getStackInSlot(sltid);
+				if (inv instanceof LockableTileEntity) {
+					ItemStack stack = ((LockableTileEntity) inv).getStackInSlot(sltid);
 					if (stack != null)
 						return stack.getCount();
 				}
@@ -270,31 +270,31 @@ public class GearsMakerBlockUpdateTickProcedure extends SlothCraftElements.ModEl
 				.getOrCreate(new ResourceLocation(("forge:ingots/chromium").toLowerCase(java.util.Locale.ENGLISH))).contains((new Object() {
 					public ItemStack getItemStack(BlockPos pos, int sltid) {
 						TileEntity inv = world.getTileEntity(pos);
-						if (inv instanceof LockableLootTileEntity)
-							return ((LockableLootTileEntity) inv).getStackInSlot(sltid);
+						if (inv instanceof LockableTileEntity)
+							return ((LockableTileEntity) inv).getStackInSlot(sltid);
 						return ItemStack.EMPTY;
 					}
 				}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (0))).getItem())) && (((new Object() {
 					public ItemStack getItemStack(BlockPos pos, int sltid) {
 						TileEntity inv = world.getTileEntity(pos);
-						if (inv instanceof LockableLootTileEntity)
-							return ((LockableLootTileEntity) inv).getStackInSlot(sltid);
+						if (inv instanceof LockableTileEntity)
+							return ((LockableTileEntity) inv).getStackInSlot(sltid);
 						return ItemStack.EMPTY;
 					}
 				}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (1))).getItem() == new ItemStack(StoneGearItemItem.block, (int) (1))
 						.getItem()) && (((new Object() {
 							public ItemStack getItemStack(BlockPos pos, int sltid) {
 								TileEntity inv = world.getTileEntity(pos);
-								if (inv instanceof LockableLootTileEntity)
-									return ((LockableLootTileEntity) inv).getStackInSlot(sltid);
+								if (inv instanceof LockableTileEntity)
+									return ((LockableTileEntity) inv).getStackInSlot(sltid);
 								return ItemStack.EMPTY;
 							}
 						}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (2)))
 								.getItem() == new ItemStack(GearMoldItemItem.block, (int) (1)).getItem()) && (((new Object() {
 									public int getAmount(BlockPos pos, int sltid) {
 										TileEntity inv = world.getTileEntity(pos);
-										if (inv instanceof LockableLootTileEntity) {
-											ItemStack stack = ((LockableLootTileEntity) inv).getStackInSlot(sltid);
+										if (inv instanceof LockableTileEntity) {
+											ItemStack stack = ((LockableTileEntity) inv).getStackInSlot(sltid);
 											if (stack != null)
 												return stack.getCount();
 										}
@@ -303,26 +303,26 @@ public class GearsMakerBlockUpdateTickProcedure extends SlothCraftElements.ModEl
 								}.getAmount(new BlockPos((int) x, (int) y, (int) z), (int) (3))) == 0) || ((new Object() {
 									public ItemStack getItemStack(BlockPos pos, int sltid) {
 										TileEntity inv = world.getTileEntity(pos);
-										if (inv instanceof LockableLootTileEntity)
-											return ((LockableLootTileEntity) inv).getStackInSlot(sltid);
+										if (inv instanceof LockableTileEntity)
+											return ((LockableTileEntity) inv).getStackInSlot(sltid);
 										return ItemStack.EMPTY;
 									}
 								}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (3)))
 										.getItem() == new ItemStack(ChromiumGearItemItem.block, (int) (1)).getItem()))))))) {
 			{
 				TileEntity inv = world.getTileEntity(new BlockPos((int) x, (int) y, (int) z));
-				if (inv instanceof LockableLootTileEntity)
-					((LockableLootTileEntity) inv).decrStackSize((int) (0), (int) (4));
+				if (inv instanceof LockableTileEntity)
+					((LockableTileEntity) inv).decrStackSize((int) (0), (int) (4));
 			}
 			{
 				TileEntity inv = world.getTileEntity(new BlockPos((int) x, (int) y, (int) z));
-				if (inv instanceof LockableLootTileEntity)
-					((LockableLootTileEntity) inv).decrStackSize((int) (1), (int) (1));
+				if (inv instanceof LockableTileEntity)
+					((LockableTileEntity) inv).decrStackSize((int) (1), (int) (1));
 			}
 			{
 				TileEntity inv = world.getTileEntity(new BlockPos((int) x, (int) y, (int) z));
-				if (inv != null && (inv instanceof LockableLootTileEntity)) {
-					ItemStack stack = ((LockableLootTileEntity) inv).getStackInSlot((int) (2));
+				if (inv != null && (inv instanceof LockableTileEntity)) {
+					ItemStack stack = ((LockableTileEntity) inv).getStackInSlot((int) (2));
 					if (stack != null) {
 						if (stack.attemptDamageItem((int) 1, new Random(), null)) {
 							stack.shrink(1);
@@ -333,27 +333,27 @@ public class GearsMakerBlockUpdateTickProcedure extends SlothCraftElements.ModEl
 			}
 			{
 				TileEntity inv = world.getTileEntity(new BlockPos((int) x, (int) y, (int) z));
-				if (inv != null && (inv instanceof LockableLootTileEntity)) {
+				if (inv != null && (inv instanceof LockableTileEntity)) {
 					ItemStack _setstack = new ItemStack(ChromiumGearItemItem.block, (int) (1));
-					_setstack.setCount(((new Object() {
+					_setstack.setCount((int) ((new Object() {
 						public int getAmount(BlockPos pos, int sltid) {
 							TileEntity inv = world.getTileEntity(pos);
-							if (inv instanceof LockableLootTileEntity) {
-								ItemStack stack = ((LockableLootTileEntity) inv).getStackInSlot(sltid);
+							if (inv instanceof LockableTileEntity) {
+								ItemStack stack = ((LockableTileEntity) inv).getStackInSlot(sltid);
 								if (stack != null)
 									return stack.getCount();
 							}
 							return 0;
 						}
 					}.getAmount(new BlockPos((int) x, (int) y, (int) z), (int) (3))) + 1));
-					((LockableLootTileEntity) inv).setInventorySlotContents((int) (3), _setstack);
+					((LockableTileEntity) inv).setInventorySlotContents((int) (3), _setstack);
 				}
 			}
 		} else if ((((new Object() {
 			public int getAmount(BlockPos pos, int sltid) {
 				TileEntity inv = world.getTileEntity(pos);
-				if (inv instanceof LockableLootTileEntity) {
-					ItemStack stack = ((LockableLootTileEntity) inv).getStackInSlot(sltid);
+				if (inv instanceof LockableTileEntity) {
+					ItemStack stack = ((LockableTileEntity) inv).getStackInSlot(sltid);
 					if (stack != null)
 						return stack.getCount();
 				}
@@ -363,31 +363,31 @@ public class GearsMakerBlockUpdateTickProcedure extends SlothCraftElements.ModEl
 				.getOrCreate(new ResourceLocation(("forge:ingots/copper").toLowerCase(java.util.Locale.ENGLISH))).contains((new Object() {
 					public ItemStack getItemStack(BlockPos pos, int sltid) {
 						TileEntity inv = world.getTileEntity(pos);
-						if (inv instanceof LockableLootTileEntity)
-							return ((LockableLootTileEntity) inv).getStackInSlot(sltid);
+						if (inv instanceof LockableTileEntity)
+							return ((LockableTileEntity) inv).getStackInSlot(sltid);
 						return ItemStack.EMPTY;
 					}
 				}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (0))).getItem())) && (((new Object() {
 					public ItemStack getItemStack(BlockPos pos, int sltid) {
 						TileEntity inv = world.getTileEntity(pos);
-						if (inv instanceof LockableLootTileEntity)
-							return ((LockableLootTileEntity) inv).getStackInSlot(sltid);
+						if (inv instanceof LockableTileEntity)
+							return ((LockableTileEntity) inv).getStackInSlot(sltid);
 						return ItemStack.EMPTY;
 					}
 				}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (1))).getItem() == new ItemStack(StoneGearItemItem.block, (int) (1))
 						.getItem()) && (((new Object() {
 							public ItemStack getItemStack(BlockPos pos, int sltid) {
 								TileEntity inv = world.getTileEntity(pos);
-								if (inv instanceof LockableLootTileEntity)
-									return ((LockableLootTileEntity) inv).getStackInSlot(sltid);
+								if (inv instanceof LockableTileEntity)
+									return ((LockableTileEntity) inv).getStackInSlot(sltid);
 								return ItemStack.EMPTY;
 							}
 						}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (2)))
 								.getItem() == new ItemStack(GearMoldItemItem.block, (int) (1)).getItem()) && (((new Object() {
 									public int getAmount(BlockPos pos, int sltid) {
 										TileEntity inv = world.getTileEntity(pos);
-										if (inv instanceof LockableLootTileEntity) {
-											ItemStack stack = ((LockableLootTileEntity) inv).getStackInSlot(sltid);
+										if (inv instanceof LockableTileEntity) {
+											ItemStack stack = ((LockableTileEntity) inv).getStackInSlot(sltid);
 											if (stack != null)
 												return stack.getCount();
 										}
@@ -396,26 +396,26 @@ public class GearsMakerBlockUpdateTickProcedure extends SlothCraftElements.ModEl
 								}.getAmount(new BlockPos((int) x, (int) y, (int) z), (int) (3))) == 0) || ((new Object() {
 									public ItemStack getItemStack(BlockPos pos, int sltid) {
 										TileEntity inv = world.getTileEntity(pos);
-										if (inv instanceof LockableLootTileEntity)
-											return ((LockableLootTileEntity) inv).getStackInSlot(sltid);
+										if (inv instanceof LockableTileEntity)
+											return ((LockableTileEntity) inv).getStackInSlot(sltid);
 										return ItemStack.EMPTY;
 									}
 								}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (3)))
 										.getItem() == new ItemStack(CopperGearItemItem.block, (int) (1)).getItem()))))))) {
 			{
 				TileEntity inv = world.getTileEntity(new BlockPos((int) x, (int) y, (int) z));
-				if (inv instanceof LockableLootTileEntity)
-					((LockableLootTileEntity) inv).decrStackSize((int) (0), (int) (4));
+				if (inv instanceof LockableTileEntity)
+					((LockableTileEntity) inv).decrStackSize((int) (0), (int) (4));
 			}
 			{
 				TileEntity inv = world.getTileEntity(new BlockPos((int) x, (int) y, (int) z));
-				if (inv instanceof LockableLootTileEntity)
-					((LockableLootTileEntity) inv).decrStackSize((int) (1), (int) (1));
+				if (inv instanceof LockableTileEntity)
+					((LockableTileEntity) inv).decrStackSize((int) (1), (int) (1));
 			}
 			{
 				TileEntity inv = world.getTileEntity(new BlockPos((int) x, (int) y, (int) z));
-				if (inv != null && (inv instanceof LockableLootTileEntity)) {
-					ItemStack stack = ((LockableLootTileEntity) inv).getStackInSlot((int) (2));
+				if (inv != null && (inv instanceof LockableTileEntity)) {
+					ItemStack stack = ((LockableTileEntity) inv).getStackInSlot((int) (2));
 					if (stack != null) {
 						if (stack.attemptDamageItem((int) 1, new Random(), null)) {
 							stack.shrink(1);
@@ -426,27 +426,27 @@ public class GearsMakerBlockUpdateTickProcedure extends SlothCraftElements.ModEl
 			}
 			{
 				TileEntity inv = world.getTileEntity(new BlockPos((int) x, (int) y, (int) z));
-				if (inv != null && (inv instanceof LockableLootTileEntity)) {
+				if (inv != null && (inv instanceof LockableTileEntity)) {
 					ItemStack _setstack = new ItemStack(CopperGearItemItem.block, (int) (1));
-					_setstack.setCount(((new Object() {
+					_setstack.setCount((int) ((new Object() {
 						public int getAmount(BlockPos pos, int sltid) {
 							TileEntity inv = world.getTileEntity(pos);
-							if (inv instanceof LockableLootTileEntity) {
-								ItemStack stack = ((LockableLootTileEntity) inv).getStackInSlot(sltid);
+							if (inv instanceof LockableTileEntity) {
+								ItemStack stack = ((LockableTileEntity) inv).getStackInSlot(sltid);
 								if (stack != null)
 									return stack.getCount();
 							}
 							return 0;
 						}
 					}.getAmount(new BlockPos((int) x, (int) y, (int) z), (int) (3))) + 1));
-					((LockableLootTileEntity) inv).setInventorySlotContents((int) (3), _setstack);
+					((LockableTileEntity) inv).setInventorySlotContents((int) (3), _setstack);
 				}
 			}
 		} else if ((((new Object() {
 			public int getAmount(BlockPos pos, int sltid) {
 				TileEntity inv = world.getTileEntity(pos);
-				if (inv instanceof LockableLootTileEntity) {
-					ItemStack stack = ((LockableLootTileEntity) inv).getStackInSlot(sltid);
+				if (inv instanceof LockableTileEntity) {
+					ItemStack stack = ((LockableTileEntity) inv).getStackInSlot(sltid);
 					if (stack != null)
 						return stack.getCount();
 				}
@@ -456,31 +456,31 @@ public class GearsMakerBlockUpdateTickProcedure extends SlothCraftElements.ModEl
 				.getOrCreate(new ResourceLocation(("forge:gems/diamond").toLowerCase(java.util.Locale.ENGLISH))).contains((new Object() {
 					public ItemStack getItemStack(BlockPos pos, int sltid) {
 						TileEntity inv = world.getTileEntity(pos);
-						if (inv instanceof LockableLootTileEntity)
-							return ((LockableLootTileEntity) inv).getStackInSlot(sltid);
+						if (inv instanceof LockableTileEntity)
+							return ((LockableTileEntity) inv).getStackInSlot(sltid);
 						return ItemStack.EMPTY;
 					}
 				}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (0))).getItem())) && (((new Object() {
 					public ItemStack getItemStack(BlockPos pos, int sltid) {
 						TileEntity inv = world.getTileEntity(pos);
-						if (inv instanceof LockableLootTileEntity)
-							return ((LockableLootTileEntity) inv).getStackInSlot(sltid);
+						if (inv instanceof LockableTileEntity)
+							return ((LockableTileEntity) inv).getStackInSlot(sltid);
 						return ItemStack.EMPTY;
 					}
 				}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (1))).getItem() == new ItemStack(StoneGearItemItem.block, (int) (1))
 						.getItem()) && (((new Object() {
 							public ItemStack getItemStack(BlockPos pos, int sltid) {
 								TileEntity inv = world.getTileEntity(pos);
-								if (inv instanceof LockableLootTileEntity)
-									return ((LockableLootTileEntity) inv).getStackInSlot(sltid);
+								if (inv instanceof LockableTileEntity)
+									return ((LockableTileEntity) inv).getStackInSlot(sltid);
 								return ItemStack.EMPTY;
 							}
 						}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (2)))
 								.getItem() == new ItemStack(GearMoldItemItem.block, (int) (1)).getItem()) && (((new Object() {
 									public int getAmount(BlockPos pos, int sltid) {
 										TileEntity inv = world.getTileEntity(pos);
-										if (inv instanceof LockableLootTileEntity) {
-											ItemStack stack = ((LockableLootTileEntity) inv).getStackInSlot(sltid);
+										if (inv instanceof LockableTileEntity) {
+											ItemStack stack = ((LockableTileEntity) inv).getStackInSlot(sltid);
 											if (stack != null)
 												return stack.getCount();
 										}
@@ -489,26 +489,26 @@ public class GearsMakerBlockUpdateTickProcedure extends SlothCraftElements.ModEl
 								}.getAmount(new BlockPos((int) x, (int) y, (int) z), (int) (3))) == 0) || ((new Object() {
 									public ItemStack getItemStack(BlockPos pos, int sltid) {
 										TileEntity inv = world.getTileEntity(pos);
-										if (inv instanceof LockableLootTileEntity)
-											return ((LockableLootTileEntity) inv).getStackInSlot(sltid);
+										if (inv instanceof LockableTileEntity)
+											return ((LockableTileEntity) inv).getStackInSlot(sltid);
 										return ItemStack.EMPTY;
 									}
 								}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (3)))
 										.getItem() == new ItemStack(DiamondGearItemItem.block, (int) (1)).getItem()))))))) {
 			{
 				TileEntity inv = world.getTileEntity(new BlockPos((int) x, (int) y, (int) z));
-				if (inv instanceof LockableLootTileEntity)
-					((LockableLootTileEntity) inv).decrStackSize((int) (0), (int) (4));
+				if (inv instanceof LockableTileEntity)
+					((LockableTileEntity) inv).decrStackSize((int) (0), (int) (4));
 			}
 			{
 				TileEntity inv = world.getTileEntity(new BlockPos((int) x, (int) y, (int) z));
-				if (inv instanceof LockableLootTileEntity)
-					((LockableLootTileEntity) inv).decrStackSize((int) (1), (int) (1));
+				if (inv instanceof LockableTileEntity)
+					((LockableTileEntity) inv).decrStackSize((int) (1), (int) (1));
 			}
 			{
 				TileEntity inv = world.getTileEntity(new BlockPos((int) x, (int) y, (int) z));
-				if (inv != null && (inv instanceof LockableLootTileEntity)) {
-					ItemStack stack = ((LockableLootTileEntity) inv).getStackInSlot((int) (2));
+				if (inv != null && (inv instanceof LockableTileEntity)) {
+					ItemStack stack = ((LockableTileEntity) inv).getStackInSlot((int) (2));
 					if (stack != null) {
 						if (stack.attemptDamageItem((int) 1, new Random(), null)) {
 							stack.shrink(1);
@@ -519,27 +519,27 @@ public class GearsMakerBlockUpdateTickProcedure extends SlothCraftElements.ModEl
 			}
 			{
 				TileEntity inv = world.getTileEntity(new BlockPos((int) x, (int) y, (int) z));
-				if (inv != null && (inv instanceof LockableLootTileEntity)) {
+				if (inv != null && (inv instanceof LockableTileEntity)) {
 					ItemStack _setstack = new ItemStack(DiamondGearItemItem.block, (int) (1));
-					_setstack.setCount(((new Object() {
+					_setstack.setCount((int) ((new Object() {
 						public int getAmount(BlockPos pos, int sltid) {
 							TileEntity inv = world.getTileEntity(pos);
-							if (inv instanceof LockableLootTileEntity) {
-								ItemStack stack = ((LockableLootTileEntity) inv).getStackInSlot(sltid);
+							if (inv instanceof LockableTileEntity) {
+								ItemStack stack = ((LockableTileEntity) inv).getStackInSlot(sltid);
 								if (stack != null)
 									return stack.getCount();
 							}
 							return 0;
 						}
 					}.getAmount(new BlockPos((int) x, (int) y, (int) z), (int) (3))) + 1));
-					((LockableLootTileEntity) inv).setInventorySlotContents((int) (3), _setstack);
+					((LockableTileEntity) inv).setInventorySlotContents((int) (3), _setstack);
 				}
 			}
 		} else if ((((new Object() {
 			public int getAmount(BlockPos pos, int sltid) {
 				TileEntity inv = world.getTileEntity(pos);
-				if (inv instanceof LockableLootTileEntity) {
-					ItemStack stack = ((LockableLootTileEntity) inv).getStackInSlot(sltid);
+				if (inv instanceof LockableTileEntity) {
+					ItemStack stack = ((LockableTileEntity) inv).getStackInSlot(sltid);
 					if (stack != null)
 						return stack.getCount();
 				}
@@ -549,31 +549,31 @@ public class GearsMakerBlockUpdateTickProcedure extends SlothCraftElements.ModEl
 				.getOrCreate(new ResourceLocation(("forge:gems/emerald").toLowerCase(java.util.Locale.ENGLISH))).contains((new Object() {
 					public ItemStack getItemStack(BlockPos pos, int sltid) {
 						TileEntity inv = world.getTileEntity(pos);
-						if (inv instanceof LockableLootTileEntity)
-							return ((LockableLootTileEntity) inv).getStackInSlot(sltid);
+						if (inv instanceof LockableTileEntity)
+							return ((LockableTileEntity) inv).getStackInSlot(sltid);
 						return ItemStack.EMPTY;
 					}
 				}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (0))).getItem())) && (((new Object() {
 					public ItemStack getItemStack(BlockPos pos, int sltid) {
 						TileEntity inv = world.getTileEntity(pos);
-						if (inv instanceof LockableLootTileEntity)
-							return ((LockableLootTileEntity) inv).getStackInSlot(sltid);
+						if (inv instanceof LockableTileEntity)
+							return ((LockableTileEntity) inv).getStackInSlot(sltid);
 						return ItemStack.EMPTY;
 					}
 				}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (1))).getItem() == new ItemStack(StoneGearItemItem.block, (int) (1))
 						.getItem()) && (((new Object() {
 							public ItemStack getItemStack(BlockPos pos, int sltid) {
 								TileEntity inv = world.getTileEntity(pos);
-								if (inv instanceof LockableLootTileEntity)
-									return ((LockableLootTileEntity) inv).getStackInSlot(sltid);
+								if (inv instanceof LockableTileEntity)
+									return ((LockableTileEntity) inv).getStackInSlot(sltid);
 								return ItemStack.EMPTY;
 							}
 						}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (2)))
 								.getItem() == new ItemStack(GearMoldItemItem.block, (int) (1)).getItem()) && (((new Object() {
 									public int getAmount(BlockPos pos, int sltid) {
 										TileEntity inv = world.getTileEntity(pos);
-										if (inv instanceof LockableLootTileEntity) {
-											ItemStack stack = ((LockableLootTileEntity) inv).getStackInSlot(sltid);
+										if (inv instanceof LockableTileEntity) {
+											ItemStack stack = ((LockableTileEntity) inv).getStackInSlot(sltid);
 											if (stack != null)
 												return stack.getCount();
 										}
@@ -582,26 +582,26 @@ public class GearsMakerBlockUpdateTickProcedure extends SlothCraftElements.ModEl
 								}.getAmount(new BlockPos((int) x, (int) y, (int) z), (int) (3))) == 0) || ((new Object() {
 									public ItemStack getItemStack(BlockPos pos, int sltid) {
 										TileEntity inv = world.getTileEntity(pos);
-										if (inv instanceof LockableLootTileEntity)
-											return ((LockableLootTileEntity) inv).getStackInSlot(sltid);
+										if (inv instanceof LockableTileEntity)
+											return ((LockableTileEntity) inv).getStackInSlot(sltid);
 										return ItemStack.EMPTY;
 									}
 								}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (3)))
 										.getItem() == new ItemStack(EmeraldGearItemItem.block, (int) (1)).getItem()))))))) {
 			{
 				TileEntity inv = world.getTileEntity(new BlockPos((int) x, (int) y, (int) z));
-				if (inv instanceof LockableLootTileEntity)
-					((LockableLootTileEntity) inv).decrStackSize((int) (0), (int) (4));
+				if (inv instanceof LockableTileEntity)
+					((LockableTileEntity) inv).decrStackSize((int) (0), (int) (4));
 			}
 			{
 				TileEntity inv = world.getTileEntity(new BlockPos((int) x, (int) y, (int) z));
-				if (inv instanceof LockableLootTileEntity)
-					((LockableLootTileEntity) inv).decrStackSize((int) (1), (int) (1));
+				if (inv instanceof LockableTileEntity)
+					((LockableTileEntity) inv).decrStackSize((int) (1), (int) (1));
 			}
 			{
 				TileEntity inv = world.getTileEntity(new BlockPos((int) x, (int) y, (int) z));
-				if (inv != null && (inv instanceof LockableLootTileEntity)) {
-					ItemStack stack = ((LockableLootTileEntity) inv).getStackInSlot((int) (2));
+				if (inv != null && (inv instanceof LockableTileEntity)) {
+					ItemStack stack = ((LockableTileEntity) inv).getStackInSlot((int) (2));
 					if (stack != null) {
 						if (stack.attemptDamageItem((int) 1, new Random(), null)) {
 							stack.shrink(1);
@@ -612,27 +612,27 @@ public class GearsMakerBlockUpdateTickProcedure extends SlothCraftElements.ModEl
 			}
 			{
 				TileEntity inv = world.getTileEntity(new BlockPos((int) x, (int) y, (int) z));
-				if (inv != null && (inv instanceof LockableLootTileEntity)) {
+				if (inv != null && (inv instanceof LockableTileEntity)) {
 					ItemStack _setstack = new ItemStack(EmeraldGearItemItem.block, (int) (1));
-					_setstack.setCount(((new Object() {
+					_setstack.setCount((int) ((new Object() {
 						public int getAmount(BlockPos pos, int sltid) {
 							TileEntity inv = world.getTileEntity(pos);
-							if (inv instanceof LockableLootTileEntity) {
-								ItemStack stack = ((LockableLootTileEntity) inv).getStackInSlot(sltid);
+							if (inv instanceof LockableTileEntity) {
+								ItemStack stack = ((LockableTileEntity) inv).getStackInSlot(sltid);
 								if (stack != null)
 									return stack.getCount();
 							}
 							return 0;
 						}
 					}.getAmount(new BlockPos((int) x, (int) y, (int) z), (int) (3))) + 1));
-					((LockableLootTileEntity) inv).setInventorySlotContents((int) (3), _setstack);
+					((LockableTileEntity) inv).setInventorySlotContents((int) (3), _setstack);
 				}
 			}
 		} else if ((((new Object() {
 			public int getAmount(BlockPos pos, int sltid) {
 				TileEntity inv = world.getTileEntity(pos);
-				if (inv instanceof LockableLootTileEntity) {
-					ItemStack stack = ((LockableLootTileEntity) inv).getStackInSlot(sltid);
+				if (inv instanceof LockableTileEntity) {
+					ItemStack stack = ((LockableTileEntity) inv).getStackInSlot(sltid);
 					if (stack != null)
 						return stack.getCount();
 				}
@@ -642,31 +642,31 @@ public class GearsMakerBlockUpdateTickProcedure extends SlothCraftElements.ModEl
 				.getOrCreate(new ResourceLocation(("forge:ingots/gobber/end").toLowerCase(java.util.Locale.ENGLISH))).contains((new Object() {
 					public ItemStack getItemStack(BlockPos pos, int sltid) {
 						TileEntity inv = world.getTileEntity(pos);
-						if (inv instanceof LockableLootTileEntity)
-							return ((LockableLootTileEntity) inv).getStackInSlot(sltid);
+						if (inv instanceof LockableTileEntity)
+							return ((LockableTileEntity) inv).getStackInSlot(sltid);
 						return ItemStack.EMPTY;
 					}
 				}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (0))).getItem())) && (((new Object() {
 					public ItemStack getItemStack(BlockPos pos, int sltid) {
 						TileEntity inv = world.getTileEntity(pos);
-						if (inv instanceof LockableLootTileEntity)
-							return ((LockableLootTileEntity) inv).getStackInSlot(sltid);
+						if (inv instanceof LockableTileEntity)
+							return ((LockableTileEntity) inv).getStackInSlot(sltid);
 						return ItemStack.EMPTY;
 					}
 				}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (1))).getItem() == new ItemStack(StoneGearItemItem.block, (int) (1))
 						.getItem()) && (((new Object() {
 							public ItemStack getItemStack(BlockPos pos, int sltid) {
 								TileEntity inv = world.getTileEntity(pos);
-								if (inv instanceof LockableLootTileEntity)
-									return ((LockableLootTileEntity) inv).getStackInSlot(sltid);
+								if (inv instanceof LockableTileEntity)
+									return ((LockableTileEntity) inv).getStackInSlot(sltid);
 								return ItemStack.EMPTY;
 							}
 						}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (2)))
 								.getItem() == new ItemStack(GearMoldItemItem.block, (int) (1)).getItem()) && (((new Object() {
 									public int getAmount(BlockPos pos, int sltid) {
 										TileEntity inv = world.getTileEntity(pos);
-										if (inv instanceof LockableLootTileEntity) {
-											ItemStack stack = ((LockableLootTileEntity) inv).getStackInSlot(sltid);
+										if (inv instanceof LockableTileEntity) {
+											ItemStack stack = ((LockableTileEntity) inv).getStackInSlot(sltid);
 											if (stack != null)
 												return stack.getCount();
 										}
@@ -675,26 +675,26 @@ public class GearsMakerBlockUpdateTickProcedure extends SlothCraftElements.ModEl
 								}.getAmount(new BlockPos((int) x, (int) y, (int) z), (int) (3))) == 0) || ((new Object() {
 									public ItemStack getItemStack(BlockPos pos, int sltid) {
 										TileEntity inv = world.getTileEntity(pos);
-										if (inv instanceof LockableLootTileEntity)
-											return ((LockableLootTileEntity) inv).getStackInSlot(sltid);
+										if (inv instanceof LockableTileEntity)
+											return ((LockableTileEntity) inv).getStackInSlot(sltid);
 										return ItemStack.EMPTY;
 									}
 								}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (3)))
 										.getItem() == new ItemStack(GobberEndGearItemItem.block, (int) (1)).getItem()))))))) {
 			{
 				TileEntity inv = world.getTileEntity(new BlockPos((int) x, (int) y, (int) z));
-				if (inv instanceof LockableLootTileEntity)
-					((LockableLootTileEntity) inv).decrStackSize((int) (0), (int) (4));
+				if (inv instanceof LockableTileEntity)
+					((LockableTileEntity) inv).decrStackSize((int) (0), (int) (4));
 			}
 			{
 				TileEntity inv = world.getTileEntity(new BlockPos((int) x, (int) y, (int) z));
-				if (inv instanceof LockableLootTileEntity)
-					((LockableLootTileEntity) inv).decrStackSize((int) (1), (int) (1));
+				if (inv instanceof LockableTileEntity)
+					((LockableTileEntity) inv).decrStackSize((int) (1), (int) (1));
 			}
 			{
 				TileEntity inv = world.getTileEntity(new BlockPos((int) x, (int) y, (int) z));
-				if (inv != null && (inv instanceof LockableLootTileEntity)) {
-					ItemStack stack = ((LockableLootTileEntity) inv).getStackInSlot((int) (2));
+				if (inv != null && (inv instanceof LockableTileEntity)) {
+					ItemStack stack = ((LockableTileEntity) inv).getStackInSlot((int) (2));
 					if (stack != null) {
 						if (stack.attemptDamageItem((int) 1, new Random(), null)) {
 							stack.shrink(1);
@@ -705,27 +705,27 @@ public class GearsMakerBlockUpdateTickProcedure extends SlothCraftElements.ModEl
 			}
 			{
 				TileEntity inv = world.getTileEntity(new BlockPos((int) x, (int) y, (int) z));
-				if (inv != null && (inv instanceof LockableLootTileEntity)) {
+				if (inv != null && (inv instanceof LockableTileEntity)) {
 					ItemStack _setstack = new ItemStack(GobberEndGearItemItem.block, (int) (1));
-					_setstack.setCount(((new Object() {
+					_setstack.setCount((int) ((new Object() {
 						public int getAmount(BlockPos pos, int sltid) {
 							TileEntity inv = world.getTileEntity(pos);
-							if (inv instanceof LockableLootTileEntity) {
-								ItemStack stack = ((LockableLootTileEntity) inv).getStackInSlot(sltid);
+							if (inv instanceof LockableTileEntity) {
+								ItemStack stack = ((LockableTileEntity) inv).getStackInSlot(sltid);
 								if (stack != null)
 									return stack.getCount();
 							}
 							return 0;
 						}
 					}.getAmount(new BlockPos((int) x, (int) y, (int) z), (int) (3))) + 1));
-					((LockableLootTileEntity) inv).setInventorySlotContents((int) (3), _setstack);
+					((LockableTileEntity) inv).setInventorySlotContents((int) (3), _setstack);
 				}
 			}
 		} else if ((((new Object() {
 			public int getAmount(BlockPos pos, int sltid) {
 				TileEntity inv = world.getTileEntity(pos);
-				if (inv instanceof LockableLootTileEntity) {
-					ItemStack stack = ((LockableLootTileEntity) inv).getStackInSlot(sltid);
+				if (inv instanceof LockableTileEntity) {
+					ItemStack stack = ((LockableTileEntity) inv).getStackInSlot(sltid);
 					if (stack != null)
 						return stack.getCount();
 				}
@@ -735,31 +735,31 @@ public class GearsMakerBlockUpdateTickProcedure extends SlothCraftElements.ModEl
 				.getOrCreate(new ResourceLocation(("forge:ingots/gobber").toLowerCase(java.util.Locale.ENGLISH))).contains((new Object() {
 					public ItemStack getItemStack(BlockPos pos, int sltid) {
 						TileEntity inv = world.getTileEntity(pos);
-						if (inv instanceof LockableLootTileEntity)
-							return ((LockableLootTileEntity) inv).getStackInSlot(sltid);
+						if (inv instanceof LockableTileEntity)
+							return ((LockableTileEntity) inv).getStackInSlot(sltid);
 						return ItemStack.EMPTY;
 					}
 				}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (0))).getItem())) && (((new Object() {
 					public ItemStack getItemStack(BlockPos pos, int sltid) {
 						TileEntity inv = world.getTileEntity(pos);
-						if (inv instanceof LockableLootTileEntity)
-							return ((LockableLootTileEntity) inv).getStackInSlot(sltid);
+						if (inv instanceof LockableTileEntity)
+							return ((LockableTileEntity) inv).getStackInSlot(sltid);
 						return ItemStack.EMPTY;
 					}
 				}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (1))).getItem() == new ItemStack(StoneGearItemItem.block, (int) (1))
 						.getItem()) && (((new Object() {
 							public ItemStack getItemStack(BlockPos pos, int sltid) {
 								TileEntity inv = world.getTileEntity(pos);
-								if (inv instanceof LockableLootTileEntity)
-									return ((LockableLootTileEntity) inv).getStackInSlot(sltid);
+								if (inv instanceof LockableTileEntity)
+									return ((LockableTileEntity) inv).getStackInSlot(sltid);
 								return ItemStack.EMPTY;
 							}
 						}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (2)))
 								.getItem() == new ItemStack(GearMoldItemItem.block, (int) (1)).getItem()) && (((new Object() {
 									public int getAmount(BlockPos pos, int sltid) {
 										TileEntity inv = world.getTileEntity(pos);
-										if (inv instanceof LockableLootTileEntity) {
-											ItemStack stack = ((LockableLootTileEntity) inv).getStackInSlot(sltid);
+										if (inv instanceof LockableTileEntity) {
+											ItemStack stack = ((LockableTileEntity) inv).getStackInSlot(sltid);
 											if (stack != null)
 												return stack.getCount();
 										}
@@ -768,26 +768,26 @@ public class GearsMakerBlockUpdateTickProcedure extends SlothCraftElements.ModEl
 								}.getAmount(new BlockPos((int) x, (int) y, (int) z), (int) (3))) == 0) || ((new Object() {
 									public ItemStack getItemStack(BlockPos pos, int sltid) {
 										TileEntity inv = world.getTileEntity(pos);
-										if (inv instanceof LockableLootTileEntity)
-											return ((LockableLootTileEntity) inv).getStackInSlot(sltid);
+										if (inv instanceof LockableTileEntity)
+											return ((LockableTileEntity) inv).getStackInSlot(sltid);
 										return ItemStack.EMPTY;
 									}
 								}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (3)))
 										.getItem() == new ItemStack(GobberGearItemItem.block, (int) (1)).getItem()))))))) {
 			{
 				TileEntity inv = world.getTileEntity(new BlockPos((int) x, (int) y, (int) z));
-				if (inv instanceof LockableLootTileEntity)
-					((LockableLootTileEntity) inv).decrStackSize((int) (0), (int) (4));
+				if (inv instanceof LockableTileEntity)
+					((LockableTileEntity) inv).decrStackSize((int) (0), (int) (4));
 			}
 			{
 				TileEntity inv = world.getTileEntity(new BlockPos((int) x, (int) y, (int) z));
-				if (inv instanceof LockableLootTileEntity)
-					((LockableLootTileEntity) inv).decrStackSize((int) (1), (int) (1));
+				if (inv instanceof LockableTileEntity)
+					((LockableTileEntity) inv).decrStackSize((int) (1), (int) (1));
 			}
 			{
 				TileEntity inv = world.getTileEntity(new BlockPos((int) x, (int) y, (int) z));
-				if (inv != null && (inv instanceof LockableLootTileEntity)) {
-					ItemStack stack = ((LockableLootTileEntity) inv).getStackInSlot((int) (2));
+				if (inv != null && (inv instanceof LockableTileEntity)) {
+					ItemStack stack = ((LockableTileEntity) inv).getStackInSlot((int) (2));
 					if (stack != null) {
 						if (stack.attemptDamageItem((int) 1, new Random(), null)) {
 							stack.shrink(1);
@@ -798,27 +798,27 @@ public class GearsMakerBlockUpdateTickProcedure extends SlothCraftElements.ModEl
 			}
 			{
 				TileEntity inv = world.getTileEntity(new BlockPos((int) x, (int) y, (int) z));
-				if (inv != null && (inv instanceof LockableLootTileEntity)) {
+				if (inv != null && (inv instanceof LockableTileEntity)) {
 					ItemStack _setstack = new ItemStack(GobberGearItemItem.block, (int) (1));
-					_setstack.setCount(((new Object() {
+					_setstack.setCount((int) ((new Object() {
 						public int getAmount(BlockPos pos, int sltid) {
 							TileEntity inv = world.getTileEntity(pos);
-							if (inv instanceof LockableLootTileEntity) {
-								ItemStack stack = ((LockableLootTileEntity) inv).getStackInSlot(sltid);
+							if (inv instanceof LockableTileEntity) {
+								ItemStack stack = ((LockableTileEntity) inv).getStackInSlot(sltid);
 								if (stack != null)
 									return stack.getCount();
 							}
 							return 0;
 						}
 					}.getAmount(new BlockPos((int) x, (int) y, (int) z), (int) (3))) + 1));
-					((LockableLootTileEntity) inv).setInventorySlotContents((int) (3), _setstack);
+					((LockableTileEntity) inv).setInventorySlotContents((int) (3), _setstack);
 				}
 			}
 		} else if ((((new Object() {
 			public int getAmount(BlockPos pos, int sltid) {
 				TileEntity inv = world.getTileEntity(pos);
-				if (inv instanceof LockableLootTileEntity) {
-					ItemStack stack = ((LockableLootTileEntity) inv).getStackInSlot(sltid);
+				if (inv instanceof LockableTileEntity) {
+					ItemStack stack = ((LockableTileEntity) inv).getStackInSlot(sltid);
 					if (stack != null)
 						return stack.getCount();
 				}
@@ -828,31 +828,31 @@ public class GearsMakerBlockUpdateTickProcedure extends SlothCraftElements.ModEl
 				.getOrCreate(new ResourceLocation(("forge:ingots/gobber/nether").toLowerCase(java.util.Locale.ENGLISH))).contains((new Object() {
 					public ItemStack getItemStack(BlockPos pos, int sltid) {
 						TileEntity inv = world.getTileEntity(pos);
-						if (inv instanceof LockableLootTileEntity)
-							return ((LockableLootTileEntity) inv).getStackInSlot(sltid);
+						if (inv instanceof LockableTileEntity)
+							return ((LockableTileEntity) inv).getStackInSlot(sltid);
 						return ItemStack.EMPTY;
 					}
 				}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (0))).getItem())) && (((new Object() {
 					public ItemStack getItemStack(BlockPos pos, int sltid) {
 						TileEntity inv = world.getTileEntity(pos);
-						if (inv instanceof LockableLootTileEntity)
-							return ((LockableLootTileEntity) inv).getStackInSlot(sltid);
+						if (inv instanceof LockableTileEntity)
+							return ((LockableTileEntity) inv).getStackInSlot(sltid);
 						return ItemStack.EMPTY;
 					}
 				}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (1))).getItem() == new ItemStack(StoneGearItemItem.block, (int) (1))
 						.getItem()) && (((new Object() {
 							public ItemStack getItemStack(BlockPos pos, int sltid) {
 								TileEntity inv = world.getTileEntity(pos);
-								if (inv instanceof LockableLootTileEntity)
-									return ((LockableLootTileEntity) inv).getStackInSlot(sltid);
+								if (inv instanceof LockableTileEntity)
+									return ((LockableTileEntity) inv).getStackInSlot(sltid);
 								return ItemStack.EMPTY;
 							}
 						}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (2)))
 								.getItem() == new ItemStack(GearMoldItemItem.block, (int) (1)).getItem()) && (((new Object() {
 									public int getAmount(BlockPos pos, int sltid) {
 										TileEntity inv = world.getTileEntity(pos);
-										if (inv instanceof LockableLootTileEntity) {
-											ItemStack stack = ((LockableLootTileEntity) inv).getStackInSlot(sltid);
+										if (inv instanceof LockableTileEntity) {
+											ItemStack stack = ((LockableTileEntity) inv).getStackInSlot(sltid);
 											if (stack != null)
 												return stack.getCount();
 										}
@@ -861,26 +861,26 @@ public class GearsMakerBlockUpdateTickProcedure extends SlothCraftElements.ModEl
 								}.getAmount(new BlockPos((int) x, (int) y, (int) z), (int) (3))) == 0) || ((new Object() {
 									public ItemStack getItemStack(BlockPos pos, int sltid) {
 										TileEntity inv = world.getTileEntity(pos);
-										if (inv instanceof LockableLootTileEntity)
-											return ((LockableLootTileEntity) inv).getStackInSlot(sltid);
+										if (inv instanceof LockableTileEntity)
+											return ((LockableTileEntity) inv).getStackInSlot(sltid);
 										return ItemStack.EMPTY;
 									}
 								}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (3)))
 										.getItem() == new ItemStack(GobberNetherGearItemItem.block, (int) (1)).getItem()))))))) {
 			{
 				TileEntity inv = world.getTileEntity(new BlockPos((int) x, (int) y, (int) z));
-				if (inv instanceof LockableLootTileEntity)
-					((LockableLootTileEntity) inv).decrStackSize((int) (0), (int) (4));
+				if (inv instanceof LockableTileEntity)
+					((LockableTileEntity) inv).decrStackSize((int) (0), (int) (4));
 			}
 			{
 				TileEntity inv = world.getTileEntity(new BlockPos((int) x, (int) y, (int) z));
-				if (inv instanceof LockableLootTileEntity)
-					((LockableLootTileEntity) inv).decrStackSize((int) (1), (int) (1));
+				if (inv instanceof LockableTileEntity)
+					((LockableTileEntity) inv).decrStackSize((int) (1), (int) (1));
 			}
 			{
 				TileEntity inv = world.getTileEntity(new BlockPos((int) x, (int) y, (int) z));
-				if (inv != null && (inv instanceof LockableLootTileEntity)) {
-					ItemStack stack = ((LockableLootTileEntity) inv).getStackInSlot((int) (2));
+				if (inv != null && (inv instanceof LockableTileEntity)) {
+					ItemStack stack = ((LockableTileEntity) inv).getStackInSlot((int) (2));
 					if (stack != null) {
 						if (stack.attemptDamageItem((int) 1, new Random(), null)) {
 							stack.shrink(1);
@@ -891,27 +891,27 @@ public class GearsMakerBlockUpdateTickProcedure extends SlothCraftElements.ModEl
 			}
 			{
 				TileEntity inv = world.getTileEntity(new BlockPos((int) x, (int) y, (int) z));
-				if (inv != null && (inv instanceof LockableLootTileEntity)) {
+				if (inv != null && (inv instanceof LockableTileEntity)) {
 					ItemStack _setstack = new ItemStack(GobberNetherGearItemItem.block, (int) (1));
-					_setstack.setCount(((new Object() {
+					_setstack.setCount((int) ((new Object() {
 						public int getAmount(BlockPos pos, int sltid) {
 							TileEntity inv = world.getTileEntity(pos);
-							if (inv instanceof LockableLootTileEntity) {
-								ItemStack stack = ((LockableLootTileEntity) inv).getStackInSlot(sltid);
+							if (inv instanceof LockableTileEntity) {
+								ItemStack stack = ((LockableTileEntity) inv).getStackInSlot(sltid);
 								if (stack != null)
 									return stack.getCount();
 							}
 							return 0;
 						}
 					}.getAmount(new BlockPos((int) x, (int) y, (int) z), (int) (3))) + 1));
-					((LockableLootTileEntity) inv).setInventorySlotContents((int) (3), _setstack);
+					((LockableTileEntity) inv).setInventorySlotContents((int) (3), _setstack);
 				}
 			}
 		} else if ((((new Object() {
 			public int getAmount(BlockPos pos, int sltid) {
 				TileEntity inv = world.getTileEntity(pos);
-				if (inv instanceof LockableLootTileEntity) {
-					ItemStack stack = ((LockableLootTileEntity) inv).getStackInSlot(sltid);
+				if (inv instanceof LockableTileEntity) {
+					ItemStack stack = ((LockableTileEntity) inv).getStackInSlot(sltid);
 					if (stack != null)
 						return stack.getCount();
 				}
@@ -921,31 +921,31 @@ public class GearsMakerBlockUpdateTickProcedure extends SlothCraftElements.ModEl
 				.getOrCreate(new ResourceLocation(("forge:ingots/gold").toLowerCase(java.util.Locale.ENGLISH))).contains((new Object() {
 					public ItemStack getItemStack(BlockPos pos, int sltid) {
 						TileEntity inv = world.getTileEntity(pos);
-						if (inv instanceof LockableLootTileEntity)
-							return ((LockableLootTileEntity) inv).getStackInSlot(sltid);
+						if (inv instanceof LockableTileEntity)
+							return ((LockableTileEntity) inv).getStackInSlot(sltid);
 						return ItemStack.EMPTY;
 					}
 				}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (0))).getItem())) && (((new Object() {
 					public ItemStack getItemStack(BlockPos pos, int sltid) {
 						TileEntity inv = world.getTileEntity(pos);
-						if (inv instanceof LockableLootTileEntity)
-							return ((LockableLootTileEntity) inv).getStackInSlot(sltid);
+						if (inv instanceof LockableTileEntity)
+							return ((LockableTileEntity) inv).getStackInSlot(sltid);
 						return ItemStack.EMPTY;
 					}
 				}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (1))).getItem() == new ItemStack(StoneGearItemItem.block, (int) (1))
 						.getItem()) && (((new Object() {
 							public ItemStack getItemStack(BlockPos pos, int sltid) {
 								TileEntity inv = world.getTileEntity(pos);
-								if (inv instanceof LockableLootTileEntity)
-									return ((LockableLootTileEntity) inv).getStackInSlot(sltid);
+								if (inv instanceof LockableTileEntity)
+									return ((LockableTileEntity) inv).getStackInSlot(sltid);
 								return ItemStack.EMPTY;
 							}
 						}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (2)))
 								.getItem() == new ItemStack(GearMoldItemItem.block, (int) (1)).getItem()) && (((new Object() {
 									public int getAmount(BlockPos pos, int sltid) {
 										TileEntity inv = world.getTileEntity(pos);
-										if (inv instanceof LockableLootTileEntity) {
-											ItemStack stack = ((LockableLootTileEntity) inv).getStackInSlot(sltid);
+										if (inv instanceof LockableTileEntity) {
+											ItemStack stack = ((LockableTileEntity) inv).getStackInSlot(sltid);
 											if (stack != null)
 												return stack.getCount();
 										}
@@ -954,26 +954,26 @@ public class GearsMakerBlockUpdateTickProcedure extends SlothCraftElements.ModEl
 								}.getAmount(new BlockPos((int) x, (int) y, (int) z), (int) (3))) == 0) || ((new Object() {
 									public ItemStack getItemStack(BlockPos pos, int sltid) {
 										TileEntity inv = world.getTileEntity(pos);
-										if (inv instanceof LockableLootTileEntity)
-											return ((LockableLootTileEntity) inv).getStackInSlot(sltid);
+										if (inv instanceof LockableTileEntity)
+											return ((LockableTileEntity) inv).getStackInSlot(sltid);
 										return ItemStack.EMPTY;
 									}
 								}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (3)))
 										.getItem() == new ItemStack(GoldGearItemItem.block, (int) (1)).getItem()))))))) {
 			{
 				TileEntity inv = world.getTileEntity(new BlockPos((int) x, (int) y, (int) z));
-				if (inv instanceof LockableLootTileEntity)
-					((LockableLootTileEntity) inv).decrStackSize((int) (0), (int) (4));
+				if (inv instanceof LockableTileEntity)
+					((LockableTileEntity) inv).decrStackSize((int) (0), (int) (4));
 			}
 			{
 				TileEntity inv = world.getTileEntity(new BlockPos((int) x, (int) y, (int) z));
-				if (inv instanceof LockableLootTileEntity)
-					((LockableLootTileEntity) inv).decrStackSize((int) (1), (int) (1));
+				if (inv instanceof LockableTileEntity)
+					((LockableTileEntity) inv).decrStackSize((int) (1), (int) (1));
 			}
 			{
 				TileEntity inv = world.getTileEntity(new BlockPos((int) x, (int) y, (int) z));
-				if (inv != null && (inv instanceof LockableLootTileEntity)) {
-					ItemStack stack = ((LockableLootTileEntity) inv).getStackInSlot((int) (2));
+				if (inv != null && (inv instanceof LockableTileEntity)) {
+					ItemStack stack = ((LockableTileEntity) inv).getStackInSlot((int) (2));
 					if (stack != null) {
 						if (stack.attemptDamageItem((int) 1, new Random(), null)) {
 							stack.shrink(1);
@@ -984,27 +984,27 @@ public class GearsMakerBlockUpdateTickProcedure extends SlothCraftElements.ModEl
 			}
 			{
 				TileEntity inv = world.getTileEntity(new BlockPos((int) x, (int) y, (int) z));
-				if (inv != null && (inv instanceof LockableLootTileEntity)) {
+				if (inv != null && (inv instanceof LockableTileEntity)) {
 					ItemStack _setstack = new ItemStack(GoldGearItemItem.block, (int) (1));
-					_setstack.setCount(((new Object() {
+					_setstack.setCount((int) ((new Object() {
 						public int getAmount(BlockPos pos, int sltid) {
 							TileEntity inv = world.getTileEntity(pos);
-							if (inv instanceof LockableLootTileEntity) {
-								ItemStack stack = ((LockableLootTileEntity) inv).getStackInSlot(sltid);
+							if (inv instanceof LockableTileEntity) {
+								ItemStack stack = ((LockableTileEntity) inv).getStackInSlot(sltid);
 								if (stack != null)
 									return stack.getCount();
 							}
 							return 0;
 						}
 					}.getAmount(new BlockPos((int) x, (int) y, (int) z), (int) (3))) + 1));
-					((LockableLootTileEntity) inv).setInventorySlotContents((int) (3), _setstack);
+					((LockableTileEntity) inv).setInventorySlotContents((int) (3), _setstack);
 				}
 			}
 		} else if ((((new Object() {
 			public int getAmount(BlockPos pos, int sltid) {
 				TileEntity inv = world.getTileEntity(pos);
-				if (inv instanceof LockableLootTileEntity) {
-					ItemStack stack = ((LockableLootTileEntity) inv).getStackInSlot(sltid);
+				if (inv instanceof LockableTileEntity) {
+					ItemStack stack = ((LockableTileEntity) inv).getStackInSlot(sltid);
 					if (stack != null)
 						return stack.getCount();
 				}
@@ -1014,31 +1014,31 @@ public class GearsMakerBlockUpdateTickProcedure extends SlothCraftElements.ModEl
 				.getOrCreate(new ResourceLocation(("forge:ingots/iridium").toLowerCase(java.util.Locale.ENGLISH))).contains((new Object() {
 					public ItemStack getItemStack(BlockPos pos, int sltid) {
 						TileEntity inv = world.getTileEntity(pos);
-						if (inv instanceof LockableLootTileEntity)
-							return ((LockableLootTileEntity) inv).getStackInSlot(sltid);
+						if (inv instanceof LockableTileEntity)
+							return ((LockableTileEntity) inv).getStackInSlot(sltid);
 						return ItemStack.EMPTY;
 					}
 				}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (0))).getItem())) && (((new Object() {
 					public ItemStack getItemStack(BlockPos pos, int sltid) {
 						TileEntity inv = world.getTileEntity(pos);
-						if (inv instanceof LockableLootTileEntity)
-							return ((LockableLootTileEntity) inv).getStackInSlot(sltid);
+						if (inv instanceof LockableTileEntity)
+							return ((LockableTileEntity) inv).getStackInSlot(sltid);
 						return ItemStack.EMPTY;
 					}
 				}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (1))).getItem() == new ItemStack(StoneGearItemItem.block, (int) (1))
 						.getItem()) && (((new Object() {
 							public ItemStack getItemStack(BlockPos pos, int sltid) {
 								TileEntity inv = world.getTileEntity(pos);
-								if (inv instanceof LockableLootTileEntity)
-									return ((LockableLootTileEntity) inv).getStackInSlot(sltid);
+								if (inv instanceof LockableTileEntity)
+									return ((LockableTileEntity) inv).getStackInSlot(sltid);
 								return ItemStack.EMPTY;
 							}
 						}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (2)))
 								.getItem() == new ItemStack(GearMoldItemItem.block, (int) (1)).getItem()) && (((new Object() {
 									public int getAmount(BlockPos pos, int sltid) {
 										TileEntity inv = world.getTileEntity(pos);
-										if (inv instanceof LockableLootTileEntity) {
-											ItemStack stack = ((LockableLootTileEntity) inv).getStackInSlot(sltid);
+										if (inv instanceof LockableTileEntity) {
+											ItemStack stack = ((LockableTileEntity) inv).getStackInSlot(sltid);
 											if (stack != null)
 												return stack.getCount();
 										}
@@ -1047,26 +1047,26 @@ public class GearsMakerBlockUpdateTickProcedure extends SlothCraftElements.ModEl
 								}.getAmount(new BlockPos((int) x, (int) y, (int) z), (int) (3))) == 0) || ((new Object() {
 									public ItemStack getItemStack(BlockPos pos, int sltid) {
 										TileEntity inv = world.getTileEntity(pos);
-										if (inv instanceof LockableLootTileEntity)
-											return ((LockableLootTileEntity) inv).getStackInSlot(sltid);
+										if (inv instanceof LockableTileEntity)
+											return ((LockableTileEntity) inv).getStackInSlot(sltid);
 										return ItemStack.EMPTY;
 									}
 								}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (3)))
 										.getItem() == new ItemStack(IridiumGearItemItem.block, (int) (1)).getItem()))))))) {
 			{
 				TileEntity inv = world.getTileEntity(new BlockPos((int) x, (int) y, (int) z));
-				if (inv instanceof LockableLootTileEntity)
-					((LockableLootTileEntity) inv).decrStackSize((int) (0), (int) (4));
+				if (inv instanceof LockableTileEntity)
+					((LockableTileEntity) inv).decrStackSize((int) (0), (int) (4));
 			}
 			{
 				TileEntity inv = world.getTileEntity(new BlockPos((int) x, (int) y, (int) z));
-				if (inv instanceof LockableLootTileEntity)
-					((LockableLootTileEntity) inv).decrStackSize((int) (1), (int) (1));
+				if (inv instanceof LockableTileEntity)
+					((LockableTileEntity) inv).decrStackSize((int) (1), (int) (1));
 			}
 			{
 				TileEntity inv = world.getTileEntity(new BlockPos((int) x, (int) y, (int) z));
-				if (inv != null && (inv instanceof LockableLootTileEntity)) {
-					ItemStack stack = ((LockableLootTileEntity) inv).getStackInSlot((int) (2));
+				if (inv != null && (inv instanceof LockableTileEntity)) {
+					ItemStack stack = ((LockableTileEntity) inv).getStackInSlot((int) (2));
 					if (stack != null) {
 						if (stack.attemptDamageItem((int) 1, new Random(), null)) {
 							stack.shrink(1);
@@ -1077,27 +1077,27 @@ public class GearsMakerBlockUpdateTickProcedure extends SlothCraftElements.ModEl
 			}
 			{
 				TileEntity inv = world.getTileEntity(new BlockPos((int) x, (int) y, (int) z));
-				if (inv != null && (inv instanceof LockableLootTileEntity)) {
+				if (inv != null && (inv instanceof LockableTileEntity)) {
 					ItemStack _setstack = new ItemStack(IridiumGearItemItem.block, (int) (1));
-					_setstack.setCount(((new Object() {
+					_setstack.setCount((int) ((new Object() {
 						public int getAmount(BlockPos pos, int sltid) {
 							TileEntity inv = world.getTileEntity(pos);
-							if (inv instanceof LockableLootTileEntity) {
-								ItemStack stack = ((LockableLootTileEntity) inv).getStackInSlot(sltid);
+							if (inv instanceof LockableTileEntity) {
+								ItemStack stack = ((LockableTileEntity) inv).getStackInSlot(sltid);
 								if (stack != null)
 									return stack.getCount();
 							}
 							return 0;
 						}
 					}.getAmount(new BlockPos((int) x, (int) y, (int) z), (int) (3))) + 1));
-					((LockableLootTileEntity) inv).setInventorySlotContents((int) (3), _setstack);
+					((LockableTileEntity) inv).setInventorySlotContents((int) (3), _setstack);
 				}
 			}
 		} else if ((((new Object() {
 			public int getAmount(BlockPos pos, int sltid) {
 				TileEntity inv = world.getTileEntity(pos);
-				if (inv instanceof LockableLootTileEntity) {
-					ItemStack stack = ((LockableLootTileEntity) inv).getStackInSlot(sltid);
+				if (inv instanceof LockableTileEntity) {
+					ItemStack stack = ((LockableTileEntity) inv).getStackInSlot(sltid);
 					if (stack != null)
 						return stack.getCount();
 				}
@@ -1107,31 +1107,31 @@ public class GearsMakerBlockUpdateTickProcedure extends SlothCraftElements.ModEl
 				.getOrCreate(new ResourceLocation(("forge:ingots/iron").toLowerCase(java.util.Locale.ENGLISH))).contains((new Object() {
 					public ItemStack getItemStack(BlockPos pos, int sltid) {
 						TileEntity inv = world.getTileEntity(pos);
-						if (inv instanceof LockableLootTileEntity)
-							return ((LockableLootTileEntity) inv).getStackInSlot(sltid);
+						if (inv instanceof LockableTileEntity)
+							return ((LockableTileEntity) inv).getStackInSlot(sltid);
 						return ItemStack.EMPTY;
 					}
 				}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (0))).getItem())) && (((new Object() {
 					public ItemStack getItemStack(BlockPos pos, int sltid) {
 						TileEntity inv = world.getTileEntity(pos);
-						if (inv instanceof LockableLootTileEntity)
-							return ((LockableLootTileEntity) inv).getStackInSlot(sltid);
+						if (inv instanceof LockableTileEntity)
+							return ((LockableTileEntity) inv).getStackInSlot(sltid);
 						return ItemStack.EMPTY;
 					}
 				}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (1))).getItem() == new ItemStack(StoneGearItemItem.block, (int) (1))
 						.getItem()) && (((new Object() {
 							public ItemStack getItemStack(BlockPos pos, int sltid) {
 								TileEntity inv = world.getTileEntity(pos);
-								if (inv instanceof LockableLootTileEntity)
-									return ((LockableLootTileEntity) inv).getStackInSlot(sltid);
+								if (inv instanceof LockableTileEntity)
+									return ((LockableTileEntity) inv).getStackInSlot(sltid);
 								return ItemStack.EMPTY;
 							}
 						}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (2)))
 								.getItem() == new ItemStack(GearMoldItemItem.block, (int) (1)).getItem()) && (((new Object() {
 									public int getAmount(BlockPos pos, int sltid) {
 										TileEntity inv = world.getTileEntity(pos);
-										if (inv instanceof LockableLootTileEntity) {
-											ItemStack stack = ((LockableLootTileEntity) inv).getStackInSlot(sltid);
+										if (inv instanceof LockableTileEntity) {
+											ItemStack stack = ((LockableTileEntity) inv).getStackInSlot(sltid);
 											if (stack != null)
 												return stack.getCount();
 										}
@@ -1140,26 +1140,26 @@ public class GearsMakerBlockUpdateTickProcedure extends SlothCraftElements.ModEl
 								}.getAmount(new BlockPos((int) x, (int) y, (int) z), (int) (3))) == 0) || ((new Object() {
 									public ItemStack getItemStack(BlockPos pos, int sltid) {
 										TileEntity inv = world.getTileEntity(pos);
-										if (inv instanceof LockableLootTileEntity)
-											return ((LockableLootTileEntity) inv).getStackInSlot(sltid);
+										if (inv instanceof LockableTileEntity)
+											return ((LockableTileEntity) inv).getStackInSlot(sltid);
 										return ItemStack.EMPTY;
 									}
 								}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (3)))
 										.getItem() == new ItemStack(IronGearItemItem.block, (int) (1)).getItem()))))))) {
 			{
 				TileEntity inv = world.getTileEntity(new BlockPos((int) x, (int) y, (int) z));
-				if (inv instanceof LockableLootTileEntity)
-					((LockableLootTileEntity) inv).decrStackSize((int) (0), (int) (4));
+				if (inv instanceof LockableTileEntity)
+					((LockableTileEntity) inv).decrStackSize((int) (0), (int) (4));
 			}
 			{
 				TileEntity inv = world.getTileEntity(new BlockPos((int) x, (int) y, (int) z));
-				if (inv instanceof LockableLootTileEntity)
-					((LockableLootTileEntity) inv).decrStackSize((int) (1), (int) (1));
+				if (inv instanceof LockableTileEntity)
+					((LockableTileEntity) inv).decrStackSize((int) (1), (int) (1));
 			}
 			{
 				TileEntity inv = world.getTileEntity(new BlockPos((int) x, (int) y, (int) z));
-				if (inv != null && (inv instanceof LockableLootTileEntity)) {
-					ItemStack stack = ((LockableLootTileEntity) inv).getStackInSlot((int) (2));
+				if (inv != null && (inv instanceof LockableTileEntity)) {
+					ItemStack stack = ((LockableTileEntity) inv).getStackInSlot((int) (2));
 					if (stack != null) {
 						if (stack.attemptDamageItem((int) 1, new Random(), null)) {
 							stack.shrink(1);
@@ -1170,27 +1170,27 @@ public class GearsMakerBlockUpdateTickProcedure extends SlothCraftElements.ModEl
 			}
 			{
 				TileEntity inv = world.getTileEntity(new BlockPos((int) x, (int) y, (int) z));
-				if (inv != null && (inv instanceof LockableLootTileEntity)) {
+				if (inv != null && (inv instanceof LockableTileEntity)) {
 					ItemStack _setstack = new ItemStack(IronGearItemItem.block, (int) (1));
-					_setstack.setCount(((new Object() {
+					_setstack.setCount((int) ((new Object() {
 						public int getAmount(BlockPos pos, int sltid) {
 							TileEntity inv = world.getTileEntity(pos);
-							if (inv instanceof LockableLootTileEntity) {
-								ItemStack stack = ((LockableLootTileEntity) inv).getStackInSlot(sltid);
+							if (inv instanceof LockableTileEntity) {
+								ItemStack stack = ((LockableTileEntity) inv).getStackInSlot(sltid);
 								if (stack != null)
 									return stack.getCount();
 							}
 							return 0;
 						}
 					}.getAmount(new BlockPos((int) x, (int) y, (int) z), (int) (3))) + 1));
-					((LockableLootTileEntity) inv).setInventorySlotContents((int) (3), _setstack);
+					((LockableTileEntity) inv).setInventorySlotContents((int) (3), _setstack);
 				}
 			}
 		} else if ((((new Object() {
 			public int getAmount(BlockPos pos, int sltid) {
 				TileEntity inv = world.getTileEntity(pos);
-				if (inv instanceof LockableLootTileEntity) {
-					ItemStack stack = ((LockableLootTileEntity) inv).getStackInSlot(sltid);
+				if (inv instanceof LockableTileEntity) {
+					ItemStack stack = ((LockableTileEntity) inv).getStackInSlot(sltid);
 					if (stack != null)
 						return stack.getCount();
 				}
@@ -1200,31 +1200,31 @@ public class GearsMakerBlockUpdateTickProcedure extends SlothCraftElements.ModEl
 				.getOrCreate(new ResourceLocation(("forge:gems/jade").toLowerCase(java.util.Locale.ENGLISH))).contains((new Object() {
 					public ItemStack getItemStack(BlockPos pos, int sltid) {
 						TileEntity inv = world.getTileEntity(pos);
-						if (inv instanceof LockableLootTileEntity)
-							return ((LockableLootTileEntity) inv).getStackInSlot(sltid);
+						if (inv instanceof LockableTileEntity)
+							return ((LockableTileEntity) inv).getStackInSlot(sltid);
 						return ItemStack.EMPTY;
 					}
 				}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (0))).getItem())) && (((new Object() {
 					public ItemStack getItemStack(BlockPos pos, int sltid) {
 						TileEntity inv = world.getTileEntity(pos);
-						if (inv instanceof LockableLootTileEntity)
-							return ((LockableLootTileEntity) inv).getStackInSlot(sltid);
+						if (inv instanceof LockableTileEntity)
+							return ((LockableTileEntity) inv).getStackInSlot(sltid);
 						return ItemStack.EMPTY;
 					}
 				}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (1))).getItem() == new ItemStack(StoneGearItemItem.block, (int) (1))
 						.getItem()) && (((new Object() {
 							public ItemStack getItemStack(BlockPos pos, int sltid) {
 								TileEntity inv = world.getTileEntity(pos);
-								if (inv instanceof LockableLootTileEntity)
-									return ((LockableLootTileEntity) inv).getStackInSlot(sltid);
+								if (inv instanceof LockableTileEntity)
+									return ((LockableTileEntity) inv).getStackInSlot(sltid);
 								return ItemStack.EMPTY;
 							}
 						}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (2)))
 								.getItem() == new ItemStack(GearMoldItemItem.block, (int) (1)).getItem()) && (((new Object() {
 									public int getAmount(BlockPos pos, int sltid) {
 										TileEntity inv = world.getTileEntity(pos);
-										if (inv instanceof LockableLootTileEntity) {
-											ItemStack stack = ((LockableLootTileEntity) inv).getStackInSlot(sltid);
+										if (inv instanceof LockableTileEntity) {
+											ItemStack stack = ((LockableTileEntity) inv).getStackInSlot(sltid);
 											if (stack != null)
 												return stack.getCount();
 										}
@@ -1233,26 +1233,26 @@ public class GearsMakerBlockUpdateTickProcedure extends SlothCraftElements.ModEl
 								}.getAmount(new BlockPos((int) x, (int) y, (int) z), (int) (3))) == 0) || ((new Object() {
 									public ItemStack getItemStack(BlockPos pos, int sltid) {
 										TileEntity inv = world.getTileEntity(pos);
-										if (inv instanceof LockableLootTileEntity)
-											return ((LockableLootTileEntity) inv).getStackInSlot(sltid);
+										if (inv instanceof LockableTileEntity)
+											return ((LockableTileEntity) inv).getStackInSlot(sltid);
 										return ItemStack.EMPTY;
 									}
 								}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (3)))
 										.getItem() == new ItemStack(JadeGearItemItem.block, (int) (1)).getItem()))))))) {
 			{
 				TileEntity inv = world.getTileEntity(new BlockPos((int) x, (int) y, (int) z));
-				if (inv instanceof LockableLootTileEntity)
-					((LockableLootTileEntity) inv).decrStackSize((int) (0), (int) (4));
+				if (inv instanceof LockableTileEntity)
+					((LockableTileEntity) inv).decrStackSize((int) (0), (int) (4));
 			}
 			{
 				TileEntity inv = world.getTileEntity(new BlockPos((int) x, (int) y, (int) z));
-				if (inv instanceof LockableLootTileEntity)
-					((LockableLootTileEntity) inv).decrStackSize((int) (1), (int) (1));
+				if (inv instanceof LockableTileEntity)
+					((LockableTileEntity) inv).decrStackSize((int) (1), (int) (1));
 			}
 			{
 				TileEntity inv = world.getTileEntity(new BlockPos((int) x, (int) y, (int) z));
-				if (inv != null && (inv instanceof LockableLootTileEntity)) {
-					ItemStack stack = ((LockableLootTileEntity) inv).getStackInSlot((int) (2));
+				if (inv != null && (inv instanceof LockableTileEntity)) {
+					ItemStack stack = ((LockableTileEntity) inv).getStackInSlot((int) (2));
 					if (stack != null) {
 						if (stack.attemptDamageItem((int) 1, new Random(), null)) {
 							stack.shrink(1);
@@ -1263,27 +1263,27 @@ public class GearsMakerBlockUpdateTickProcedure extends SlothCraftElements.ModEl
 			}
 			{
 				TileEntity inv = world.getTileEntity(new BlockPos((int) x, (int) y, (int) z));
-				if (inv != null && (inv instanceof LockableLootTileEntity)) {
+				if (inv != null && (inv instanceof LockableTileEntity)) {
 					ItemStack _setstack = new ItemStack(JadeGearItemItem.block, (int) (1));
-					_setstack.setCount(((new Object() {
+					_setstack.setCount((int) ((new Object() {
 						public int getAmount(BlockPos pos, int sltid) {
 							TileEntity inv = world.getTileEntity(pos);
-							if (inv instanceof LockableLootTileEntity) {
-								ItemStack stack = ((LockableLootTileEntity) inv).getStackInSlot(sltid);
+							if (inv instanceof LockableTileEntity) {
+								ItemStack stack = ((LockableTileEntity) inv).getStackInSlot(sltid);
 								if (stack != null)
 									return stack.getCount();
 							}
 							return 0;
 						}
 					}.getAmount(new BlockPos((int) x, (int) y, (int) z), (int) (3))) + 1));
-					((LockableLootTileEntity) inv).setInventorySlotContents((int) (3), _setstack);
+					((LockableTileEntity) inv).setInventorySlotContents((int) (3), _setstack);
 				}
 			}
 		} else if ((((new Object() {
 			public int getAmount(BlockPos pos, int sltid) {
 				TileEntity inv = world.getTileEntity(pos);
-				if (inv instanceof LockableLootTileEntity) {
-					ItemStack stack = ((LockableLootTileEntity) inv).getStackInSlot(sltid);
+				if (inv instanceof LockableTileEntity) {
+					ItemStack stack = ((LockableTileEntity) inv).getStackInSlot(sltid);
 					if (stack != null)
 						return stack.getCount();
 				}
@@ -1293,31 +1293,31 @@ public class GearsMakerBlockUpdateTickProcedure extends SlothCraftElements.ModEl
 				.getOrCreate(new ResourceLocation(("forge:gems/lapis").toLowerCase(java.util.Locale.ENGLISH))).contains((new Object() {
 					public ItemStack getItemStack(BlockPos pos, int sltid) {
 						TileEntity inv = world.getTileEntity(pos);
-						if (inv instanceof LockableLootTileEntity)
-							return ((LockableLootTileEntity) inv).getStackInSlot(sltid);
+						if (inv instanceof LockableTileEntity)
+							return ((LockableTileEntity) inv).getStackInSlot(sltid);
 						return ItemStack.EMPTY;
 					}
 				}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (0))).getItem())) && (((new Object() {
 					public ItemStack getItemStack(BlockPos pos, int sltid) {
 						TileEntity inv = world.getTileEntity(pos);
-						if (inv instanceof LockableLootTileEntity)
-							return ((LockableLootTileEntity) inv).getStackInSlot(sltid);
+						if (inv instanceof LockableTileEntity)
+							return ((LockableTileEntity) inv).getStackInSlot(sltid);
 						return ItemStack.EMPTY;
 					}
 				}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (1))).getItem() == new ItemStack(StoneGearItemItem.block, (int) (1))
 						.getItem()) && (((new Object() {
 							public ItemStack getItemStack(BlockPos pos, int sltid) {
 								TileEntity inv = world.getTileEntity(pos);
-								if (inv instanceof LockableLootTileEntity)
-									return ((LockableLootTileEntity) inv).getStackInSlot(sltid);
+								if (inv instanceof LockableTileEntity)
+									return ((LockableTileEntity) inv).getStackInSlot(sltid);
 								return ItemStack.EMPTY;
 							}
 						}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (2)))
 								.getItem() == new ItemStack(GearMoldItemItem.block, (int) (1)).getItem()) && (((new Object() {
 									public int getAmount(BlockPos pos, int sltid) {
 										TileEntity inv = world.getTileEntity(pos);
-										if (inv instanceof LockableLootTileEntity) {
-											ItemStack stack = ((LockableLootTileEntity) inv).getStackInSlot(sltid);
+										if (inv instanceof LockableTileEntity) {
+											ItemStack stack = ((LockableTileEntity) inv).getStackInSlot(sltid);
 											if (stack != null)
 												return stack.getCount();
 										}
@@ -1326,26 +1326,26 @@ public class GearsMakerBlockUpdateTickProcedure extends SlothCraftElements.ModEl
 								}.getAmount(new BlockPos((int) x, (int) y, (int) z), (int) (3))) == 0) || ((new Object() {
 									public ItemStack getItemStack(BlockPos pos, int sltid) {
 										TileEntity inv = world.getTileEntity(pos);
-										if (inv instanceof LockableLootTileEntity)
-											return ((LockableLootTileEntity) inv).getStackInSlot(sltid);
+										if (inv instanceof LockableTileEntity)
+											return ((LockableTileEntity) inv).getStackInSlot(sltid);
 										return ItemStack.EMPTY;
 									}
 								}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (3)))
 										.getItem() == new ItemStack(LapisGearItemItem.block, (int) (1)).getItem()))))))) {
 			{
 				TileEntity inv = world.getTileEntity(new BlockPos((int) x, (int) y, (int) z));
-				if (inv instanceof LockableLootTileEntity)
-					((LockableLootTileEntity) inv).decrStackSize((int) (0), (int) (4));
+				if (inv instanceof LockableTileEntity)
+					((LockableTileEntity) inv).decrStackSize((int) (0), (int) (4));
 			}
 			{
 				TileEntity inv = world.getTileEntity(new BlockPos((int) x, (int) y, (int) z));
-				if (inv instanceof LockableLootTileEntity)
-					((LockableLootTileEntity) inv).decrStackSize((int) (1), (int) (1));
+				if (inv instanceof LockableTileEntity)
+					((LockableTileEntity) inv).decrStackSize((int) (1), (int) (1));
 			}
 			{
 				TileEntity inv = world.getTileEntity(new BlockPos((int) x, (int) y, (int) z));
-				if (inv != null && (inv instanceof LockableLootTileEntity)) {
-					ItemStack stack = ((LockableLootTileEntity) inv).getStackInSlot((int) (2));
+				if (inv != null && (inv instanceof LockableTileEntity)) {
+					ItemStack stack = ((LockableTileEntity) inv).getStackInSlot((int) (2));
 					if (stack != null) {
 						if (stack.attemptDamageItem((int) 1, new Random(), null)) {
 							stack.shrink(1);
@@ -1356,27 +1356,27 @@ public class GearsMakerBlockUpdateTickProcedure extends SlothCraftElements.ModEl
 			}
 			{
 				TileEntity inv = world.getTileEntity(new BlockPos((int) x, (int) y, (int) z));
-				if (inv != null && (inv instanceof LockableLootTileEntity)) {
+				if (inv != null && (inv instanceof LockableTileEntity)) {
 					ItemStack _setstack = new ItemStack(LapisGearItemItem.block, (int) (1));
-					_setstack.setCount(((new Object() {
+					_setstack.setCount((int) ((new Object() {
 						public int getAmount(BlockPos pos, int sltid) {
 							TileEntity inv = world.getTileEntity(pos);
-							if (inv instanceof LockableLootTileEntity) {
-								ItemStack stack = ((LockableLootTileEntity) inv).getStackInSlot(sltid);
+							if (inv instanceof LockableTileEntity) {
+								ItemStack stack = ((LockableTileEntity) inv).getStackInSlot(sltid);
 								if (stack != null)
 									return stack.getCount();
 							}
 							return 0;
 						}
 					}.getAmount(new BlockPos((int) x, (int) y, (int) z), (int) (3))) + 1));
-					((LockableLootTileEntity) inv).setInventorySlotContents((int) (3), _setstack);
+					((LockableTileEntity) inv).setInventorySlotContents((int) (3), _setstack);
 				}
 			}
 		} else if ((((new Object() {
 			public int getAmount(BlockPos pos, int sltid) {
 				TileEntity inv = world.getTileEntity(pos);
-				if (inv instanceof LockableLootTileEntity) {
-					ItemStack stack = ((LockableLootTileEntity) inv).getStackInSlot(sltid);
+				if (inv instanceof LockableTileEntity) {
+					ItemStack stack = ((LockableTileEntity) inv).getStackInSlot(sltid);
 					if (stack != null)
 						return stack.getCount();
 				}
@@ -1386,31 +1386,31 @@ public class GearsMakerBlockUpdateTickProcedure extends SlothCraftElements.ModEl
 				.getOrCreate(new ResourceLocation(("forge:ingots/lead").toLowerCase(java.util.Locale.ENGLISH))).contains((new Object() {
 					public ItemStack getItemStack(BlockPos pos, int sltid) {
 						TileEntity inv = world.getTileEntity(pos);
-						if (inv instanceof LockableLootTileEntity)
-							return ((LockableLootTileEntity) inv).getStackInSlot(sltid);
+						if (inv instanceof LockableTileEntity)
+							return ((LockableTileEntity) inv).getStackInSlot(sltid);
 						return ItemStack.EMPTY;
 					}
 				}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (0))).getItem())) && (((new Object() {
 					public ItemStack getItemStack(BlockPos pos, int sltid) {
 						TileEntity inv = world.getTileEntity(pos);
-						if (inv instanceof LockableLootTileEntity)
-							return ((LockableLootTileEntity) inv).getStackInSlot(sltid);
+						if (inv instanceof LockableTileEntity)
+							return ((LockableTileEntity) inv).getStackInSlot(sltid);
 						return ItemStack.EMPTY;
 					}
 				}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (1))).getItem() == new ItemStack(StoneGearItemItem.block, (int) (1))
 						.getItem()) && (((new Object() {
 							public ItemStack getItemStack(BlockPos pos, int sltid) {
 								TileEntity inv = world.getTileEntity(pos);
-								if (inv instanceof LockableLootTileEntity)
-									return ((LockableLootTileEntity) inv).getStackInSlot(sltid);
+								if (inv instanceof LockableTileEntity)
+									return ((LockableTileEntity) inv).getStackInSlot(sltid);
 								return ItemStack.EMPTY;
 							}
 						}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (2)))
 								.getItem() == new ItemStack(GearMoldItemItem.block, (int) (1)).getItem()) && (((new Object() {
 									public int getAmount(BlockPos pos, int sltid) {
 										TileEntity inv = world.getTileEntity(pos);
-										if (inv instanceof LockableLootTileEntity) {
-											ItemStack stack = ((LockableLootTileEntity) inv).getStackInSlot(sltid);
+										if (inv instanceof LockableTileEntity) {
+											ItemStack stack = ((LockableTileEntity) inv).getStackInSlot(sltid);
 											if (stack != null)
 												return stack.getCount();
 										}
@@ -1419,26 +1419,26 @@ public class GearsMakerBlockUpdateTickProcedure extends SlothCraftElements.ModEl
 								}.getAmount(new BlockPos((int) x, (int) y, (int) z), (int) (3))) == 0) || ((new Object() {
 									public ItemStack getItemStack(BlockPos pos, int sltid) {
 										TileEntity inv = world.getTileEntity(pos);
-										if (inv instanceof LockableLootTileEntity)
-											return ((LockableLootTileEntity) inv).getStackInSlot(sltid);
+										if (inv instanceof LockableTileEntity)
+											return ((LockableTileEntity) inv).getStackInSlot(sltid);
 										return ItemStack.EMPTY;
 									}
 								}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (3)))
 										.getItem() == new ItemStack(LeadGearItemItem.block, (int) (1)).getItem()))))))) {
 			{
 				TileEntity inv = world.getTileEntity(new BlockPos((int) x, (int) y, (int) z));
-				if (inv instanceof LockableLootTileEntity)
-					((LockableLootTileEntity) inv).decrStackSize((int) (0), (int) (4));
+				if (inv instanceof LockableTileEntity)
+					((LockableTileEntity) inv).decrStackSize((int) (0), (int) (4));
 			}
 			{
 				TileEntity inv = world.getTileEntity(new BlockPos((int) x, (int) y, (int) z));
-				if (inv instanceof LockableLootTileEntity)
-					((LockableLootTileEntity) inv).decrStackSize((int) (1), (int) (1));
+				if (inv instanceof LockableTileEntity)
+					((LockableTileEntity) inv).decrStackSize((int) (1), (int) (1));
 			}
 			{
 				TileEntity inv = world.getTileEntity(new BlockPos((int) x, (int) y, (int) z));
-				if (inv != null && (inv instanceof LockableLootTileEntity)) {
-					ItemStack stack = ((LockableLootTileEntity) inv).getStackInSlot((int) (2));
+				if (inv != null && (inv instanceof LockableTileEntity)) {
+					ItemStack stack = ((LockableTileEntity) inv).getStackInSlot((int) (2));
 					if (stack != null) {
 						if (stack.attemptDamageItem((int) 1, new Random(), null)) {
 							stack.shrink(1);
@@ -1449,27 +1449,27 @@ public class GearsMakerBlockUpdateTickProcedure extends SlothCraftElements.ModEl
 			}
 			{
 				TileEntity inv = world.getTileEntity(new BlockPos((int) x, (int) y, (int) z));
-				if (inv != null && (inv instanceof LockableLootTileEntity)) {
+				if (inv != null && (inv instanceof LockableTileEntity)) {
 					ItemStack _setstack = new ItemStack(LeadGearItemItem.block, (int) (1));
-					_setstack.setCount(((new Object() {
+					_setstack.setCount((int) ((new Object() {
 						public int getAmount(BlockPos pos, int sltid) {
 							TileEntity inv = world.getTileEntity(pos);
-							if (inv instanceof LockableLootTileEntity) {
-								ItemStack stack = ((LockableLootTileEntity) inv).getStackInSlot(sltid);
+							if (inv instanceof LockableTileEntity) {
+								ItemStack stack = ((LockableTileEntity) inv).getStackInSlot(sltid);
 								if (stack != null)
 									return stack.getCount();
 							}
 							return 0;
 						}
 					}.getAmount(new BlockPos((int) x, (int) y, (int) z), (int) (3))) + 1));
-					((LockableLootTileEntity) inv).setInventorySlotContents((int) (3), _setstack);
+					((LockableTileEntity) inv).setInventorySlotContents((int) (3), _setstack);
 				}
 			}
 		} else if ((((new Object() {
 			public int getAmount(BlockPos pos, int sltid) {
 				TileEntity inv = world.getTileEntity(pos);
-				if (inv instanceof LockableLootTileEntity) {
-					ItemStack stack = ((LockableLootTileEntity) inv).getStackInSlot(sltid);
+				if (inv instanceof LockableTileEntity) {
+					ItemStack stack = ((LockableTileEntity) inv).getStackInSlot(sltid);
 					if (stack != null)
 						return stack.getCount();
 				}
@@ -1479,31 +1479,31 @@ public class GearsMakerBlockUpdateTickProcedure extends SlothCraftElements.ModEl
 				.getOrCreate(new ResourceLocation(("forge:ingots/mithril").toLowerCase(java.util.Locale.ENGLISH))).contains((new Object() {
 					public ItemStack getItemStack(BlockPos pos, int sltid) {
 						TileEntity inv = world.getTileEntity(pos);
-						if (inv instanceof LockableLootTileEntity)
-							return ((LockableLootTileEntity) inv).getStackInSlot(sltid);
+						if (inv instanceof LockableTileEntity)
+							return ((LockableTileEntity) inv).getStackInSlot(sltid);
 						return ItemStack.EMPTY;
 					}
 				}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (0))).getItem())) && (((new Object() {
 					public ItemStack getItemStack(BlockPos pos, int sltid) {
 						TileEntity inv = world.getTileEntity(pos);
-						if (inv instanceof LockableLootTileEntity)
-							return ((LockableLootTileEntity) inv).getStackInSlot(sltid);
+						if (inv instanceof LockableTileEntity)
+							return ((LockableTileEntity) inv).getStackInSlot(sltid);
 						return ItemStack.EMPTY;
 					}
 				}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (1))).getItem() == new ItemStack(StoneGearItemItem.block, (int) (1))
 						.getItem()) && (((new Object() {
 							public ItemStack getItemStack(BlockPos pos, int sltid) {
 								TileEntity inv = world.getTileEntity(pos);
-								if (inv instanceof LockableLootTileEntity)
-									return ((LockableLootTileEntity) inv).getStackInSlot(sltid);
+								if (inv instanceof LockableTileEntity)
+									return ((LockableTileEntity) inv).getStackInSlot(sltid);
 								return ItemStack.EMPTY;
 							}
 						}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (2)))
 								.getItem() == new ItemStack(GearMoldItemItem.block, (int) (1)).getItem()) && (((new Object() {
 									public int getAmount(BlockPos pos, int sltid) {
 										TileEntity inv = world.getTileEntity(pos);
-										if (inv instanceof LockableLootTileEntity) {
-											ItemStack stack = ((LockableLootTileEntity) inv).getStackInSlot(sltid);
+										if (inv instanceof LockableTileEntity) {
+											ItemStack stack = ((LockableTileEntity) inv).getStackInSlot(sltid);
 											if (stack != null)
 												return stack.getCount();
 										}
@@ -1512,26 +1512,26 @@ public class GearsMakerBlockUpdateTickProcedure extends SlothCraftElements.ModEl
 								}.getAmount(new BlockPos((int) x, (int) y, (int) z), (int) (3))) == 0) || ((new Object() {
 									public ItemStack getItemStack(BlockPos pos, int sltid) {
 										TileEntity inv = world.getTileEntity(pos);
-										if (inv instanceof LockableLootTileEntity)
-											return ((LockableLootTileEntity) inv).getStackInSlot(sltid);
+										if (inv instanceof LockableTileEntity)
+											return ((LockableTileEntity) inv).getStackInSlot(sltid);
 										return ItemStack.EMPTY;
 									}
 								}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (3)))
 										.getItem() == new ItemStack(MithrilGearItemItem.block, (int) (1)).getItem()))))))) {
 			{
 				TileEntity inv = world.getTileEntity(new BlockPos((int) x, (int) y, (int) z));
-				if (inv instanceof LockableLootTileEntity)
-					((LockableLootTileEntity) inv).decrStackSize((int) (0), (int) (4));
+				if (inv instanceof LockableTileEntity)
+					((LockableTileEntity) inv).decrStackSize((int) (0), (int) (4));
 			}
 			{
 				TileEntity inv = world.getTileEntity(new BlockPos((int) x, (int) y, (int) z));
-				if (inv instanceof LockableLootTileEntity)
-					((LockableLootTileEntity) inv).decrStackSize((int) (1), (int) (1));
+				if (inv instanceof LockableTileEntity)
+					((LockableTileEntity) inv).decrStackSize((int) (1), (int) (1));
 			}
 			{
 				TileEntity inv = world.getTileEntity(new BlockPos((int) x, (int) y, (int) z));
-				if (inv != null && (inv instanceof LockableLootTileEntity)) {
-					ItemStack stack = ((LockableLootTileEntity) inv).getStackInSlot((int) (2));
+				if (inv != null && (inv instanceof LockableTileEntity)) {
+					ItemStack stack = ((LockableTileEntity) inv).getStackInSlot((int) (2));
 					if (stack != null) {
 						if (stack.attemptDamageItem((int) 1, new Random(), null)) {
 							stack.shrink(1);
@@ -1542,27 +1542,27 @@ public class GearsMakerBlockUpdateTickProcedure extends SlothCraftElements.ModEl
 			}
 			{
 				TileEntity inv = world.getTileEntity(new BlockPos((int) x, (int) y, (int) z));
-				if (inv != null && (inv instanceof LockableLootTileEntity)) {
+				if (inv != null && (inv instanceof LockableTileEntity)) {
 					ItemStack _setstack = new ItemStack(MithrilGearItemItem.block, (int) (1));
-					_setstack.setCount(((new Object() {
+					_setstack.setCount((int) ((new Object() {
 						public int getAmount(BlockPos pos, int sltid) {
 							TileEntity inv = world.getTileEntity(pos);
-							if (inv instanceof LockableLootTileEntity) {
-								ItemStack stack = ((LockableLootTileEntity) inv).getStackInSlot(sltid);
+							if (inv instanceof LockableTileEntity) {
+								ItemStack stack = ((LockableTileEntity) inv).getStackInSlot(sltid);
 								if (stack != null)
 									return stack.getCount();
 							}
 							return 0;
 						}
 					}.getAmount(new BlockPos((int) x, (int) y, (int) z), (int) (3))) + 1));
-					((LockableLootTileEntity) inv).setInventorySlotContents((int) (3), _setstack);
+					((LockableTileEntity) inv).setInventorySlotContents((int) (3), _setstack);
 				}
 			}
 		} else if ((((new Object() {
 			public int getAmount(BlockPos pos, int sltid) {
 				TileEntity inv = world.getTileEntity(pos);
-				if (inv instanceof LockableLootTileEntity) {
-					ItemStack stack = ((LockableLootTileEntity) inv).getStackInSlot(sltid);
+				if (inv instanceof LockableTileEntity) {
+					ItemStack stack = ((LockableTileEntity) inv).getStackInSlot(sltid);
 					if (stack != null)
 						return stack.getCount();
 				}
@@ -1572,31 +1572,31 @@ public class GearsMakerBlockUpdateTickProcedure extends SlothCraftElements.ModEl
 				.getOrCreate(new ResourceLocation(("forge:ingots/nickel").toLowerCase(java.util.Locale.ENGLISH))).contains((new Object() {
 					public ItemStack getItemStack(BlockPos pos, int sltid) {
 						TileEntity inv = world.getTileEntity(pos);
-						if (inv instanceof LockableLootTileEntity)
-							return ((LockableLootTileEntity) inv).getStackInSlot(sltid);
+						if (inv instanceof LockableTileEntity)
+							return ((LockableTileEntity) inv).getStackInSlot(sltid);
 						return ItemStack.EMPTY;
 					}
 				}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (0))).getItem())) && (((new Object() {
 					public ItemStack getItemStack(BlockPos pos, int sltid) {
 						TileEntity inv = world.getTileEntity(pos);
-						if (inv instanceof LockableLootTileEntity)
-							return ((LockableLootTileEntity) inv).getStackInSlot(sltid);
+						if (inv instanceof LockableTileEntity)
+							return ((LockableTileEntity) inv).getStackInSlot(sltid);
 						return ItemStack.EMPTY;
 					}
 				}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (1))).getItem() == new ItemStack(StoneGearItemItem.block, (int) (1))
 						.getItem()) && (((new Object() {
 							public ItemStack getItemStack(BlockPos pos, int sltid) {
 								TileEntity inv = world.getTileEntity(pos);
-								if (inv instanceof LockableLootTileEntity)
-									return ((LockableLootTileEntity) inv).getStackInSlot(sltid);
+								if (inv instanceof LockableTileEntity)
+									return ((LockableTileEntity) inv).getStackInSlot(sltid);
 								return ItemStack.EMPTY;
 							}
 						}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (2)))
 								.getItem() == new ItemStack(GearMoldItemItem.block, (int) (1)).getItem()) && (((new Object() {
 									public int getAmount(BlockPos pos, int sltid) {
 										TileEntity inv = world.getTileEntity(pos);
-										if (inv instanceof LockableLootTileEntity) {
-											ItemStack stack = ((LockableLootTileEntity) inv).getStackInSlot(sltid);
+										if (inv instanceof LockableTileEntity) {
+											ItemStack stack = ((LockableTileEntity) inv).getStackInSlot(sltid);
 											if (stack != null)
 												return stack.getCount();
 										}
@@ -1605,26 +1605,26 @@ public class GearsMakerBlockUpdateTickProcedure extends SlothCraftElements.ModEl
 								}.getAmount(new BlockPos((int) x, (int) y, (int) z), (int) (3))) == 0) || ((new Object() {
 									public ItemStack getItemStack(BlockPos pos, int sltid) {
 										TileEntity inv = world.getTileEntity(pos);
-										if (inv instanceof LockableLootTileEntity)
-											return ((LockableLootTileEntity) inv).getStackInSlot(sltid);
+										if (inv instanceof LockableTileEntity)
+											return ((LockableTileEntity) inv).getStackInSlot(sltid);
 										return ItemStack.EMPTY;
 									}
 								}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (3)))
 										.getItem() == new ItemStack(NickelGearItemItem.block, (int) (1)).getItem()))))))) {
 			{
 				TileEntity inv = world.getTileEntity(new BlockPos((int) x, (int) y, (int) z));
-				if (inv instanceof LockableLootTileEntity)
-					((LockableLootTileEntity) inv).decrStackSize((int) (0), (int) (4));
+				if (inv instanceof LockableTileEntity)
+					((LockableTileEntity) inv).decrStackSize((int) (0), (int) (4));
 			}
 			{
 				TileEntity inv = world.getTileEntity(new BlockPos((int) x, (int) y, (int) z));
-				if (inv instanceof LockableLootTileEntity)
-					((LockableLootTileEntity) inv).decrStackSize((int) (1), (int) (1));
+				if (inv instanceof LockableTileEntity)
+					((LockableTileEntity) inv).decrStackSize((int) (1), (int) (1));
 			}
 			{
 				TileEntity inv = world.getTileEntity(new BlockPos((int) x, (int) y, (int) z));
-				if (inv != null && (inv instanceof LockableLootTileEntity)) {
-					ItemStack stack = ((LockableLootTileEntity) inv).getStackInSlot((int) (2));
+				if (inv != null && (inv instanceof LockableTileEntity)) {
+					ItemStack stack = ((LockableTileEntity) inv).getStackInSlot((int) (2));
 					if (stack != null) {
 						if (stack.attemptDamageItem((int) 1, new Random(), null)) {
 							stack.shrink(1);
@@ -1635,27 +1635,27 @@ public class GearsMakerBlockUpdateTickProcedure extends SlothCraftElements.ModEl
 			}
 			{
 				TileEntity inv = world.getTileEntity(new BlockPos((int) x, (int) y, (int) z));
-				if (inv != null && (inv instanceof LockableLootTileEntity)) {
+				if (inv != null && (inv instanceof LockableTileEntity)) {
 					ItemStack _setstack = new ItemStack(NickelGearItemItem.block, (int) (1));
-					_setstack.setCount(((new Object() {
+					_setstack.setCount((int) ((new Object() {
 						public int getAmount(BlockPos pos, int sltid) {
 							TileEntity inv = world.getTileEntity(pos);
-							if (inv instanceof LockableLootTileEntity) {
-								ItemStack stack = ((LockableLootTileEntity) inv).getStackInSlot(sltid);
+							if (inv instanceof LockableTileEntity) {
+								ItemStack stack = ((LockableTileEntity) inv).getStackInSlot(sltid);
 								if (stack != null)
 									return stack.getCount();
 							}
 							return 0;
 						}
 					}.getAmount(new BlockPos((int) x, (int) y, (int) z), (int) (3))) + 1));
-					((LockableLootTileEntity) inv).setInventorySlotContents((int) (3), _setstack);
+					((LockableTileEntity) inv).setInventorySlotContents((int) (3), _setstack);
 				}
 			}
 		} else if ((((new Object() {
 			public int getAmount(BlockPos pos, int sltid) {
 				TileEntity inv = world.getTileEntity(pos);
-				if (inv instanceof LockableLootTileEntity) {
-					ItemStack stack = ((LockableLootTileEntity) inv).getStackInSlot(sltid);
+				if (inv instanceof LockableTileEntity) {
+					ItemStack stack = ((LockableTileEntity) inv).getStackInSlot(sltid);
 					if (stack != null)
 						return stack.getCount();
 				}
@@ -1665,31 +1665,31 @@ public class GearsMakerBlockUpdateTickProcedure extends SlothCraftElements.ModEl
 				.getOrCreate(new ResourceLocation(("forge:obsidian").toLowerCase(java.util.Locale.ENGLISH))).contains((new Object() {
 					public ItemStack getItemStack(BlockPos pos, int sltid) {
 						TileEntity inv = world.getTileEntity(pos);
-						if (inv instanceof LockableLootTileEntity)
-							return ((LockableLootTileEntity) inv).getStackInSlot(sltid);
+						if (inv instanceof LockableTileEntity)
+							return ((LockableTileEntity) inv).getStackInSlot(sltid);
 						return ItemStack.EMPTY;
 					}
 				}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (0))).getItem())) && (((new Object() {
 					public ItemStack getItemStack(BlockPos pos, int sltid) {
 						TileEntity inv = world.getTileEntity(pos);
-						if (inv instanceof LockableLootTileEntity)
-							return ((LockableLootTileEntity) inv).getStackInSlot(sltid);
+						if (inv instanceof LockableTileEntity)
+							return ((LockableTileEntity) inv).getStackInSlot(sltid);
 						return ItemStack.EMPTY;
 					}
 				}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (1))).getItem() == new ItemStack(StoneGearItemItem.block, (int) (1))
 						.getItem()) && (((new Object() {
 							public ItemStack getItemStack(BlockPos pos, int sltid) {
 								TileEntity inv = world.getTileEntity(pos);
-								if (inv instanceof LockableLootTileEntity)
-									return ((LockableLootTileEntity) inv).getStackInSlot(sltid);
+								if (inv instanceof LockableTileEntity)
+									return ((LockableTileEntity) inv).getStackInSlot(sltid);
 								return ItemStack.EMPTY;
 							}
 						}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (2)))
 								.getItem() == new ItemStack(GearMoldItemItem.block, (int) (1)).getItem()) && (((new Object() {
 									public int getAmount(BlockPos pos, int sltid) {
 										TileEntity inv = world.getTileEntity(pos);
-										if (inv instanceof LockableLootTileEntity) {
-											ItemStack stack = ((LockableLootTileEntity) inv).getStackInSlot(sltid);
+										if (inv instanceof LockableTileEntity) {
+											ItemStack stack = ((LockableTileEntity) inv).getStackInSlot(sltid);
 											if (stack != null)
 												return stack.getCount();
 										}
@@ -1698,26 +1698,26 @@ public class GearsMakerBlockUpdateTickProcedure extends SlothCraftElements.ModEl
 								}.getAmount(new BlockPos((int) x, (int) y, (int) z), (int) (3))) == 0) || ((new Object() {
 									public ItemStack getItemStack(BlockPos pos, int sltid) {
 										TileEntity inv = world.getTileEntity(pos);
-										if (inv instanceof LockableLootTileEntity)
-											return ((LockableLootTileEntity) inv).getStackInSlot(sltid);
+										if (inv instanceof LockableTileEntity)
+											return ((LockableTileEntity) inv).getStackInSlot(sltid);
 										return ItemStack.EMPTY;
 									}
 								}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (3)))
 										.getItem() == new ItemStack(ObsidianGearItemItem.block, (int) (1)).getItem()))))))) {
 			{
 				TileEntity inv = world.getTileEntity(new BlockPos((int) x, (int) y, (int) z));
-				if (inv instanceof LockableLootTileEntity)
-					((LockableLootTileEntity) inv).decrStackSize((int) (0), (int) (4));
+				if (inv instanceof LockableTileEntity)
+					((LockableTileEntity) inv).decrStackSize((int) (0), (int) (4));
 			}
 			{
 				TileEntity inv = world.getTileEntity(new BlockPos((int) x, (int) y, (int) z));
-				if (inv instanceof LockableLootTileEntity)
-					((LockableLootTileEntity) inv).decrStackSize((int) (1), (int) (1));
+				if (inv instanceof LockableTileEntity)
+					((LockableTileEntity) inv).decrStackSize((int) (1), (int) (1));
 			}
 			{
 				TileEntity inv = world.getTileEntity(new BlockPos((int) x, (int) y, (int) z));
-				if (inv != null && (inv instanceof LockableLootTileEntity)) {
-					ItemStack stack = ((LockableLootTileEntity) inv).getStackInSlot((int) (2));
+				if (inv != null && (inv instanceof LockableTileEntity)) {
+					ItemStack stack = ((LockableTileEntity) inv).getStackInSlot((int) (2));
 					if (stack != null) {
 						if (stack.attemptDamageItem((int) 1, new Random(), null)) {
 							stack.shrink(1);
@@ -1728,27 +1728,27 @@ public class GearsMakerBlockUpdateTickProcedure extends SlothCraftElements.ModEl
 			}
 			{
 				TileEntity inv = world.getTileEntity(new BlockPos((int) x, (int) y, (int) z));
-				if (inv != null && (inv instanceof LockableLootTileEntity)) {
+				if (inv != null && (inv instanceof LockableTileEntity)) {
 					ItemStack _setstack = new ItemStack(ObsidianGearItemItem.block, (int) (1));
-					_setstack.setCount(((new Object() {
+					_setstack.setCount((int) ((new Object() {
 						public int getAmount(BlockPos pos, int sltid) {
 							TileEntity inv = world.getTileEntity(pos);
-							if (inv instanceof LockableLootTileEntity) {
-								ItemStack stack = ((LockableLootTileEntity) inv).getStackInSlot(sltid);
+							if (inv instanceof LockableTileEntity) {
+								ItemStack stack = ((LockableTileEntity) inv).getStackInSlot(sltid);
 								if (stack != null)
 									return stack.getCount();
 							}
 							return 0;
 						}
 					}.getAmount(new BlockPos((int) x, (int) y, (int) z), (int) (3))) + 1));
-					((LockableLootTileEntity) inv).setInventorySlotContents((int) (3), _setstack);
+					((LockableTileEntity) inv).setInventorySlotContents((int) (3), _setstack);
 				}
 			}
 		} else if ((((new Object() {
 			public int getAmount(BlockPos pos, int sltid) {
 				TileEntity inv = world.getTileEntity(pos);
-				if (inv instanceof LockableLootTileEntity) {
-					ItemStack stack = ((LockableLootTileEntity) inv).getStackInSlot(sltid);
+				if (inv instanceof LockableTileEntity) {
+					ItemStack stack = ((LockableTileEntity) inv).getStackInSlot(sltid);
 					if (stack != null)
 						return stack.getCount();
 				}
@@ -1758,31 +1758,31 @@ public class GearsMakerBlockUpdateTickProcedure extends SlothCraftElements.ModEl
 				.getOrCreate(new ResourceLocation(("forge:ingots/osmium").toLowerCase(java.util.Locale.ENGLISH))).contains((new Object() {
 					public ItemStack getItemStack(BlockPos pos, int sltid) {
 						TileEntity inv = world.getTileEntity(pos);
-						if (inv instanceof LockableLootTileEntity)
-							return ((LockableLootTileEntity) inv).getStackInSlot(sltid);
+						if (inv instanceof LockableTileEntity)
+							return ((LockableTileEntity) inv).getStackInSlot(sltid);
 						return ItemStack.EMPTY;
 					}
 				}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (0))).getItem())) && (((new Object() {
 					public ItemStack getItemStack(BlockPos pos, int sltid) {
 						TileEntity inv = world.getTileEntity(pos);
-						if (inv instanceof LockableLootTileEntity)
-							return ((LockableLootTileEntity) inv).getStackInSlot(sltid);
+						if (inv instanceof LockableTileEntity)
+							return ((LockableTileEntity) inv).getStackInSlot(sltid);
 						return ItemStack.EMPTY;
 					}
 				}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (1))).getItem() == new ItemStack(StoneGearItemItem.block, (int) (1))
 						.getItem()) && (((new Object() {
 							public ItemStack getItemStack(BlockPos pos, int sltid) {
 								TileEntity inv = world.getTileEntity(pos);
-								if (inv instanceof LockableLootTileEntity)
-									return ((LockableLootTileEntity) inv).getStackInSlot(sltid);
+								if (inv instanceof LockableTileEntity)
+									return ((LockableTileEntity) inv).getStackInSlot(sltid);
 								return ItemStack.EMPTY;
 							}
 						}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (2)))
 								.getItem() == new ItemStack(GearMoldItemItem.block, (int) (1)).getItem()) && (((new Object() {
 									public int getAmount(BlockPos pos, int sltid) {
 										TileEntity inv = world.getTileEntity(pos);
-										if (inv instanceof LockableLootTileEntity) {
-											ItemStack stack = ((LockableLootTileEntity) inv).getStackInSlot(sltid);
+										if (inv instanceof LockableTileEntity) {
+											ItemStack stack = ((LockableTileEntity) inv).getStackInSlot(sltid);
 											if (stack != null)
 												return stack.getCount();
 										}
@@ -1791,26 +1791,26 @@ public class GearsMakerBlockUpdateTickProcedure extends SlothCraftElements.ModEl
 								}.getAmount(new BlockPos((int) x, (int) y, (int) z), (int) (3))) == 0) || ((new Object() {
 									public ItemStack getItemStack(BlockPos pos, int sltid) {
 										TileEntity inv = world.getTileEntity(pos);
-										if (inv instanceof LockableLootTileEntity)
-											return ((LockableLootTileEntity) inv).getStackInSlot(sltid);
+										if (inv instanceof LockableTileEntity)
+											return ((LockableTileEntity) inv).getStackInSlot(sltid);
 										return ItemStack.EMPTY;
 									}
 								}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (3)))
 										.getItem() == new ItemStack(OsmiumGearItemItem.block, (int) (1)).getItem()))))))) {
 			{
 				TileEntity inv = world.getTileEntity(new BlockPos((int) x, (int) y, (int) z));
-				if (inv instanceof LockableLootTileEntity)
-					((LockableLootTileEntity) inv).decrStackSize((int) (0), (int) (4));
+				if (inv instanceof LockableTileEntity)
+					((LockableTileEntity) inv).decrStackSize((int) (0), (int) (4));
 			}
 			{
 				TileEntity inv = world.getTileEntity(new BlockPos((int) x, (int) y, (int) z));
-				if (inv instanceof LockableLootTileEntity)
-					((LockableLootTileEntity) inv).decrStackSize((int) (1), (int) (1));
+				if (inv instanceof LockableTileEntity)
+					((LockableTileEntity) inv).decrStackSize((int) (1), (int) (1));
 			}
 			{
 				TileEntity inv = world.getTileEntity(new BlockPos((int) x, (int) y, (int) z));
-				if (inv != null && (inv instanceof LockableLootTileEntity)) {
-					ItemStack stack = ((LockableLootTileEntity) inv).getStackInSlot((int) (2));
+				if (inv != null && (inv instanceof LockableTileEntity)) {
+					ItemStack stack = ((LockableTileEntity) inv).getStackInSlot((int) (2));
 					if (stack != null) {
 						if (stack.attemptDamageItem((int) 1, new Random(), null)) {
 							stack.shrink(1);
@@ -1821,27 +1821,27 @@ public class GearsMakerBlockUpdateTickProcedure extends SlothCraftElements.ModEl
 			}
 			{
 				TileEntity inv = world.getTileEntity(new BlockPos((int) x, (int) y, (int) z));
-				if (inv != null && (inv instanceof LockableLootTileEntity)) {
+				if (inv != null && (inv instanceof LockableTileEntity)) {
 					ItemStack _setstack = new ItemStack(OsmiumGearItemItem.block, (int) (1));
-					_setstack.setCount(((new Object() {
+					_setstack.setCount((int) ((new Object() {
 						public int getAmount(BlockPos pos, int sltid) {
 							TileEntity inv = world.getTileEntity(pos);
-							if (inv instanceof LockableLootTileEntity) {
-								ItemStack stack = ((LockableLootTileEntity) inv).getStackInSlot(sltid);
+							if (inv instanceof LockableTileEntity) {
+								ItemStack stack = ((LockableTileEntity) inv).getStackInSlot(sltid);
 								if (stack != null)
 									return stack.getCount();
 							}
 							return 0;
 						}
 					}.getAmount(new BlockPos((int) x, (int) y, (int) z), (int) (3))) + 1));
-					((LockableLootTileEntity) inv).setInventorySlotContents((int) (3), _setstack);
+					((LockableTileEntity) inv).setInventorySlotContents((int) (3), _setstack);
 				}
 			}
 		} else if ((((new Object() {
 			public int getAmount(BlockPos pos, int sltid) {
 				TileEntity inv = world.getTileEntity(pos);
-				if (inv instanceof LockableLootTileEntity) {
-					ItemStack stack = ((LockableLootTileEntity) inv).getStackInSlot(sltid);
+				if (inv instanceof LockableTileEntity) {
+					ItemStack stack = ((LockableTileEntity) inv).getStackInSlot(sltid);
 					if (stack != null)
 						return stack.getCount();
 				}
@@ -1851,31 +1851,31 @@ public class GearsMakerBlockUpdateTickProcedure extends SlothCraftElements.ModEl
 				.getOrCreate(new ResourceLocation(("forge:ingots/platinum").toLowerCase(java.util.Locale.ENGLISH))).contains((new Object() {
 					public ItemStack getItemStack(BlockPos pos, int sltid) {
 						TileEntity inv = world.getTileEntity(pos);
-						if (inv instanceof LockableLootTileEntity)
-							return ((LockableLootTileEntity) inv).getStackInSlot(sltid);
+						if (inv instanceof LockableTileEntity)
+							return ((LockableTileEntity) inv).getStackInSlot(sltid);
 						return ItemStack.EMPTY;
 					}
 				}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (0))).getItem())) && (((new Object() {
 					public ItemStack getItemStack(BlockPos pos, int sltid) {
 						TileEntity inv = world.getTileEntity(pos);
-						if (inv instanceof LockableLootTileEntity)
-							return ((LockableLootTileEntity) inv).getStackInSlot(sltid);
+						if (inv instanceof LockableTileEntity)
+							return ((LockableTileEntity) inv).getStackInSlot(sltid);
 						return ItemStack.EMPTY;
 					}
 				}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (1))).getItem() == new ItemStack(StoneGearItemItem.block, (int) (1))
 						.getItem()) && (((new Object() {
 							public ItemStack getItemStack(BlockPos pos, int sltid) {
 								TileEntity inv = world.getTileEntity(pos);
-								if (inv instanceof LockableLootTileEntity)
-									return ((LockableLootTileEntity) inv).getStackInSlot(sltid);
+								if (inv instanceof LockableTileEntity)
+									return ((LockableTileEntity) inv).getStackInSlot(sltid);
 								return ItemStack.EMPTY;
 							}
 						}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (2)))
 								.getItem() == new ItemStack(GearMoldItemItem.block, (int) (1)).getItem()) && (((new Object() {
 									public int getAmount(BlockPos pos, int sltid) {
 										TileEntity inv = world.getTileEntity(pos);
-										if (inv instanceof LockableLootTileEntity) {
-											ItemStack stack = ((LockableLootTileEntity) inv).getStackInSlot(sltid);
+										if (inv instanceof LockableTileEntity) {
+											ItemStack stack = ((LockableTileEntity) inv).getStackInSlot(sltid);
 											if (stack != null)
 												return stack.getCount();
 										}
@@ -1884,26 +1884,26 @@ public class GearsMakerBlockUpdateTickProcedure extends SlothCraftElements.ModEl
 								}.getAmount(new BlockPos((int) x, (int) y, (int) z), (int) (3))) == 0) || ((new Object() {
 									public ItemStack getItemStack(BlockPos pos, int sltid) {
 										TileEntity inv = world.getTileEntity(pos);
-										if (inv instanceof LockableLootTileEntity)
-											return ((LockableLootTileEntity) inv).getStackInSlot(sltid);
+										if (inv instanceof LockableTileEntity)
+											return ((LockableTileEntity) inv).getStackInSlot(sltid);
 										return ItemStack.EMPTY;
 									}
 								}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (3)))
 										.getItem() == new ItemStack(PlatinumGearItemItem.block, (int) (1)).getItem()))))))) {
 			{
 				TileEntity inv = world.getTileEntity(new BlockPos((int) x, (int) y, (int) z));
-				if (inv instanceof LockableLootTileEntity)
-					((LockableLootTileEntity) inv).decrStackSize((int) (0), (int) (4));
+				if (inv instanceof LockableTileEntity)
+					((LockableTileEntity) inv).decrStackSize((int) (0), (int) (4));
 			}
 			{
 				TileEntity inv = world.getTileEntity(new BlockPos((int) x, (int) y, (int) z));
-				if (inv instanceof LockableLootTileEntity)
-					((LockableLootTileEntity) inv).decrStackSize((int) (1), (int) (1));
+				if (inv instanceof LockableTileEntity)
+					((LockableTileEntity) inv).decrStackSize((int) (1), (int) (1));
 			}
 			{
 				TileEntity inv = world.getTileEntity(new BlockPos((int) x, (int) y, (int) z));
-				if (inv != null && (inv instanceof LockableLootTileEntity)) {
-					ItemStack stack = ((LockableLootTileEntity) inv).getStackInSlot((int) (2));
+				if (inv != null && (inv instanceof LockableTileEntity)) {
+					ItemStack stack = ((LockableTileEntity) inv).getStackInSlot((int) (2));
 					if (stack != null) {
 						if (stack.attemptDamageItem((int) 1, new Random(), null)) {
 							stack.shrink(1);
@@ -1914,27 +1914,27 @@ public class GearsMakerBlockUpdateTickProcedure extends SlothCraftElements.ModEl
 			}
 			{
 				TileEntity inv = world.getTileEntity(new BlockPos((int) x, (int) y, (int) z));
-				if (inv != null && (inv instanceof LockableLootTileEntity)) {
+				if (inv != null && (inv instanceof LockableTileEntity)) {
 					ItemStack _setstack = new ItemStack(PlatinumGearItemItem.block, (int) (1));
-					_setstack.setCount(((new Object() {
+					_setstack.setCount((int) ((new Object() {
 						public int getAmount(BlockPos pos, int sltid) {
 							TileEntity inv = world.getTileEntity(pos);
-							if (inv instanceof LockableLootTileEntity) {
-								ItemStack stack = ((LockableLootTileEntity) inv).getStackInSlot(sltid);
+							if (inv instanceof LockableTileEntity) {
+								ItemStack stack = ((LockableTileEntity) inv).getStackInSlot(sltid);
 								if (stack != null)
 									return stack.getCount();
 							}
 							return 0;
 						}
 					}.getAmount(new BlockPos((int) x, (int) y, (int) z), (int) (3))) + 1));
-					((LockableLootTileEntity) inv).setInventorySlotContents((int) (3), _setstack);
+					((LockableTileEntity) inv).setInventorySlotContents((int) (3), _setstack);
 				}
 			}
 		} else if ((((new Object() {
 			public int getAmount(BlockPos pos, int sltid) {
 				TileEntity inv = world.getTileEntity(pos);
-				if (inv instanceof LockableLootTileEntity) {
-					ItemStack stack = ((LockableLootTileEntity) inv).getStackInSlot(sltid);
+				if (inv instanceof LockableTileEntity) {
+					ItemStack stack = ((LockableTileEntity) inv).getStackInSlot(sltid);
 					if (stack != null)
 						return stack.getCount();
 				}
@@ -1944,31 +1944,31 @@ public class GearsMakerBlockUpdateTickProcedure extends SlothCraftElements.ModEl
 				.getOrCreate(new ResourceLocation(("forge:gems/quartz").toLowerCase(java.util.Locale.ENGLISH))).contains((new Object() {
 					public ItemStack getItemStack(BlockPos pos, int sltid) {
 						TileEntity inv = world.getTileEntity(pos);
-						if (inv instanceof LockableLootTileEntity)
-							return ((LockableLootTileEntity) inv).getStackInSlot(sltid);
+						if (inv instanceof LockableTileEntity)
+							return ((LockableTileEntity) inv).getStackInSlot(sltid);
 						return ItemStack.EMPTY;
 					}
 				}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (0))).getItem())) && (((new Object() {
 					public ItemStack getItemStack(BlockPos pos, int sltid) {
 						TileEntity inv = world.getTileEntity(pos);
-						if (inv instanceof LockableLootTileEntity)
-							return ((LockableLootTileEntity) inv).getStackInSlot(sltid);
+						if (inv instanceof LockableTileEntity)
+							return ((LockableTileEntity) inv).getStackInSlot(sltid);
 						return ItemStack.EMPTY;
 					}
 				}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (1))).getItem() == new ItemStack(StoneGearItemItem.block, (int) (1))
 						.getItem()) && (((new Object() {
 							public ItemStack getItemStack(BlockPos pos, int sltid) {
 								TileEntity inv = world.getTileEntity(pos);
-								if (inv instanceof LockableLootTileEntity)
-									return ((LockableLootTileEntity) inv).getStackInSlot(sltid);
+								if (inv instanceof LockableTileEntity)
+									return ((LockableTileEntity) inv).getStackInSlot(sltid);
 								return ItemStack.EMPTY;
 							}
 						}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (2)))
 								.getItem() == new ItemStack(GearMoldItemItem.block, (int) (1)).getItem()) && (((new Object() {
 									public int getAmount(BlockPos pos, int sltid) {
 										TileEntity inv = world.getTileEntity(pos);
-										if (inv instanceof LockableLootTileEntity) {
-											ItemStack stack = ((LockableLootTileEntity) inv).getStackInSlot(sltid);
+										if (inv instanceof LockableTileEntity) {
+											ItemStack stack = ((LockableTileEntity) inv).getStackInSlot(sltid);
 											if (stack != null)
 												return stack.getCount();
 										}
@@ -1977,26 +1977,26 @@ public class GearsMakerBlockUpdateTickProcedure extends SlothCraftElements.ModEl
 								}.getAmount(new BlockPos((int) x, (int) y, (int) z), (int) (3))) == 0) || ((new Object() {
 									public ItemStack getItemStack(BlockPos pos, int sltid) {
 										TileEntity inv = world.getTileEntity(pos);
-										if (inv instanceof LockableLootTileEntity)
-											return ((LockableLootTileEntity) inv).getStackInSlot(sltid);
+										if (inv instanceof LockableTileEntity)
+											return ((LockableTileEntity) inv).getStackInSlot(sltid);
 										return ItemStack.EMPTY;
 									}
 								}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (3)))
 										.getItem() == new ItemStack(QuartzGearItemItem.block, (int) (1)).getItem()))))))) {
 			{
 				TileEntity inv = world.getTileEntity(new BlockPos((int) x, (int) y, (int) z));
-				if (inv instanceof LockableLootTileEntity)
-					((LockableLootTileEntity) inv).decrStackSize((int) (0), (int) (4));
+				if (inv instanceof LockableTileEntity)
+					((LockableTileEntity) inv).decrStackSize((int) (0), (int) (4));
 			}
 			{
 				TileEntity inv = world.getTileEntity(new BlockPos((int) x, (int) y, (int) z));
-				if (inv instanceof LockableLootTileEntity)
-					((LockableLootTileEntity) inv).decrStackSize((int) (1), (int) (1));
+				if (inv instanceof LockableTileEntity)
+					((LockableTileEntity) inv).decrStackSize((int) (1), (int) (1));
 			}
 			{
 				TileEntity inv = world.getTileEntity(new BlockPos((int) x, (int) y, (int) z));
-				if (inv != null && (inv instanceof LockableLootTileEntity)) {
-					ItemStack stack = ((LockableLootTileEntity) inv).getStackInSlot((int) (2));
+				if (inv != null && (inv instanceof LockableTileEntity)) {
+					ItemStack stack = ((LockableTileEntity) inv).getStackInSlot((int) (2));
 					if (stack != null) {
 						if (stack.attemptDamageItem((int) 1, new Random(), null)) {
 							stack.shrink(1);
@@ -2007,27 +2007,27 @@ public class GearsMakerBlockUpdateTickProcedure extends SlothCraftElements.ModEl
 			}
 			{
 				TileEntity inv = world.getTileEntity(new BlockPos((int) x, (int) y, (int) z));
-				if (inv != null && (inv instanceof LockableLootTileEntity)) {
+				if (inv != null && (inv instanceof LockableTileEntity)) {
 					ItemStack _setstack = new ItemStack(QuartzGearItemItem.block, (int) (1));
-					_setstack.setCount(((new Object() {
+					_setstack.setCount((int) ((new Object() {
 						public int getAmount(BlockPos pos, int sltid) {
 							TileEntity inv = world.getTileEntity(pos);
-							if (inv instanceof LockableLootTileEntity) {
-								ItemStack stack = ((LockableLootTileEntity) inv).getStackInSlot(sltid);
+							if (inv instanceof LockableTileEntity) {
+								ItemStack stack = ((LockableTileEntity) inv).getStackInSlot(sltid);
 								if (stack != null)
 									return stack.getCount();
 							}
 							return 0;
 						}
 					}.getAmount(new BlockPos((int) x, (int) y, (int) z), (int) (3))) + 1));
-					((LockableLootTileEntity) inv).setInventorySlotContents((int) (3), _setstack);
+					((LockableTileEntity) inv).setInventorySlotContents((int) (3), _setstack);
 				}
 			}
 		} else if ((((new Object() {
 			public int getAmount(BlockPos pos, int sltid) {
 				TileEntity inv = world.getTileEntity(pos);
-				if (inv instanceof LockableLootTileEntity) {
-					ItemStack stack = ((LockableLootTileEntity) inv).getStackInSlot(sltid);
+				if (inv instanceof LockableTileEntity) {
+					ItemStack stack = ((LockableTileEntity) inv).getStackInSlot(sltid);
 					if (stack != null)
 						return stack.getCount();
 				}
@@ -2037,31 +2037,31 @@ public class GearsMakerBlockUpdateTickProcedure extends SlothCraftElements.ModEl
 				.getOrCreate(new ResourceLocation(("forge:dusts/redstone").toLowerCase(java.util.Locale.ENGLISH))).contains((new Object() {
 					public ItemStack getItemStack(BlockPos pos, int sltid) {
 						TileEntity inv = world.getTileEntity(pos);
-						if (inv instanceof LockableLootTileEntity)
-							return ((LockableLootTileEntity) inv).getStackInSlot(sltid);
+						if (inv instanceof LockableTileEntity)
+							return ((LockableTileEntity) inv).getStackInSlot(sltid);
 						return ItemStack.EMPTY;
 					}
 				}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (0))).getItem())) && (((new Object() {
 					public ItemStack getItemStack(BlockPos pos, int sltid) {
 						TileEntity inv = world.getTileEntity(pos);
-						if (inv instanceof LockableLootTileEntity)
-							return ((LockableLootTileEntity) inv).getStackInSlot(sltid);
+						if (inv instanceof LockableTileEntity)
+							return ((LockableTileEntity) inv).getStackInSlot(sltid);
 						return ItemStack.EMPTY;
 					}
 				}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (1))).getItem() == new ItemStack(StoneGearItemItem.block, (int) (1))
 						.getItem()) && (((new Object() {
 							public ItemStack getItemStack(BlockPos pos, int sltid) {
 								TileEntity inv = world.getTileEntity(pos);
-								if (inv instanceof LockableLootTileEntity)
-									return ((LockableLootTileEntity) inv).getStackInSlot(sltid);
+								if (inv instanceof LockableTileEntity)
+									return ((LockableTileEntity) inv).getStackInSlot(sltid);
 								return ItemStack.EMPTY;
 							}
 						}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (2)))
 								.getItem() == new ItemStack(GearMoldItemItem.block, (int) (1)).getItem()) && (((new Object() {
 									public int getAmount(BlockPos pos, int sltid) {
 										TileEntity inv = world.getTileEntity(pos);
-										if (inv instanceof LockableLootTileEntity) {
-											ItemStack stack = ((LockableLootTileEntity) inv).getStackInSlot(sltid);
+										if (inv instanceof LockableTileEntity) {
+											ItemStack stack = ((LockableTileEntity) inv).getStackInSlot(sltid);
 											if (stack != null)
 												return stack.getCount();
 										}
@@ -2070,26 +2070,26 @@ public class GearsMakerBlockUpdateTickProcedure extends SlothCraftElements.ModEl
 								}.getAmount(new BlockPos((int) x, (int) y, (int) z), (int) (3))) == 0) || ((new Object() {
 									public ItemStack getItemStack(BlockPos pos, int sltid) {
 										TileEntity inv = world.getTileEntity(pos);
-										if (inv instanceof LockableLootTileEntity)
-											return ((LockableLootTileEntity) inv).getStackInSlot(sltid);
+										if (inv instanceof LockableTileEntity)
+											return ((LockableTileEntity) inv).getStackInSlot(sltid);
 										return ItemStack.EMPTY;
 									}
 								}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (3)))
 										.getItem() == new ItemStack(RedstoneGearItemItem.block, (int) (1)).getItem()))))))) {
 			{
 				TileEntity inv = world.getTileEntity(new BlockPos((int) x, (int) y, (int) z));
-				if (inv instanceof LockableLootTileEntity)
-					((LockableLootTileEntity) inv).decrStackSize((int) (0), (int) (4));
+				if (inv instanceof LockableTileEntity)
+					((LockableTileEntity) inv).decrStackSize((int) (0), (int) (4));
 			}
 			{
 				TileEntity inv = world.getTileEntity(new BlockPos((int) x, (int) y, (int) z));
-				if (inv instanceof LockableLootTileEntity)
-					((LockableLootTileEntity) inv).decrStackSize((int) (1), (int) (1));
+				if (inv instanceof LockableTileEntity)
+					((LockableTileEntity) inv).decrStackSize((int) (1), (int) (1));
 			}
 			{
 				TileEntity inv = world.getTileEntity(new BlockPos((int) x, (int) y, (int) z));
-				if (inv != null && (inv instanceof LockableLootTileEntity)) {
-					ItemStack stack = ((LockableLootTileEntity) inv).getStackInSlot((int) (2));
+				if (inv != null && (inv instanceof LockableTileEntity)) {
+					ItemStack stack = ((LockableTileEntity) inv).getStackInSlot((int) (2));
 					if (stack != null) {
 						if (stack.attemptDamageItem((int) 1, new Random(), null)) {
 							stack.shrink(1);
@@ -2100,27 +2100,27 @@ public class GearsMakerBlockUpdateTickProcedure extends SlothCraftElements.ModEl
 			}
 			{
 				TileEntity inv = world.getTileEntity(new BlockPos((int) x, (int) y, (int) z));
-				if (inv != null && (inv instanceof LockableLootTileEntity)) {
+				if (inv != null && (inv instanceof LockableTileEntity)) {
 					ItemStack _setstack = new ItemStack(RedstoneGearItemItem.block, (int) (1));
-					_setstack.setCount(((new Object() {
+					_setstack.setCount((int) ((new Object() {
 						public int getAmount(BlockPos pos, int sltid) {
 							TileEntity inv = world.getTileEntity(pos);
-							if (inv instanceof LockableLootTileEntity) {
-								ItemStack stack = ((LockableLootTileEntity) inv).getStackInSlot(sltid);
+							if (inv instanceof LockableTileEntity) {
+								ItemStack stack = ((LockableTileEntity) inv).getStackInSlot(sltid);
 								if (stack != null)
 									return stack.getCount();
 							}
 							return 0;
 						}
 					}.getAmount(new BlockPos((int) x, (int) y, (int) z), (int) (3))) + 1));
-					((LockableLootTileEntity) inv).setInventorySlotContents((int) (3), _setstack);
+					((LockableTileEntity) inv).setInventorySlotContents((int) (3), _setstack);
 				}
 			}
 		} else if ((((new Object() {
 			public int getAmount(BlockPos pos, int sltid) {
 				TileEntity inv = world.getTileEntity(pos);
-				if (inv instanceof LockableLootTileEntity) {
-					ItemStack stack = ((LockableLootTileEntity) inv).getStackInSlot(sltid);
+				if (inv instanceof LockableTileEntity) {
+					ItemStack stack = ((LockableTileEntity) inv).getStackInSlot(sltid);
 					if (stack != null)
 						return stack.getCount();
 				}
@@ -2130,31 +2130,31 @@ public class GearsMakerBlockUpdateTickProcedure extends SlothCraftElements.ModEl
 				.getOrCreate(new ResourceLocation(("forge:gems/ruby").toLowerCase(java.util.Locale.ENGLISH))).contains((new Object() {
 					public ItemStack getItemStack(BlockPos pos, int sltid) {
 						TileEntity inv = world.getTileEntity(pos);
-						if (inv instanceof LockableLootTileEntity)
-							return ((LockableLootTileEntity) inv).getStackInSlot(sltid);
+						if (inv instanceof LockableTileEntity)
+							return ((LockableTileEntity) inv).getStackInSlot(sltid);
 						return ItemStack.EMPTY;
 					}
 				}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (0))).getItem())) && (((new Object() {
 					public ItemStack getItemStack(BlockPos pos, int sltid) {
 						TileEntity inv = world.getTileEntity(pos);
-						if (inv instanceof LockableLootTileEntity)
-							return ((LockableLootTileEntity) inv).getStackInSlot(sltid);
+						if (inv instanceof LockableTileEntity)
+							return ((LockableTileEntity) inv).getStackInSlot(sltid);
 						return ItemStack.EMPTY;
 					}
 				}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (1))).getItem() == new ItemStack(StoneGearItemItem.block, (int) (1))
 						.getItem()) && (((new Object() {
 							public ItemStack getItemStack(BlockPos pos, int sltid) {
 								TileEntity inv = world.getTileEntity(pos);
-								if (inv instanceof LockableLootTileEntity)
-									return ((LockableLootTileEntity) inv).getStackInSlot(sltid);
+								if (inv instanceof LockableTileEntity)
+									return ((LockableTileEntity) inv).getStackInSlot(sltid);
 								return ItemStack.EMPTY;
 							}
 						}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (2)))
 								.getItem() == new ItemStack(GearMoldItemItem.block, (int) (1)).getItem()) && (((new Object() {
 									public int getAmount(BlockPos pos, int sltid) {
 										TileEntity inv = world.getTileEntity(pos);
-										if (inv instanceof LockableLootTileEntity) {
-											ItemStack stack = ((LockableLootTileEntity) inv).getStackInSlot(sltid);
+										if (inv instanceof LockableTileEntity) {
+											ItemStack stack = ((LockableTileEntity) inv).getStackInSlot(sltid);
 											if (stack != null)
 												return stack.getCount();
 										}
@@ -2163,26 +2163,26 @@ public class GearsMakerBlockUpdateTickProcedure extends SlothCraftElements.ModEl
 								}.getAmount(new BlockPos((int) x, (int) y, (int) z), (int) (3))) == 0) || ((new Object() {
 									public ItemStack getItemStack(BlockPos pos, int sltid) {
 										TileEntity inv = world.getTileEntity(pos);
-										if (inv instanceof LockableLootTileEntity)
-											return ((LockableLootTileEntity) inv).getStackInSlot(sltid);
+										if (inv instanceof LockableTileEntity)
+											return ((LockableTileEntity) inv).getStackInSlot(sltid);
 										return ItemStack.EMPTY;
 									}
 								}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (3)))
 										.getItem() == new ItemStack(RubyGearItemItem.block, (int) (1)).getItem()))))))) {
 			{
 				TileEntity inv = world.getTileEntity(new BlockPos((int) x, (int) y, (int) z));
-				if (inv instanceof LockableLootTileEntity)
-					((LockableLootTileEntity) inv).decrStackSize((int) (0), (int) (4));
+				if (inv instanceof LockableTileEntity)
+					((LockableTileEntity) inv).decrStackSize((int) (0), (int) (4));
 			}
 			{
 				TileEntity inv = world.getTileEntity(new BlockPos((int) x, (int) y, (int) z));
-				if (inv instanceof LockableLootTileEntity)
-					((LockableLootTileEntity) inv).decrStackSize((int) (1), (int) (1));
+				if (inv instanceof LockableTileEntity)
+					((LockableTileEntity) inv).decrStackSize((int) (1), (int) (1));
 			}
 			{
 				TileEntity inv = world.getTileEntity(new BlockPos((int) x, (int) y, (int) z));
-				if (inv != null && (inv instanceof LockableLootTileEntity)) {
-					ItemStack stack = ((LockableLootTileEntity) inv).getStackInSlot((int) (2));
+				if (inv != null && (inv instanceof LockableTileEntity)) {
+					ItemStack stack = ((LockableTileEntity) inv).getStackInSlot((int) (2));
 					if (stack != null) {
 						if (stack.attemptDamageItem((int) 1, new Random(), null)) {
 							stack.shrink(1);
@@ -2193,27 +2193,27 @@ public class GearsMakerBlockUpdateTickProcedure extends SlothCraftElements.ModEl
 			}
 			{
 				TileEntity inv = world.getTileEntity(new BlockPos((int) x, (int) y, (int) z));
-				if (inv != null && (inv instanceof LockableLootTileEntity)) {
+				if (inv != null && (inv instanceof LockableTileEntity)) {
 					ItemStack _setstack = new ItemStack(RubyGearItemItem.block, (int) (1));
-					_setstack.setCount(((new Object() {
+					_setstack.setCount((int) ((new Object() {
 						public int getAmount(BlockPos pos, int sltid) {
 							TileEntity inv = world.getTileEntity(pos);
-							if (inv instanceof LockableLootTileEntity) {
-								ItemStack stack = ((LockableLootTileEntity) inv).getStackInSlot(sltid);
+							if (inv instanceof LockableTileEntity) {
+								ItemStack stack = ((LockableTileEntity) inv).getStackInSlot(sltid);
 								if (stack != null)
 									return stack.getCount();
 							}
 							return 0;
 						}
 					}.getAmount(new BlockPos((int) x, (int) y, (int) z), (int) (3))) + 1));
-					((LockableLootTileEntity) inv).setInventorySlotContents((int) (3), _setstack);
+					((LockableTileEntity) inv).setInventorySlotContents((int) (3), _setstack);
 				}
 			}
 		} else if ((((new Object() {
 			public int getAmount(BlockPos pos, int sltid) {
 				TileEntity inv = world.getTileEntity(pos);
-				if (inv instanceof LockableLootTileEntity) {
-					ItemStack stack = ((LockableLootTileEntity) inv).getStackInSlot(sltid);
+				if (inv instanceof LockableTileEntity) {
+					ItemStack stack = ((LockableTileEntity) inv).getStackInSlot(sltid);
 					if (stack != null)
 						return stack.getCount();
 				}
@@ -2223,31 +2223,31 @@ public class GearsMakerBlockUpdateTickProcedure extends SlothCraftElements.ModEl
 				.getOrCreate(new ResourceLocation(("forge:ingots/silver").toLowerCase(java.util.Locale.ENGLISH))).contains((new Object() {
 					public ItemStack getItemStack(BlockPos pos, int sltid) {
 						TileEntity inv = world.getTileEntity(pos);
-						if (inv instanceof LockableLootTileEntity)
-							return ((LockableLootTileEntity) inv).getStackInSlot(sltid);
+						if (inv instanceof LockableTileEntity)
+							return ((LockableTileEntity) inv).getStackInSlot(sltid);
 						return ItemStack.EMPTY;
 					}
 				}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (0))).getItem())) && (((new Object() {
 					public ItemStack getItemStack(BlockPos pos, int sltid) {
 						TileEntity inv = world.getTileEntity(pos);
-						if (inv instanceof LockableLootTileEntity)
-							return ((LockableLootTileEntity) inv).getStackInSlot(sltid);
+						if (inv instanceof LockableTileEntity)
+							return ((LockableTileEntity) inv).getStackInSlot(sltid);
 						return ItemStack.EMPTY;
 					}
 				}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (1))).getItem() == new ItemStack(StoneGearItemItem.block, (int) (1))
 						.getItem()) && (((new Object() {
 							public ItemStack getItemStack(BlockPos pos, int sltid) {
 								TileEntity inv = world.getTileEntity(pos);
-								if (inv instanceof LockableLootTileEntity)
-									return ((LockableLootTileEntity) inv).getStackInSlot(sltid);
+								if (inv instanceof LockableTileEntity)
+									return ((LockableTileEntity) inv).getStackInSlot(sltid);
 								return ItemStack.EMPTY;
 							}
 						}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (2)))
 								.getItem() == new ItemStack(GearMoldItemItem.block, (int) (1)).getItem()) && (((new Object() {
 									public int getAmount(BlockPos pos, int sltid) {
 										TileEntity inv = world.getTileEntity(pos);
-										if (inv instanceof LockableLootTileEntity) {
-											ItemStack stack = ((LockableLootTileEntity) inv).getStackInSlot(sltid);
+										if (inv instanceof LockableTileEntity) {
+											ItemStack stack = ((LockableTileEntity) inv).getStackInSlot(sltid);
 											if (stack != null)
 												return stack.getCount();
 										}
@@ -2256,26 +2256,26 @@ public class GearsMakerBlockUpdateTickProcedure extends SlothCraftElements.ModEl
 								}.getAmount(new BlockPos((int) x, (int) y, (int) z), (int) (3))) == 0) || ((new Object() {
 									public ItemStack getItemStack(BlockPos pos, int sltid) {
 										TileEntity inv = world.getTileEntity(pos);
-										if (inv instanceof LockableLootTileEntity)
-											return ((LockableLootTileEntity) inv).getStackInSlot(sltid);
+										if (inv instanceof LockableTileEntity)
+											return ((LockableTileEntity) inv).getStackInSlot(sltid);
 										return ItemStack.EMPTY;
 									}
 								}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (3)))
 										.getItem() == new ItemStack(SilverGearItemItem.block, (int) (1)).getItem()))))))) {
 			{
 				TileEntity inv = world.getTileEntity(new BlockPos((int) x, (int) y, (int) z));
-				if (inv instanceof LockableLootTileEntity)
-					((LockableLootTileEntity) inv).decrStackSize((int) (0), (int) (4));
+				if (inv instanceof LockableTileEntity)
+					((LockableTileEntity) inv).decrStackSize((int) (0), (int) (4));
 			}
 			{
 				TileEntity inv = world.getTileEntity(new BlockPos((int) x, (int) y, (int) z));
-				if (inv instanceof LockableLootTileEntity)
-					((LockableLootTileEntity) inv).decrStackSize((int) (1), (int) (1));
+				if (inv instanceof LockableTileEntity)
+					((LockableTileEntity) inv).decrStackSize((int) (1), (int) (1));
 			}
 			{
 				TileEntity inv = world.getTileEntity(new BlockPos((int) x, (int) y, (int) z));
-				if (inv != null && (inv instanceof LockableLootTileEntity)) {
-					ItemStack stack = ((LockableLootTileEntity) inv).getStackInSlot((int) (2));
+				if (inv != null && (inv instanceof LockableTileEntity)) {
+					ItemStack stack = ((LockableTileEntity) inv).getStackInSlot((int) (2));
 					if (stack != null) {
 						if (stack.attemptDamageItem((int) 1, new Random(), null)) {
 							stack.shrink(1);
@@ -2286,27 +2286,27 @@ public class GearsMakerBlockUpdateTickProcedure extends SlothCraftElements.ModEl
 			}
 			{
 				TileEntity inv = world.getTileEntity(new BlockPos((int) x, (int) y, (int) z));
-				if (inv != null && (inv instanceof LockableLootTileEntity)) {
+				if (inv != null && (inv instanceof LockableTileEntity)) {
 					ItemStack _setstack = new ItemStack(SilverGearItemItem.block, (int) (1));
-					_setstack.setCount(((new Object() {
+					_setstack.setCount((int) ((new Object() {
 						public int getAmount(BlockPos pos, int sltid) {
 							TileEntity inv = world.getTileEntity(pos);
-							if (inv instanceof LockableLootTileEntity) {
-								ItemStack stack = ((LockableLootTileEntity) inv).getStackInSlot(sltid);
+							if (inv instanceof LockableTileEntity) {
+								ItemStack stack = ((LockableTileEntity) inv).getStackInSlot(sltid);
 								if (stack != null)
 									return stack.getCount();
 							}
 							return 0;
 						}
 					}.getAmount(new BlockPos((int) x, (int) y, (int) z), (int) (3))) + 1));
-					((LockableLootTileEntity) inv).setInventorySlotContents((int) (3), _setstack);
+					((LockableTileEntity) inv).setInventorySlotContents((int) (3), _setstack);
 				}
 			}
 		} else if ((((new Object() {
 			public int getAmount(BlockPos pos, int sltid) {
 				TileEntity inv = world.getTileEntity(pos);
-				if (inv instanceof LockableLootTileEntity) {
-					ItemStack stack = ((LockableLootTileEntity) inv).getStackInSlot(sltid);
+				if (inv instanceof LockableTileEntity) {
+					ItemStack stack = ((LockableTileEntity) inv).getStackInSlot(sltid);
 					if (stack != null)
 						return stack.getCount();
 				}
@@ -2316,31 +2316,31 @@ public class GearsMakerBlockUpdateTickProcedure extends SlothCraftElements.ModEl
 				.getOrCreate(new ResourceLocation(("forge:ingots/steel").toLowerCase(java.util.Locale.ENGLISH))).contains((new Object() {
 					public ItemStack getItemStack(BlockPos pos, int sltid) {
 						TileEntity inv = world.getTileEntity(pos);
-						if (inv instanceof LockableLootTileEntity)
-							return ((LockableLootTileEntity) inv).getStackInSlot(sltid);
+						if (inv instanceof LockableTileEntity)
+							return ((LockableTileEntity) inv).getStackInSlot(sltid);
 						return ItemStack.EMPTY;
 					}
 				}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (0))).getItem())) && (((new Object() {
 					public ItemStack getItemStack(BlockPos pos, int sltid) {
 						TileEntity inv = world.getTileEntity(pos);
-						if (inv instanceof LockableLootTileEntity)
-							return ((LockableLootTileEntity) inv).getStackInSlot(sltid);
+						if (inv instanceof LockableTileEntity)
+							return ((LockableTileEntity) inv).getStackInSlot(sltid);
 						return ItemStack.EMPTY;
 					}
 				}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (1))).getItem() == new ItemStack(StoneGearItemItem.block, (int) (1))
 						.getItem()) && (((new Object() {
 							public ItemStack getItemStack(BlockPos pos, int sltid) {
 								TileEntity inv = world.getTileEntity(pos);
-								if (inv instanceof LockableLootTileEntity)
-									return ((LockableLootTileEntity) inv).getStackInSlot(sltid);
+								if (inv instanceof LockableTileEntity)
+									return ((LockableTileEntity) inv).getStackInSlot(sltid);
 								return ItemStack.EMPTY;
 							}
 						}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (2)))
 								.getItem() == new ItemStack(GearMoldItemItem.block, (int) (1)).getItem()) && (((new Object() {
 									public int getAmount(BlockPos pos, int sltid) {
 										TileEntity inv = world.getTileEntity(pos);
-										if (inv instanceof LockableLootTileEntity) {
-											ItemStack stack = ((LockableLootTileEntity) inv).getStackInSlot(sltid);
+										if (inv instanceof LockableTileEntity) {
+											ItemStack stack = ((LockableTileEntity) inv).getStackInSlot(sltid);
 											if (stack != null)
 												return stack.getCount();
 										}
@@ -2349,26 +2349,26 @@ public class GearsMakerBlockUpdateTickProcedure extends SlothCraftElements.ModEl
 								}.getAmount(new BlockPos((int) x, (int) y, (int) z), (int) (3))) == 0) || ((new Object() {
 									public ItemStack getItemStack(BlockPos pos, int sltid) {
 										TileEntity inv = world.getTileEntity(pos);
-										if (inv instanceof LockableLootTileEntity)
-											return ((LockableLootTileEntity) inv).getStackInSlot(sltid);
+										if (inv instanceof LockableTileEntity)
+											return ((LockableTileEntity) inv).getStackInSlot(sltid);
 										return ItemStack.EMPTY;
 									}
 								}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (3)))
 										.getItem() == new ItemStack(SteelGearItemItem.block, (int) (1)).getItem()))))))) {
 			{
 				TileEntity inv = world.getTileEntity(new BlockPos((int) x, (int) y, (int) z));
-				if (inv instanceof LockableLootTileEntity)
-					((LockableLootTileEntity) inv).decrStackSize((int) (0), (int) (4));
+				if (inv instanceof LockableTileEntity)
+					((LockableTileEntity) inv).decrStackSize((int) (0), (int) (4));
 			}
 			{
 				TileEntity inv = world.getTileEntity(new BlockPos((int) x, (int) y, (int) z));
-				if (inv instanceof LockableLootTileEntity)
-					((LockableLootTileEntity) inv).decrStackSize((int) (1), (int) (1));
+				if (inv instanceof LockableTileEntity)
+					((LockableTileEntity) inv).decrStackSize((int) (1), (int) (1));
 			}
 			{
 				TileEntity inv = world.getTileEntity(new BlockPos((int) x, (int) y, (int) z));
-				if (inv != null && (inv instanceof LockableLootTileEntity)) {
-					ItemStack stack = ((LockableLootTileEntity) inv).getStackInSlot((int) (2));
+				if (inv != null && (inv instanceof LockableTileEntity)) {
+					ItemStack stack = ((LockableTileEntity) inv).getStackInSlot((int) (2));
 					if (stack != null) {
 						if (stack.attemptDamageItem((int) 1, new Random(), null)) {
 							stack.shrink(1);
@@ -2379,27 +2379,27 @@ public class GearsMakerBlockUpdateTickProcedure extends SlothCraftElements.ModEl
 			}
 			{
 				TileEntity inv = world.getTileEntity(new BlockPos((int) x, (int) y, (int) z));
-				if (inv != null && (inv instanceof LockableLootTileEntity)) {
+				if (inv != null && (inv instanceof LockableTileEntity)) {
 					ItemStack _setstack = new ItemStack(SteelGearItemItem.block, (int) (1));
-					_setstack.setCount(((new Object() {
+					_setstack.setCount((int) ((new Object() {
 						public int getAmount(BlockPos pos, int sltid) {
 							TileEntity inv = world.getTileEntity(pos);
-							if (inv instanceof LockableLootTileEntity) {
-								ItemStack stack = ((LockableLootTileEntity) inv).getStackInSlot(sltid);
+							if (inv instanceof LockableTileEntity) {
+								ItemStack stack = ((LockableTileEntity) inv).getStackInSlot(sltid);
 								if (stack != null)
 									return stack.getCount();
 							}
 							return 0;
 						}
 					}.getAmount(new BlockPos((int) x, (int) y, (int) z), (int) (3))) + 1));
-					((LockableLootTileEntity) inv).setInventorySlotContents((int) (3), _setstack);
+					((LockableTileEntity) inv).setInventorySlotContents((int) (3), _setstack);
 				}
 			}
 		} else if ((((new Object() {
 			public int getAmount(BlockPos pos, int sltid) {
 				TileEntity inv = world.getTileEntity(pos);
-				if (inv instanceof LockableLootTileEntity) {
-					ItemStack stack = ((LockableLootTileEntity) inv).getStackInSlot(sltid);
+				if (inv instanceof LockableTileEntity) {
+					ItemStack stack = ((LockableTileEntity) inv).getStackInSlot(sltid);
 					if (stack != null)
 						return stack.getCount();
 				}
@@ -2409,31 +2409,31 @@ public class GearsMakerBlockUpdateTickProcedure extends SlothCraftElements.ModEl
 				.getOrCreate(new ResourceLocation(("forge:ingots/tin").toLowerCase(java.util.Locale.ENGLISH))).contains((new Object() {
 					public ItemStack getItemStack(BlockPos pos, int sltid) {
 						TileEntity inv = world.getTileEntity(pos);
-						if (inv instanceof LockableLootTileEntity)
-							return ((LockableLootTileEntity) inv).getStackInSlot(sltid);
+						if (inv instanceof LockableTileEntity)
+							return ((LockableTileEntity) inv).getStackInSlot(sltid);
 						return ItemStack.EMPTY;
 					}
 				}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (0))).getItem())) && (((new Object() {
 					public ItemStack getItemStack(BlockPos pos, int sltid) {
 						TileEntity inv = world.getTileEntity(pos);
-						if (inv instanceof LockableLootTileEntity)
-							return ((LockableLootTileEntity) inv).getStackInSlot(sltid);
+						if (inv instanceof LockableTileEntity)
+							return ((LockableTileEntity) inv).getStackInSlot(sltid);
 						return ItemStack.EMPTY;
 					}
 				}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (1))).getItem() == new ItemStack(StoneGearItemItem.block, (int) (1))
 						.getItem()) && (((new Object() {
 							public ItemStack getItemStack(BlockPos pos, int sltid) {
 								TileEntity inv = world.getTileEntity(pos);
-								if (inv instanceof LockableLootTileEntity)
-									return ((LockableLootTileEntity) inv).getStackInSlot(sltid);
+								if (inv instanceof LockableTileEntity)
+									return ((LockableTileEntity) inv).getStackInSlot(sltid);
 								return ItemStack.EMPTY;
 							}
 						}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (2)))
 								.getItem() == new ItemStack(GearMoldItemItem.block, (int) (1)).getItem()) && (((new Object() {
 									public int getAmount(BlockPos pos, int sltid) {
 										TileEntity inv = world.getTileEntity(pos);
-										if (inv instanceof LockableLootTileEntity) {
-											ItemStack stack = ((LockableLootTileEntity) inv).getStackInSlot(sltid);
+										if (inv instanceof LockableTileEntity) {
+											ItemStack stack = ((LockableTileEntity) inv).getStackInSlot(sltid);
 											if (stack != null)
 												return stack.getCount();
 										}
@@ -2442,26 +2442,26 @@ public class GearsMakerBlockUpdateTickProcedure extends SlothCraftElements.ModEl
 								}.getAmount(new BlockPos((int) x, (int) y, (int) z), (int) (3))) == 0) || ((new Object() {
 									public ItemStack getItemStack(BlockPos pos, int sltid) {
 										TileEntity inv = world.getTileEntity(pos);
-										if (inv instanceof LockableLootTileEntity)
-											return ((LockableLootTileEntity) inv).getStackInSlot(sltid);
+										if (inv instanceof LockableTileEntity)
+											return ((LockableTileEntity) inv).getStackInSlot(sltid);
 										return ItemStack.EMPTY;
 									}
 								}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (3)))
 										.getItem() == new ItemStack(TinGearItemItem.block, (int) (1)).getItem()))))))) {
 			{
 				TileEntity inv = world.getTileEntity(new BlockPos((int) x, (int) y, (int) z));
-				if (inv instanceof LockableLootTileEntity)
-					((LockableLootTileEntity) inv).decrStackSize((int) (0), (int) (4));
+				if (inv instanceof LockableTileEntity)
+					((LockableTileEntity) inv).decrStackSize((int) (0), (int) (4));
 			}
 			{
 				TileEntity inv = world.getTileEntity(new BlockPos((int) x, (int) y, (int) z));
-				if (inv instanceof LockableLootTileEntity)
-					((LockableLootTileEntity) inv).decrStackSize((int) (1), (int) (1));
+				if (inv instanceof LockableTileEntity)
+					((LockableTileEntity) inv).decrStackSize((int) (1), (int) (1));
 			}
 			{
 				TileEntity inv = world.getTileEntity(new BlockPos((int) x, (int) y, (int) z));
-				if (inv != null && (inv instanceof LockableLootTileEntity)) {
-					ItemStack stack = ((LockableLootTileEntity) inv).getStackInSlot((int) (2));
+				if (inv != null && (inv instanceof LockableTileEntity)) {
+					ItemStack stack = ((LockableTileEntity) inv).getStackInSlot((int) (2));
 					if (stack != null) {
 						if (stack.attemptDamageItem((int) 1, new Random(), null)) {
 							stack.shrink(1);
@@ -2472,27 +2472,27 @@ public class GearsMakerBlockUpdateTickProcedure extends SlothCraftElements.ModEl
 			}
 			{
 				TileEntity inv = world.getTileEntity(new BlockPos((int) x, (int) y, (int) z));
-				if (inv != null && (inv instanceof LockableLootTileEntity)) {
+				if (inv != null && (inv instanceof LockableTileEntity)) {
 					ItemStack _setstack = new ItemStack(TinGearItemItem.block, (int) (1));
-					_setstack.setCount(((new Object() {
+					_setstack.setCount((int) ((new Object() {
 						public int getAmount(BlockPos pos, int sltid) {
 							TileEntity inv = world.getTileEntity(pos);
-							if (inv instanceof LockableLootTileEntity) {
-								ItemStack stack = ((LockableLootTileEntity) inv).getStackInSlot(sltid);
+							if (inv instanceof LockableTileEntity) {
+								ItemStack stack = ((LockableTileEntity) inv).getStackInSlot(sltid);
 								if (stack != null)
 									return stack.getCount();
 							}
 							return 0;
 						}
 					}.getAmount(new BlockPos((int) x, (int) y, (int) z), (int) (3))) + 1));
-					((LockableLootTileEntity) inv).setInventorySlotContents((int) (3), _setstack);
+					((LockableTileEntity) inv).setInventorySlotContents((int) (3), _setstack);
 				}
 			}
 		} else if ((((new Object() {
 			public int getAmount(BlockPos pos, int sltid) {
 				TileEntity inv = world.getTileEntity(pos);
-				if (inv instanceof LockableLootTileEntity) {
-					ItemStack stack = ((LockableLootTileEntity) inv).getStackInSlot(sltid);
+				if (inv instanceof LockableTileEntity) {
+					ItemStack stack = ((LockableTileEntity) inv).getStackInSlot(sltid);
 					if (stack != null)
 						return stack.getCount();
 				}
@@ -2502,31 +2502,31 @@ public class GearsMakerBlockUpdateTickProcedure extends SlothCraftElements.ModEl
 				.getOrCreate(new ResourceLocation(("forge:ingots/titanium").toLowerCase(java.util.Locale.ENGLISH))).contains((new Object() {
 					public ItemStack getItemStack(BlockPos pos, int sltid) {
 						TileEntity inv = world.getTileEntity(pos);
-						if (inv instanceof LockableLootTileEntity)
-							return ((LockableLootTileEntity) inv).getStackInSlot(sltid);
+						if (inv instanceof LockableTileEntity)
+							return ((LockableTileEntity) inv).getStackInSlot(sltid);
 						return ItemStack.EMPTY;
 					}
 				}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (0))).getItem())) && (((new Object() {
 					public ItemStack getItemStack(BlockPos pos, int sltid) {
 						TileEntity inv = world.getTileEntity(pos);
-						if (inv instanceof LockableLootTileEntity)
-							return ((LockableLootTileEntity) inv).getStackInSlot(sltid);
+						if (inv instanceof LockableTileEntity)
+							return ((LockableTileEntity) inv).getStackInSlot(sltid);
 						return ItemStack.EMPTY;
 					}
 				}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (1))).getItem() == new ItemStack(StoneGearItemItem.block, (int) (1))
 						.getItem()) && (((new Object() {
 							public ItemStack getItemStack(BlockPos pos, int sltid) {
 								TileEntity inv = world.getTileEntity(pos);
-								if (inv instanceof LockableLootTileEntity)
-									return ((LockableLootTileEntity) inv).getStackInSlot(sltid);
+								if (inv instanceof LockableTileEntity)
+									return ((LockableTileEntity) inv).getStackInSlot(sltid);
 								return ItemStack.EMPTY;
 							}
 						}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (2)))
 								.getItem() == new ItemStack(GearMoldItemItem.block, (int) (1)).getItem()) && (((new Object() {
 									public int getAmount(BlockPos pos, int sltid) {
 										TileEntity inv = world.getTileEntity(pos);
-										if (inv instanceof LockableLootTileEntity) {
-											ItemStack stack = ((LockableLootTileEntity) inv).getStackInSlot(sltid);
+										if (inv instanceof LockableTileEntity) {
+											ItemStack stack = ((LockableTileEntity) inv).getStackInSlot(sltid);
 											if (stack != null)
 												return stack.getCount();
 										}
@@ -2535,26 +2535,26 @@ public class GearsMakerBlockUpdateTickProcedure extends SlothCraftElements.ModEl
 								}.getAmount(new BlockPos((int) x, (int) y, (int) z), (int) (3))) == 0) || ((new Object() {
 									public ItemStack getItemStack(BlockPos pos, int sltid) {
 										TileEntity inv = world.getTileEntity(pos);
-										if (inv instanceof LockableLootTileEntity)
-											return ((LockableLootTileEntity) inv).getStackInSlot(sltid);
+										if (inv instanceof LockableTileEntity)
+											return ((LockableTileEntity) inv).getStackInSlot(sltid);
 										return ItemStack.EMPTY;
 									}
 								}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (3)))
 										.getItem() == new ItemStack(TitaniumGearItemItem.block, (int) (1)).getItem()))))))) {
 			{
 				TileEntity inv = world.getTileEntity(new BlockPos((int) x, (int) y, (int) z));
-				if (inv instanceof LockableLootTileEntity)
-					((LockableLootTileEntity) inv).decrStackSize((int) (0), (int) (4));
+				if (inv instanceof LockableTileEntity)
+					((LockableTileEntity) inv).decrStackSize((int) (0), (int) (4));
 			}
 			{
 				TileEntity inv = world.getTileEntity(new BlockPos((int) x, (int) y, (int) z));
-				if (inv instanceof LockableLootTileEntity)
-					((LockableLootTileEntity) inv).decrStackSize((int) (1), (int) (1));
+				if (inv instanceof LockableTileEntity)
+					((LockableTileEntity) inv).decrStackSize((int) (1), (int) (1));
 			}
 			{
 				TileEntity inv = world.getTileEntity(new BlockPos((int) x, (int) y, (int) z));
-				if (inv != null && (inv instanceof LockableLootTileEntity)) {
-					ItemStack stack = ((LockableLootTileEntity) inv).getStackInSlot((int) (2));
+				if (inv != null && (inv instanceof LockableTileEntity)) {
+					ItemStack stack = ((LockableTileEntity) inv).getStackInSlot((int) (2));
 					if (stack != null) {
 						if (stack.attemptDamageItem((int) 1, new Random(), null)) {
 							stack.shrink(1);
@@ -2565,27 +2565,27 @@ public class GearsMakerBlockUpdateTickProcedure extends SlothCraftElements.ModEl
 			}
 			{
 				TileEntity inv = world.getTileEntity(new BlockPos((int) x, (int) y, (int) z));
-				if (inv != null && (inv instanceof LockableLootTileEntity)) {
+				if (inv != null && (inv instanceof LockableTileEntity)) {
 					ItemStack _setstack = new ItemStack(TitaniumGearItemItem.block, (int) (1));
-					_setstack.setCount(((new Object() {
+					_setstack.setCount((int) ((new Object() {
 						public int getAmount(BlockPos pos, int sltid) {
 							TileEntity inv = world.getTileEntity(pos);
-							if (inv instanceof LockableLootTileEntity) {
-								ItemStack stack = ((LockableLootTileEntity) inv).getStackInSlot(sltid);
+							if (inv instanceof LockableTileEntity) {
+								ItemStack stack = ((LockableTileEntity) inv).getStackInSlot(sltid);
 								if (stack != null)
 									return stack.getCount();
 							}
 							return 0;
 						}
 					}.getAmount(new BlockPos((int) x, (int) y, (int) z), (int) (3))) + 1));
-					((LockableLootTileEntity) inv).setInventorySlotContents((int) (3), _setstack);
+					((LockableTileEntity) inv).setInventorySlotContents((int) (3), _setstack);
 				}
 			}
 		} else if ((((new Object() {
 			public int getAmount(BlockPos pos, int sltid) {
 				TileEntity inv = world.getTileEntity(pos);
-				if (inv instanceof LockableLootTileEntity) {
-					ItemStack stack = ((LockableLootTileEntity) inv).getStackInSlot(sltid);
+				if (inv instanceof LockableTileEntity) {
+					ItemStack stack = ((LockableTileEntity) inv).getStackInSlot(sltid);
 					if (stack != null)
 						return stack.getCount();
 				}
@@ -2595,31 +2595,31 @@ public class GearsMakerBlockUpdateTickProcedure extends SlothCraftElements.ModEl
 				.getOrCreate(new ResourceLocation(("forge:ingots/uranium").toLowerCase(java.util.Locale.ENGLISH))).contains((new Object() {
 					public ItemStack getItemStack(BlockPos pos, int sltid) {
 						TileEntity inv = world.getTileEntity(pos);
-						if (inv instanceof LockableLootTileEntity)
-							return ((LockableLootTileEntity) inv).getStackInSlot(sltid);
+						if (inv instanceof LockableTileEntity)
+							return ((LockableTileEntity) inv).getStackInSlot(sltid);
 						return ItemStack.EMPTY;
 					}
 				}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (0))).getItem())) && (((new Object() {
 					public ItemStack getItemStack(BlockPos pos, int sltid) {
 						TileEntity inv = world.getTileEntity(pos);
-						if (inv instanceof LockableLootTileEntity)
-							return ((LockableLootTileEntity) inv).getStackInSlot(sltid);
+						if (inv instanceof LockableTileEntity)
+							return ((LockableTileEntity) inv).getStackInSlot(sltid);
 						return ItemStack.EMPTY;
 					}
 				}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (1))).getItem() == new ItemStack(StoneGearItemItem.block, (int) (1))
 						.getItem()) && (((new Object() {
 							public ItemStack getItemStack(BlockPos pos, int sltid) {
 								TileEntity inv = world.getTileEntity(pos);
-								if (inv instanceof LockableLootTileEntity)
-									return ((LockableLootTileEntity) inv).getStackInSlot(sltid);
+								if (inv instanceof LockableTileEntity)
+									return ((LockableTileEntity) inv).getStackInSlot(sltid);
 								return ItemStack.EMPTY;
 							}
 						}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (2)))
 								.getItem() == new ItemStack(GearMoldItemItem.block, (int) (1)).getItem()) && (((new Object() {
 									public int getAmount(BlockPos pos, int sltid) {
 										TileEntity inv = world.getTileEntity(pos);
-										if (inv instanceof LockableLootTileEntity) {
-											ItemStack stack = ((LockableLootTileEntity) inv).getStackInSlot(sltid);
+										if (inv instanceof LockableTileEntity) {
+											ItemStack stack = ((LockableTileEntity) inv).getStackInSlot(sltid);
 											if (stack != null)
 												return stack.getCount();
 										}
@@ -2628,26 +2628,26 @@ public class GearsMakerBlockUpdateTickProcedure extends SlothCraftElements.ModEl
 								}.getAmount(new BlockPos((int) x, (int) y, (int) z), (int) (3))) == 0) || ((new Object() {
 									public ItemStack getItemStack(BlockPos pos, int sltid) {
 										TileEntity inv = world.getTileEntity(pos);
-										if (inv instanceof LockableLootTileEntity)
-											return ((LockableLootTileEntity) inv).getStackInSlot(sltid);
+										if (inv instanceof LockableTileEntity)
+											return ((LockableTileEntity) inv).getStackInSlot(sltid);
 										return ItemStack.EMPTY;
 									}
 								}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (3)))
 										.getItem() == new ItemStack(UraniumGearItemItem.block, (int) (1)).getItem()))))))) {
 			{
 				TileEntity inv = world.getTileEntity(new BlockPos((int) x, (int) y, (int) z));
-				if (inv instanceof LockableLootTileEntity)
-					((LockableLootTileEntity) inv).decrStackSize((int) (0), (int) (4));
+				if (inv instanceof LockableTileEntity)
+					((LockableTileEntity) inv).decrStackSize((int) (0), (int) (4));
 			}
 			{
 				TileEntity inv = world.getTileEntity(new BlockPos((int) x, (int) y, (int) z));
-				if (inv instanceof LockableLootTileEntity)
-					((LockableLootTileEntity) inv).decrStackSize((int) (1), (int) (1));
+				if (inv instanceof LockableTileEntity)
+					((LockableTileEntity) inv).decrStackSize((int) (1), (int) (1));
 			}
 			{
 				TileEntity inv = world.getTileEntity(new BlockPos((int) x, (int) y, (int) z));
-				if (inv != null && (inv instanceof LockableLootTileEntity)) {
-					ItemStack stack = ((LockableLootTileEntity) inv).getStackInSlot((int) (2));
+				if (inv != null && (inv instanceof LockableTileEntity)) {
+					ItemStack stack = ((LockableTileEntity) inv).getStackInSlot((int) (2));
 					if (stack != null) {
 						if (stack.attemptDamageItem((int) 1, new Random(), null)) {
 							stack.shrink(1);
@@ -2658,27 +2658,27 @@ public class GearsMakerBlockUpdateTickProcedure extends SlothCraftElements.ModEl
 			}
 			{
 				TileEntity inv = world.getTileEntity(new BlockPos((int) x, (int) y, (int) z));
-				if (inv != null && (inv instanceof LockableLootTileEntity)) {
+				if (inv != null && (inv instanceof LockableTileEntity)) {
 					ItemStack _setstack = new ItemStack(UraniumGearItemItem.block, (int) (1));
-					_setstack.setCount(((new Object() {
+					_setstack.setCount((int) ((new Object() {
 						public int getAmount(BlockPos pos, int sltid) {
 							TileEntity inv = world.getTileEntity(pos);
-							if (inv instanceof LockableLootTileEntity) {
-								ItemStack stack = ((LockableLootTileEntity) inv).getStackInSlot(sltid);
+							if (inv instanceof LockableTileEntity) {
+								ItemStack stack = ((LockableTileEntity) inv).getStackInSlot(sltid);
 								if (stack != null)
 									return stack.getCount();
 							}
 							return 0;
 						}
 					}.getAmount(new BlockPos((int) x, (int) y, (int) z), (int) (3))) + 1));
-					((LockableLootTileEntity) inv).setInventorySlotContents((int) (3), _setstack);
+					((LockableTileEntity) inv).setInventorySlotContents((int) (3), _setstack);
 				}
 			}
 		} else if ((((new Object() {
 			public int getAmount(BlockPos pos, int sltid) {
 				TileEntity inv = world.getTileEntity(pos);
-				if (inv instanceof LockableLootTileEntity) {
-					ItemStack stack = ((LockableLootTileEntity) inv).getStackInSlot(sltid);
+				if (inv instanceof LockableTileEntity) {
+					ItemStack stack = ((LockableTileEntity) inv).getStackInSlot(sltid);
 					if (stack != null)
 						return stack.getCount();
 				}
@@ -2688,31 +2688,31 @@ public class GearsMakerBlockUpdateTickProcedure extends SlothCraftElements.ModEl
 				.getOrCreate(new ResourceLocation(("forge:ingots/zinc").toLowerCase(java.util.Locale.ENGLISH))).contains((new Object() {
 					public ItemStack getItemStack(BlockPos pos, int sltid) {
 						TileEntity inv = world.getTileEntity(pos);
-						if (inv instanceof LockableLootTileEntity)
-							return ((LockableLootTileEntity) inv).getStackInSlot(sltid);
+						if (inv instanceof LockableTileEntity)
+							return ((LockableTileEntity) inv).getStackInSlot(sltid);
 						return ItemStack.EMPTY;
 					}
 				}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (0))).getItem())) && (((new Object() {
 					public ItemStack getItemStack(BlockPos pos, int sltid) {
 						TileEntity inv = world.getTileEntity(pos);
-						if (inv instanceof LockableLootTileEntity)
-							return ((LockableLootTileEntity) inv).getStackInSlot(sltid);
+						if (inv instanceof LockableTileEntity)
+							return ((LockableTileEntity) inv).getStackInSlot(sltid);
 						return ItemStack.EMPTY;
 					}
 				}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (1))).getItem() == new ItemStack(StoneGearItemItem.block, (int) (1))
 						.getItem()) && (((new Object() {
 							public ItemStack getItemStack(BlockPos pos, int sltid) {
 								TileEntity inv = world.getTileEntity(pos);
-								if (inv instanceof LockableLootTileEntity)
-									return ((LockableLootTileEntity) inv).getStackInSlot(sltid);
+								if (inv instanceof LockableTileEntity)
+									return ((LockableTileEntity) inv).getStackInSlot(sltid);
 								return ItemStack.EMPTY;
 							}
 						}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (2)))
 								.getItem() == new ItemStack(GearMoldItemItem.block, (int) (1)).getItem()) && (((new Object() {
 									public int getAmount(BlockPos pos, int sltid) {
 										TileEntity inv = world.getTileEntity(pos);
-										if (inv instanceof LockableLootTileEntity) {
-											ItemStack stack = ((LockableLootTileEntity) inv).getStackInSlot(sltid);
+										if (inv instanceof LockableTileEntity) {
+											ItemStack stack = ((LockableTileEntity) inv).getStackInSlot(sltid);
 											if (stack != null)
 												return stack.getCount();
 										}
@@ -2721,26 +2721,26 @@ public class GearsMakerBlockUpdateTickProcedure extends SlothCraftElements.ModEl
 								}.getAmount(new BlockPos((int) x, (int) y, (int) z), (int) (3))) == 0) || ((new Object() {
 									public ItemStack getItemStack(BlockPos pos, int sltid) {
 										TileEntity inv = world.getTileEntity(pos);
-										if (inv instanceof LockableLootTileEntity)
-											return ((LockableLootTileEntity) inv).getStackInSlot(sltid);
+										if (inv instanceof LockableTileEntity)
+											return ((LockableTileEntity) inv).getStackInSlot(sltid);
 										return ItemStack.EMPTY;
 									}
 								}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (3)))
 										.getItem() == new ItemStack(ZincGearItemItem.block, (int) (1)).getItem()))))))) {
 			{
 				TileEntity inv = world.getTileEntity(new BlockPos((int) x, (int) y, (int) z));
-				if (inv instanceof LockableLootTileEntity)
-					((LockableLootTileEntity) inv).decrStackSize((int) (0), (int) (4));
+				if (inv instanceof LockableTileEntity)
+					((LockableTileEntity) inv).decrStackSize((int) (0), (int) (4));
 			}
 			{
 				TileEntity inv = world.getTileEntity(new BlockPos((int) x, (int) y, (int) z));
-				if (inv instanceof LockableLootTileEntity)
-					((LockableLootTileEntity) inv).decrStackSize((int) (1), (int) (1));
+				if (inv instanceof LockableTileEntity)
+					((LockableTileEntity) inv).decrStackSize((int) (1), (int) (1));
 			}
 			{
 				TileEntity inv = world.getTileEntity(new BlockPos((int) x, (int) y, (int) z));
-				if (inv != null && (inv instanceof LockableLootTileEntity)) {
-					ItemStack stack = ((LockableLootTileEntity) inv).getStackInSlot((int) (2));
+				if (inv != null && (inv instanceof LockableTileEntity)) {
+					ItemStack stack = ((LockableTileEntity) inv).getStackInSlot((int) (2));
 					if (stack != null) {
 						if (stack.attemptDamageItem((int) 1, new Random(), null)) {
 							stack.shrink(1);
@@ -2751,20 +2751,20 @@ public class GearsMakerBlockUpdateTickProcedure extends SlothCraftElements.ModEl
 			}
 			{
 				TileEntity inv = world.getTileEntity(new BlockPos((int) x, (int) y, (int) z));
-				if (inv != null && (inv instanceof LockableLootTileEntity)) {
+				if (inv != null && (inv instanceof LockableTileEntity)) {
 					ItemStack _setstack = new ItemStack(ZincGearItemItem.block, (int) (1));
-					_setstack.setCount(((new Object() {
+					_setstack.setCount((int) ((new Object() {
 						public int getAmount(BlockPos pos, int sltid) {
 							TileEntity inv = world.getTileEntity(pos);
-							if (inv instanceof LockableLootTileEntity) {
-								ItemStack stack = ((LockableLootTileEntity) inv).getStackInSlot(sltid);
+							if (inv instanceof LockableTileEntity) {
+								ItemStack stack = ((LockableTileEntity) inv).getStackInSlot(sltid);
 								if (stack != null)
 									return stack.getCount();
 							}
 							return 0;
 						}
 					}.getAmount(new BlockPos((int) x, (int) y, (int) z), (int) (3))) + 1));
-					((LockableLootTileEntity) inv).setInventorySlotContents((int) (3), _setstack);
+					((LockableTileEntity) inv).setInventorySlotContents((int) (3), _setstack);
 				}
 			}
 		}

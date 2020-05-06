@@ -86,7 +86,7 @@ public class GearsMakerBlockBlock extends SlothCraftElements.ModElement {
 	public static class CustomBlock extends Block {
 		public static final DirectionProperty FACING = HorizontalBlock.HORIZONTAL_FACING;
 		public CustomBlock() {
-			super(Block.Properties.create(Material.ROCK).sound(SoundType.STONE).hardnessAndResistance(1f, 10f).lightValue(0).harvestLevel(1)
+			super(Block.Properties.create(Material.ROCK).sound(SoundType.STONE).hardnessAndResistance(1f, 10f).lightValue(0).harvestLevel(0)
 					.harvestTool(ToolType.PICKAXE));
 			this.setDefaultState(this.stateContainer.getBaseState().with(FACING, Direction.NORTH));
 			setRegistryName("gearsmakerblock");
@@ -95,12 +95,17 @@ public class GearsMakerBlockBlock extends SlothCraftElements.ModElement {
 		@OnlyIn(Dist.CLIENT)
 		@Override
 		public BlockRenderLayer getRenderLayer() {
-			return BlockRenderLayer.CUTOUT_MIPPED;
+			return BlockRenderLayer.TRANSLUCENT;
 		}
 
 		@Override
 		public boolean isNormalCube(BlockState state, IBlockReader worldIn, BlockPos pos) {
 			return false;
+		}
+
+		@Override
+		public boolean propagatesSkylightDown(BlockState state, IBlockReader reader, BlockPos pos) {
+			return true;
 		}
 
 		@Override

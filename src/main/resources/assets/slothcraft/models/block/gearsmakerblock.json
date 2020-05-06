@@ -1,12 +1,8 @@
 {
-  "parent": "block/cube",
+  "parent": "slothcraft:custom/platemaker_animation",
   "textures": {
-    "down": "slothcraft:blocks/wip",
-    "up": "slothcraft:blocks/wip",
-    "north": "slothcraft:blocks/wip",
-    "east": "slothcraft:blocks/wip",
-    "south": "slothcraft:blocks/wip",
-    "west": "slothcraft:blocks/wip",
-    "particle": "slothcraft:blocks/wip"
+    "all": "slothcraft:blocks/earsaker",
+    "particle": "slothcraft:blocks/earsaker",
+    "main": "slothcraft:blocks/plateakernimation"
   }
 }

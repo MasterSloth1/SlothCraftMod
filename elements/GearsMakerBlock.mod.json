@@ -1,25 +1,25 @@
 {
-  "_fv": 6,
+  "_fv": 7,
   "_type": "block",
   "definition": {
-    "texture": "wip",
+    "texture": "earsaker",
     "textureTop": "",
     "textureLeft": "",
     "textureFront": "",
     "textureRight": "",
     "textureBack": "",
-    "renderType": 10,
-    "customModelName": "Normal",
+    "renderType": 2,
+    "customModelName": "platemaker_animation:default",
     "rotationMode": 1,
     "hasTransparency": true,
-    "transparencyType": "CUTOUT_MIPPED",
+    "connectedSides": false,
+    "transparencyType": "TRANSLUCENT",
     "mx": 0.0,
     "my": 0.0,
     "mz": 0.0,
     "Mx": 1.0,
     "My": 1.0,
     "Mz": 1.0,
-    "faceShape": "SOLID",
     "name": "Gear's Maker",
     "specialInfo": [],
     "hardness": 1.0,
@@ -29,7 +29,6 @@
       "value": "CUSTOM:SlothCraftGearsCreativeTab"
     },
     "destroyTool": "pickaxe",
-    "affectedBySilkTouch": false,
     "customDrop": {
       "value": ""
     },
@@ -38,7 +37,7 @@
     "enchantPowerBonus": 0.0,
     "plantsGrowOn": false,
     "canProvidePower": false,
-    "lightOpacity": 255,
+    "lightOpacity": 0,
     "material": {
       "value": "ROCK"
     },
@@ -60,7 +59,7 @@
     },
     "luminance": 0.0,
     "unbreakable": false,
-    "breakHarvestLevel": 1,
+    "breakHarvestLevel": 0,
     "spawnParticles": false,
     "particleToSpawn": {
       "value": "EXPLOSION_NORMAL"

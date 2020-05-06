@@ -1,5 +1,5 @@
 {
-  "_fv": 6,
+  "_fv": 7,
   "_type": "gui",
   "definition": {
     "type": 1,
@@ -18,6 +18,9 @@
             "falpha": 0.0
           },
           "id": 0,
+          "onSlotChanged": {
+            "name": "ItemMoverGearsMakerProcedure"
+          },
           "name": "Slot #0",
           "x": 300,
           "y": 96

@@ -612,6 +612,634 @@
       "compiles": true,
       "locked_code": false,
       "ids": {}
+    },
+    {
+      "name": "GearMoldRecipe",
+      "type": "recipe",
+      "sortid": 73,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {}
+    },
+    {
+      "name": "SlothCraftPlatesCreativeTab",
+      "type": "tab",
+      "sortid": 74,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {}
+    },
+    {
+      "name": "AluminumPlateItem",
+      "type": "item",
+      "sortid": 75,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {}
+    },
+    {
+      "name": "AmethystPlateItem",
+      "type": "item",
+      "sortid": 76,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {}
+    },
+    {
+      "name": "ChromiumPlateItem",
+      "type": "item",
+      "sortid": 77,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {}
+    },
+    {
+      "name": "CopperPlateItem",
+      "type": "item",
+      "sortid": 78,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {}
+    },
+    {
+      "name": "DiamondPlateItem",
+      "type": "item",
+      "sortid": 79,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {}
+    },
+    {
+      "name": "EmeraldPlateItem",
+      "type": "item",
+      "sortid": 80,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {}
+    },
+    {
+      "name": "FlintPlateItem",
+      "type": "item",
+      "sortid": 81,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {}
+    },
+    {
+      "name": "GobberEndPlateItem",
+      "type": "item",
+      "sortid": 82,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {}
+    },
+    {
+      "name": "GobberNetherPlateItem",
+      "type": "item",
+      "sortid": 83,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {}
+    },
+    {
+      "name": "GobberPlateItem",
+      "type": "item",
+      "sortid": 84,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {}
+    },
+    {
+      "name": "GoldPlateItem",
+      "type": "item",
+      "sortid": 85,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {}
+    },
+    {
+      "name": "IridiumPlateItem",
+      "type": "item",
+      "sortid": 86,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {}
+    },
+    {
+      "name": "IronPlateItem",
+      "type": "item",
+      "sortid": 87,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {}
+    },
+    {
+      "name": "JadePlateItem",
+      "type": "item",
+      "sortid": 88,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {}
+    },
+    {
+      "name": "LapisPlateItem",
+      "type": "item",
+      "sortid": 89,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {}
+    },
+    {
+      "name": "LeadPlateItem",
+      "type": "item",
+      "sortid": 90,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {}
+    },
+    {
+      "name": "MithrilPlateItem",
+      "type": "item",
+      "sortid": 91,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {}
+    },
+    {
+      "name": "NickelPlateItem",
+      "type": "item",
+      "sortid": 92,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {}
+    },
+    {
+      "name": "ObsidianPlateItem",
+      "type": "item",
+      "sortid": 93,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {}
+    },
+    {
+      "name": "OsmiumPlateItem",
+      "type": "item",
+      "sortid": 94,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {}
+    },
+    {
+      "name": "PlatinumPlateItem",
+      "type": "item",
+      "sortid": 95,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {}
+    },
+    {
+      "name": "QuartzPlateItem",
+      "type": "item",
+      "sortid": 96,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {}
+    },
+    {
+      "name": "RedstonePlateItem",
+      "type": "item",
+      "sortid": 97,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {}
+    },
+    {
+      "name": "RubyPlateItem",
+      "type": "item",
+      "sortid": 98,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {}
+    },
+    {
+      "name": "SilverPlateItem",
+      "type": "item",
+      "sortid": 99,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {}
+    },
+    {
+      "name": "SteelPlateItem",
+      "type": "item",
+      "sortid": 100,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {}
+    },
+    {
+      "name": "TinPlateItem",
+      "type": "item",
+      "sortid": 101,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {}
+    },
+    {
+      "name": "TitaniumPlateItem",
+      "type": "item",
+      "sortid": 102,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {}
+    },
+    {
+      "name": "UraniumPlateItem",
+      "type": "item",
+      "sortid": 103,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {}
+    },
+    {
+      "name": "WoodPlateItem",
+      "type": "item",
+      "sortid": 104,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {}
+    },
+    {
+      "name": "ZincPlateItem",
+      "type": "item",
+      "sortid": 105,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {}
+    },
+    {
+      "name": "PlatesTag",
+      "type": "tag",
+      "sortid": 106,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {}
+    },
+    {
+      "name": "PlatesAluminumTag",
+      "type": "tag",
+      "sortid": 107,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {}
+    },
+    {
+      "name": "PlatesAmethystTag",
+      "type": "tag",
+      "sortid": 108,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {}
+    },
+    {
+      "name": "PlatesChromiumTag",
+      "type": "tag",
+      "sortid": 109,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {}
+    },
+    {
+      "name": "PlatesCopperTag",
+      "type": "tag",
+      "sortid": 110,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {}
+    },
+    {
+      "name": "PlatesDiamondTag",
+      "type": "tag",
+      "sortid": 111,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {}
+    },
+    {
+      "name": "PlatesEmeraldTag",
+      "type": "tag",
+      "sortid": 112,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {}
+    },
+    {
+      "name": "PlatesFlintTag",
+      "type": "tag",
+      "sortid": 113,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {}
+    },
+    {
+      "name": "PlatesGobberEndTag",
+      "type": "tag",
+      "sortid": 114,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {}
+    },
+    {
+      "name": "PlatesGobberNetherTag",
+      "type": "tag",
+      "sortid": 115,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {}
+    },
+    {
+      "name": "PlatesGobberTag",
+      "type": "tag",
+      "sortid": 116,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {}
+    },
+    {
+      "name": "PlatesGoldTag",
+      "type": "tag",
+      "sortid": 117,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {}
+    },
+    {
+      "name": "PlatesIridiumTag",
+      "type": "tag",
+      "sortid": 118,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {}
+    },
+    {
+      "name": "PlatesIronTag",
+      "type": "tag",
+      "sortid": 119,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {}
+    },
+    {
+      "name": "PlatesJadeTag",
+      "type": "tag",
+      "sortid": 120,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {}
+    },
+    {
+      "name": "PlatesLapisTag",
+      "type": "tag",
+      "sortid": 121,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {}
+    },
+    {
+      "name": "PlatesLeadTag",
+      "type": "tag",
+      "sortid": 122,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {}
+    },
+    {
+      "name": "PlatesMithrilTag",
+      "type": "tag",
+      "sortid": 123,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {}
+    },
+    {
+      "name": "PlatesNickelTag",
+      "type": "tag",
+      "sortid": 124,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {}
+    },
+    {
+      "name": "PlatesObsidianTag",
+      "type": "tag",
+      "sortid": 125,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {}
+    },
+    {
+      "name": "PlatesOsmiumTag",
+      "type": "tag",
+      "sortid": 126,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {}
+    },
+    {
+      "name": "PlatesPlatinumTag",
+      "type": "tag",
+      "sortid": 127,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {}
+    },
+    {
+      "name": "PlatesQuartzTag",
+      "type": "tag",
+      "sortid": 128,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {}
+    },
+    {
+      "name": "PlatesRedstoneTag",
+      "type": "tag",
+      "sortid": 129,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {}
+    },
+    {
+      "name": "PlatesRubyTag",
+      "type": "tag",
+      "sortid": 130,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {}
+    },
+    {
+      "name": "PlatesSilverTag",
+      "type": "tag",
+      "sortid": 131,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {}
+    },
+    {
+      "name": "PlatesSteelTag",
+      "type": "tag",
+      "sortid": 132,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {}
+    },
+    {
+      "name": "PlatesTinTag",
+      "type": "tag",
+      "sortid": 133,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {}
+    },
+    {
+      "name": "PlatesTitaniumTag",
+      "type": "tag",
+      "sortid": 134,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {}
+    },
+    {
+      "name": "PlatesUraniumTag",
+      "type": "tag",
+      "sortid": 135,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {}
+    },
+    {
+      "name": "PlatesWoodTag",
+      "type": "tag",
+      "sortid": 136,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {}
+    },
+    {
+      "name": "PlatesZincTag",
+      "type": "tag",
+      "sortid": 137,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {}
+    },
+    {
+      "name": "PlateHammerItem",
+      "type": "item",
+      "sortid": 139,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {}
+    },
+    {
+      "name": "PlatesMakerGui",
+      "type": "gui",
+      "sortid": 140,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {}
+    },
+    {
+      "name": "PlatesMakerBlockUpdateTick",
+      "type": "procedure",
+      "sortid": 141,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "int"
+          },
+          {
+            "name": "y",
+            "type": "int"
+          },
+          {
+            "name": "z",
+            "type": "int"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "PlatesMakerBlock",
+      "type": "block",
+      "sortid": 141,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {}
+    },
+    {
+      "name": "ItemMoverPlatesMakerProcedure",
+      "type": "procedure",
+      "sortid": 142,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "int"
+          },
+          {
+            "name": "y",
+            "type": "int"
+          },
+          {
+            "name": "z",
+            "type": "int"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "ItemMoverGearsMakerProcedure",
+      "type": "procedure",
+      "sortid": 147,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "int"
+          },
+          {
+            "name": "y",
+            "type": "int"
+          },
+          {
+            "name": "z",
+            "type": "int"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
     }
   ],
   "variable_elements": [],
@@ -620,38 +1248,72 @@
     "en_us": {
       "itemGroup.tabslothcraftgearscreativetab": "Sloth Craft Gears",
       "item.slothcraft.gobbergearitem": "Gobber Gear",
-      "item.slothcraft.amethystgearitem": "Amethyst Gear",
+      "item.slothcraft.zincplateitem": "Zinc Plate",
       "item.slothcraft.gearmolditem": "Gear Mold",
       "item.slothcraft.lapisgearitem": "Lapis Gear",
-      "item.slothcraft.leadgearitem": "Lead Gear",
+      "item.slothcraft.gobbernetherplateitem": "Nether Gobber Plate",
       "item.slothcraft.coppergearitem": "Copper Gear",
-      "item.slothcraft.jadegearitem": "Jade Gear",
-      "item.slothcraft.diamondgearitem": "Diamond Gear",
       "item.slothcraft.irongearitem": "Iron Gear",
       "item.slothcraft.quartzgearitem": "Quartz Gear",
-      "item.slothcraft.uraniumgearitem": "Uranium Gear",
-      "item.slothcraft.iridiumgearitem": "Iridium Gear",
-      "item.slothcraft.redstonegearitem": "Redstone Gear",
+      "item.slothcraft.copperplateitem": "Copper Plate",
+      "item.slothcraft.leadplateitem": "Lead Plate",
+      "item.slothcraft.steelplateitem": "Steel Plate",
+      "item.slothcraft.diamondplateitem": "Diamond Plate",
       "item.slothcraft.tingearitem": "Tin Gear",
       "item.slothcraft.gobbernethergearitem": "Gobber Nether Gear",
       "item.slothcraft.mithrilgearitem": "Mithril Gear",
       "item.slothcraft.obsidiangearitem": "Obsidian Gear",
+      "item.slothcraft.quartzplateitem": "Quartz Plate",
+      "item.slothcraft.tinplateitem": "Tin Plate",
       "item.slothcraft.flintgearitem": "Flint Gear",
       "block.slothcraft.gearsmakerblock": "Gear\u0027s Maker",
+      "item.slothcraft.uraniumplateitem": "Uranium Plate",
       "item.slothcraft.chromiumgearitem": "Chromium Gear",
+      "item.slothcraft.goldplateitem": "Gold Plate",
+      "item.slothcraft.titaniumgearitem": "Titanium Gear",
+      "item.slothcraft.chromiumplateitem": "Chromium Plate",
+      "item.slothcraft.aluminumplateitem": "Aluminum Plate",
+      "item.slothcraft.rubygearitem": "Ruby Gear",
+      "item.slothcraft.aluminumgearitem": "Aluminum Gear",
+      "item.slothcraft.platehammeritem": "Plate Hammer",
+      "item.slothcraft.nickelgearitem": "Nickel Gear",
+      "item.slothcraft.stonegearitem": "Stone Gear",
+      "item.slothcraft.nickelplateitem": "Nickel Plate",
+      "item.slothcraft.emeraldgearitem": "Emerald Gear",
+      "item.slothcraft.mithrilplateitem": "Mithril Plate",
+      "item.slothcraft.platinumgearitem": "Platinum Gear",
+      "item.slothcraft.gobberplateitem": "Gobber Plate",
+      "item.slothcraft.ironplateitem": "Iron Plate",
+      "item.slothcraft.titaniumplateitem": "Titanium Plate",
+      "item.slothcraft.woodplateitem": "Wooden Plate",
+      "item.slothcraft.amethystgearitem": "Amethyst Gear",
+      "item.slothcraft.jadeplateitem": "Jade Plate",
+      "item.slothcraft.leadgearitem": "Lead Gear",
+      "item.slothcraft.jadegearitem": "Jade Gear",
+      "item.slothcraft.diamondgearitem": "Diamond Gear",
+      "item.slothcraft.rubyplateitem": "Ruby Plate",
+      "item.slothcraft.uraniumgearitem": "Uranium Gear",
+      "item.slothcraft.lapisplateitem": "Lapis Plate",
+      "item.slothcraft.iridiumgearitem": "Iridium Gear",
+      "item.slothcraft.emeraldplateitem": "Emerald Plate",
+      "item.slothcraft.obsidianplateitem": "Obsidian Plate",
+      "item.slothcraft.iridiumplateitem": "Iridium Plate",
+      "item.slothcraft.gobberendplateitem": "Ender Gobber Plate",
+      "item.slothcraft.redstonegearitem": "Redstone Gear",
+      "item.slothcraft.osmiumplateitem": "Osmium Plate",
+      "item.slothcraft.silverplateitem": "Silver Plate",
+      "item.slothcraft.amethystplateitem": "Amethyst Plate",
       "item.slothcraft.goldgearitem": "Gold Gear",
       "item.slothcraft.gobberendgearitem": "Gobber End Gear",
       "item.slothcraft.zincgearitem": "Zinc Gear",
-      "item.slothcraft.titaniumgearitem": "Titanium Gear",
-      "item.slothcraft.rubygearitem": "Ruby Gear",
-      "item.slothcraft.aluminumgearitem": "Aluminum Gear",
+      "block.slothcraft.platesmakerblock": "Plate\u0027s Maker",
+      "item.slothcraft.redstoneplateitem": "Redstone Plate",
+      "itemGroup.tabslothcraftplatescreativetab": "Sloth Craft Plates",
       "item.slothcraft.osmiumgearitem": "Osmium Gear",
-      "item.slothcraft.nickelgearitem": "Nickel Gear",
-      "item.slothcraft.stonegearitem": "Stone Gear",
-      "item.slothcraft.emeraldgearitem": "Emerald Gear",
+      "item.slothcraft.flintplateitem": "Flint Plate",
+      "item.slothcraft.platinumplateitem": "Platinum Plate",
       "item.slothcraft.silvergearitem": "Silver Gear",
       "item.slothcraft.steelgearitem": "Steel Gear",
-      "item.slothcraft.platinumgearitem": "Platinum Gear",
       "item.slothcraft.woodengearitem": "Wooden Gear"
     }
   },
@@ -671,5 +1333,5 @@
     "modElementsPackage": "net.slothcraft",
     "lockBaseModFiles": false
   },
-  "mcreatorVersion": 202000214217
+  "mcreatorVersion": 202000318613
 }
