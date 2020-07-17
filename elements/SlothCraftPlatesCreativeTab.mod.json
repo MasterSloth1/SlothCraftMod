@@ -4,7 +4,7 @@
   "definition": {
     "name": "Sloth Craft Plates",
     "icon": {
-      "value": "CUSTOM:AluminumGearItem"
+      "value": "CUSTOM:AmethystPlateItem"
     },
     "showSearch": true
   }

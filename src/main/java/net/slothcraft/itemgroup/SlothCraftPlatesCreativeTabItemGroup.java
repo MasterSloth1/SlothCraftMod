@@ -1,7 +1,7 @@
 
 package net.slothcraft.itemgroup;
 
-import net.slothcraft.item.AluminumGearItemItem;
+import net.slothcraft.item.AmethystPlateItemItem;
 import net.slothcraft.SlothcraftModElements;
 
 import net.minecraftforge.api.distmarker.OnlyIn;
@@ -22,7 +22,7 @@ public class SlothCraftPlatesCreativeTabItemGroup extends SlothcraftModElements.
 			@OnlyIn(Dist.CLIENT)
 			@Override
 			public ItemStack createIcon() {
-				return new ItemStack(AluminumGearItemItem.block, (int) (1));
+				return new ItemStack(AmethystPlateItemItem.block, (int) (1));
 			}
 
 			@OnlyIn(Dist.CLIENT)
