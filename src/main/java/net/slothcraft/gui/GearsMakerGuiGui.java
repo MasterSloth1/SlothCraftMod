@@ -6,8 +6,8 @@ import org.lwjgl.opengl.GL11;
 import net.slothcraft.procedures.ItemMoverGearsMakerProcedureProcedure;
 import net.slothcraft.item.StoneGearItemItem;
 import net.slothcraft.item.GearMoldItemItem;
-import net.slothcraft.SlothCraftElements;
-import net.slothcraft.SlothCraft;
+import net.slothcraft.SlothcraftModElements;
+import net.slothcraft.SlothcraftMod;
 
 import net.minecraftforge.items.SlotItemHandler;
 import net.minecraftforge.items.ItemStackHandler;
@@ -27,7 +27,6 @@ import net.minecraft.util.text.ITextComponent;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.tileentity.TileEntity;
-import net.minecraft.tileentity.LockableTileEntity;
 import net.minecraft.network.PacketBuffer;
 import net.minecraft.item.ItemStack;
 import net.minecraft.inventory.container.Slot;
@@ -44,11 +43,11 @@ import java.util.function.Supplier;
 import java.util.Map;
 import java.util.HashMap;
 
-@SlothCraftElements.ModElement.Tag
-public class GearsMakerGuiGui extends SlothCraftElements.ModElement {
+@SlothcraftModElements.ModElement.Tag
+public class GearsMakerGuiGui extends SlothcraftModElements.ModElement {
 	public static HashMap guistate = new HashMap();
 	private static ContainerType<GuiContainerMod> containerType = null;
-	public GearsMakerGuiGui(SlothCraftElements instance) {
+	public GearsMakerGuiGui(SlothcraftModElements instance) {
 		super(instance, 34);
 		elements.addNetworkMessage(ButtonPressedMessage.class, ButtonPressedMessage::buffer, ButtonPressedMessage::new,
 				ButtonPressedMessage::handler);
@@ -106,34 +105,34 @@ public class GearsMakerGuiGui extends SlothCraftElements.ModElement {
 					});
 				} else { // might be bound to block
 					TileEntity ent = inv.player != null ? inv.player.world.getTileEntity(pos) : null;
-					if (ent instanceof LockableTileEntity) {
-						((LockableTileEntity) ent).getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
+					if (ent != null) {
+						ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
 							this.internal = capability;
 							this.bound = true;
 						});
 					}
 				}
 			}
-			this.customSlots.put(0, this.addSlot(new SlotItemHandler(internal, 0, 26, 12) {
+			this.customSlots.put(0, this.addSlot(new SlotItemHandler(internal, 0, 25, 12) {
 				@Override
 				public void onSlotChanged() {
 					super.onSlotChanged();
 					GuiContainerMod.this.slotChanged(0, 0, 0);
 				}
 			}));
-			this.customSlots.put(1, this.addSlot(new SlotItemHandler(internal, 1, 26, 48) {
+			this.customSlots.put(1, this.addSlot(new SlotItemHandler(internal, 1, 25, 48) {
 				@Override
 				public boolean isItemValid(ItemStack stack) {
 					return (new ItemStack(StoneGearItemItem.block, (int) (1)).getItem() == stack.getItem());
 				}
 			}));
-			this.customSlots.put(2, this.addSlot(new SlotItemHandler(internal, 2, 80, 30) {
+			this.customSlots.put(2, this.addSlot(new SlotItemHandler(internal, 2, 79, 30) {
 				@Override
 				public boolean isItemValid(ItemStack stack) {
 					return (new ItemStack(GearMoldItemItem.block, (int) (1)).getItem() == stack.getItem());
 				}
 			}));
-			this.customSlots.put(3, this.addSlot(new SlotItemHandler(internal, 3, 134, 30) {
+			this.customSlots.put(3, this.addSlot(new SlotItemHandler(internal, 3, 133, 30) {
 				@Override
 				public boolean isItemValid(ItemStack stack) {
 					return false;
@@ -294,7 +293,7 @@ public class GearsMakerGuiGui extends SlothCraftElements.ModElement {
 
 		private void slotChanged(int slotid, int ctype, int meta) {
 			if (this.world != null && this.world.isRemote) {
-				SlothCraft.PACKET_HANDLER.sendToServer(new GUISlotChangedMessage(slotid, x, y, z, ctype, meta));
+				SlothcraftMod.PACKET_HANDLER.sendToServer(new GUISlotChangedMessage(slotid, x, y, z, ctype, meta));
 				handleSlotAction(entity, slotid, ctype, meta, x, y, z);
 			}
 		}

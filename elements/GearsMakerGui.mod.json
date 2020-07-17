@@ -1,5 +1,5 @@
 {
-  "_fv": 7,
+  "_fv": 8,
   "_type": "gui",
   "definition": {
     "type": 1,
@@ -18,6 +18,7 @@
             "falpha": 0.0
           },
           "id": 0,
+          "disableStackInteraction": false,
           "onSlotChanged": {
             "name": "ItemMoverGearsMakerProcedure"
           },
@@ -37,6 +38,7 @@
             "falpha": 0.0
           },
           "id": 1,
+          "disableStackInteraction": false,
           "name": "Slot #1",
           "x": 300,
           "y": 168
@@ -53,6 +55,7 @@
             "falpha": 0.0
           },
           "id": 2,
+          "disableStackInteraction": false,
           "name": "Slot #2",
           "x": 408,
           "y": 132
@@ -66,6 +69,7 @@
             "falpha": 0.0
           },
           "id": 3,
+          "disableStackInteraction": false,
           "name": "Slot #3",
           "x": 516,
           "y": 132

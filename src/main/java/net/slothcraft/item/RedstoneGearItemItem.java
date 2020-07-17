@@ -2,7 +2,7 @@
 package net.slothcraft.item;
 
 import net.slothcraft.itemgroup.SlothCraftGearsCreativeTabItemGroup;
-import net.slothcraft.SlothCraftElements;
+import net.slothcraft.SlothcraftModElements;
 
 import net.minecraftforge.registries.ObjectHolder;
 
@@ -10,11 +10,11 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.item.Item;
 import net.minecraft.block.BlockState;
 
-@SlothCraftElements.ModElement.Tag
-public class RedstoneGearItemItem extends SlothCraftElements.ModElement {
+@SlothcraftModElements.ModElement.Tag
+public class RedstoneGearItemItem extends SlothcraftModElements.ModElement {
 	@ObjectHolder("slothcraft:redstonegearitem")
 	public static final Item block = null;
-	public RedstoneGearItemItem(SlothCraftElements instance) {
+	public RedstoneGearItemItem(SlothcraftModElements instance) {
 		super(instance, 23);
 	}
 

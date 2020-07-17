@@ -40,31 +40,31 @@ import java.util.ArrayList;
 import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Retention;
 
-public class SlothCraftElements {
+public class SlothcraftModElements {
 	public final List<ModElement> elements = new ArrayList<>();
 	public final List<Supplier<Block>> blocks = new ArrayList<>();
 	public final List<Supplier<Item>> items = new ArrayList<>();
 	public final List<Supplier<Biome>> biomes = new ArrayList<>();
 	public final List<Supplier<EntityType<?>>> entities = new ArrayList<>();
 	public static Map<ResourceLocation, net.minecraft.util.SoundEvent> sounds = new HashMap<>();
-	public SlothCraftElements() {
+	public SlothcraftModElements() {
 		try {
 			ModFileScanData modFileInfo = ModList.get().getModFileById("slothcraft").getFile().getScanResult();
 			Set<ModFileScanData.AnnotationData> annotations = modFileInfo.getAnnotations();
 			for (ModFileScanData.AnnotationData annotationData : annotations) {
 				if (annotationData.getAnnotationType().getClassName().equals(ModElement.Tag.class.getName())) {
 					Class<?> clazz = Class.forName(annotationData.getClassType().getClassName());
-					if (clazz.getSuperclass() == SlothCraftElements.ModElement.class)
-						elements.add((SlothCraftElements.ModElement) clazz.getConstructor(this.getClass()).newInstance(this));
+					if (clazz.getSuperclass() == SlothcraftModElements.ModElement.class)
+						elements.add((SlothcraftModElements.ModElement) clazz.getConstructor(this.getClass()).newInstance(this));
 				}
 			}
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
 		Collections.sort(elements);
-		elements.forEach(SlothCraftElements.ModElement::initElements);
-		this.addNetworkMessage(SlothCraftVariables.WorldSavedDataSyncMessage.class, SlothCraftVariables.WorldSavedDataSyncMessage::buffer,
-				SlothCraftVariables.WorldSavedDataSyncMessage::new, SlothCraftVariables.WorldSavedDataSyncMessage::handler);
+		elements.forEach(SlothcraftModElements.ModElement::initElements);
+		this.addNetworkMessage(SlothcraftModVariables.WorldSavedDataSyncMessage.class, SlothcraftModVariables.WorldSavedDataSyncMessage::buffer,
+				SlothcraftModVariables.WorldSavedDataSyncMessage::new, SlothcraftModVariables.WorldSavedDataSyncMessage::handler);
 		MinecraftForge.EVENT_BUS.register(this);
 	}
 
@@ -76,30 +76,30 @@ public class SlothCraftElements {
 	@SubscribeEvent
 	public void onPlayerLoggedIn(PlayerEvent.PlayerLoggedInEvent event) {
 		if (!event.getPlayer().world.isRemote) {
-			WorldSavedData mapdata = SlothCraftVariables.MapVariables.get(event.getPlayer().world);
-			WorldSavedData worlddata = SlothCraftVariables.WorldVariables.get(event.getPlayer().world);
+			WorldSavedData mapdata = SlothcraftModVariables.MapVariables.get(event.getPlayer().world);
+			WorldSavedData worlddata = SlothcraftModVariables.WorldVariables.get(event.getPlayer().world);
 			if (mapdata != null)
-				SlothCraft.PACKET_HANDLER.send(PacketDistributor.PLAYER.with(() -> (ServerPlayerEntity) event.getPlayer()),
-						new SlothCraftVariables.WorldSavedDataSyncMessage(0, mapdata));
+				SlothcraftMod.PACKET_HANDLER.send(PacketDistributor.PLAYER.with(() -> (ServerPlayerEntity) event.getPlayer()),
+						new SlothcraftModVariables.WorldSavedDataSyncMessage(0, mapdata));
 			if (worlddata != null)
-				SlothCraft.PACKET_HANDLER.send(PacketDistributor.PLAYER.with(() -> (ServerPlayerEntity) event.getPlayer()),
-						new SlothCraftVariables.WorldSavedDataSyncMessage(1, worlddata));
+				SlothcraftMod.PACKET_HANDLER.send(PacketDistributor.PLAYER.with(() -> (ServerPlayerEntity) event.getPlayer()),
+						new SlothcraftModVariables.WorldSavedDataSyncMessage(1, worlddata));
 		}
 	}
 
 	@SubscribeEvent
 	public void onPlayerChangedDimension(PlayerEvent.PlayerChangedDimensionEvent event) {
 		if (!event.getPlayer().world.isRemote) {
-			WorldSavedData worlddata = SlothCraftVariables.WorldVariables.get(event.getPlayer().world);
+			WorldSavedData worlddata = SlothcraftModVariables.WorldVariables.get(event.getPlayer().world);
 			if (worlddata != null)
-				SlothCraft.PACKET_HANDLER.send(PacketDistributor.PLAYER.with(() -> (ServerPlayerEntity) event.getPlayer()),
-						new SlothCraftVariables.WorldSavedDataSyncMessage(1, worlddata));
+				SlothcraftMod.PACKET_HANDLER.send(PacketDistributor.PLAYER.with(() -> (ServerPlayerEntity) event.getPlayer()),
+						new SlothcraftModVariables.WorldSavedDataSyncMessage(1, worlddata));
 		}
 	}
 	private int messageID = 0;
 	public <T> void addNetworkMessage(Class<T> messageType, BiConsumer<T, PacketBuffer> encoder, Function<PacketBuffer, T> decoder,
 			BiConsumer<T, Supplier<NetworkEvent.Context>> messageConsumer) {
-		SlothCraft.PACKET_HANDLER.registerMessage(messageID, messageType, encoder, decoder, messageConsumer);
+		SlothcraftMod.PACKET_HANDLER.registerMessage(messageID, messageType, encoder, decoder, messageConsumer);
 		messageID++;
 	}
 
@@ -126,9 +126,9 @@ public class SlothCraftElements {
 		@Retention(RetentionPolicy.RUNTIME)
 		public @interface Tag {
 		}
-		protected final SlothCraftElements elements;
+		protected final SlothcraftModElements elements;
 		protected final int sortid;
-		public ModElement(SlothCraftElements elements, int sortid) {
+		public ModElement(SlothcraftModElements elements, int sortid) {
 			this.elements = elements;
 			this.sortid = sortid;
 		}

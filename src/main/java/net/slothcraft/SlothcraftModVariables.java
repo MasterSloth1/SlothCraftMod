@@ -14,7 +14,7 @@ import net.minecraft.client.Minecraft;
 
 import java.util.function.Supplier;
 
-public class SlothCraftVariables {
+public class SlothcraftModVariables {
 	public static class WorldVariables extends WorldSavedData {
 		public static final String DATA_NAME = "slothcraft_worldvars";
 		public WorldVariables() {
@@ -37,9 +37,9 @@ public class SlothCraftVariables {
 		public void syncData(World world) {
 			this.markDirty();
 			if (world.isRemote) {
-				SlothCraft.PACKET_HANDLER.sendToServer(new WorldSavedDataSyncMessage(1, this));
+				SlothcraftMod.PACKET_HANDLER.sendToServer(new WorldSavedDataSyncMessage(1, this));
 			} else {
-				SlothCraft.PACKET_HANDLER.send(PacketDistributor.DIMENSION.with(world.dimension::getType), new WorldSavedDataSyncMessage(1, this));
+				SlothcraftMod.PACKET_HANDLER.send(PacketDistributor.DIMENSION.with(world.dimension::getType), new WorldSavedDataSyncMessage(1, this));
 			}
 		}
 		static WorldVariables clientSide = new WorldVariables();
@@ -74,9 +74,9 @@ public class SlothCraftVariables {
 		public void syncData(World world) {
 			this.markDirty();
 			if (world.isRemote) {
-				SlothCraft.PACKET_HANDLER.sendToServer(new WorldSavedDataSyncMessage(0, this));
+				SlothcraftMod.PACKET_HANDLER.sendToServer(new WorldSavedDataSyncMessage(0, this));
 			} else {
-				SlothCraft.PACKET_HANDLER.send(PacketDistributor.ALL.noArg(), new WorldSavedDataSyncMessage(0, this));
+				SlothcraftMod.PACKET_HANDLER.send(PacketDistributor.ALL.noArg(), new WorldSavedDataSyncMessage(0, this));
 			}
 		}
 		static MapVariables clientSide = new MapVariables();
@@ -126,10 +126,10 @@ public class SlothCraftVariables {
 			if (side.isServer()) {
 				message.data.markDirty();
 				if (message.type == 0) {
-					SlothCraft.PACKET_HANDLER.send(PacketDistributor.ALL.noArg(), message);
+					SlothcraftMod.PACKET_HANDLER.send(PacketDistributor.ALL.noArg(), message);
 					world.getServer().getWorld(DimensionType.OVERWORLD).getSavedData().set(message.data);
 				} else {
-					SlothCraft.PACKET_HANDLER.send(PacketDistributor.DIMENSION.with(world.dimension::getType), message);
+					SlothcraftMod.PACKET_HANDLER.send(PacketDistributor.DIMENSION.with(world.dimension::getType), message);
 					((ServerWorld) world).getSavedData().set(message.data);
 				}
 			} else {

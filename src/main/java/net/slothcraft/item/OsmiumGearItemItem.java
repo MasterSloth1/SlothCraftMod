@@ -2,7 +2,7 @@
 package net.slothcraft.item;
 
 import net.slothcraft.itemgroup.SlothCraftGearsCreativeTabItemGroup;
-import net.slothcraft.SlothCraftElements;
+import net.slothcraft.SlothcraftModElements;
 
 import net.minecraftforge.registries.ObjectHolder;
 
@@ -10,11 +10,11 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.item.Item;
 import net.minecraft.block.BlockState;
 
-@SlothCraftElements.ModElement.Tag
-public class OsmiumGearItemItem extends SlothCraftElements.ModElement {
+@SlothcraftModElements.ModElement.Tag
+public class OsmiumGearItemItem extends SlothcraftModElements.ModElement {
 	@ObjectHolder("slothcraft:osmiumgearitem")
 	public static final Item block = null;
-	public OsmiumGearItemItem(SlothCraftElements instance) {
+	public OsmiumGearItemItem(SlothcraftModElements instance) {
 		super(instance, 20);
 	}
 

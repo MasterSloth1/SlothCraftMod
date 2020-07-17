@@ -2,7 +2,7 @@
 package net.slothcraft.itemgroup;
 
 import net.slothcraft.item.AmethystGearItemItem;
-import net.slothcraft.SlothCraftElements;
+import net.slothcraft.SlothcraftModElements;
 
 import net.minecraftforge.api.distmarker.OnlyIn;
 import net.minecraftforge.api.distmarker.Dist;
@@ -10,9 +10,9 @@ import net.minecraftforge.api.distmarker.Dist;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.ItemGroup;
 
-@SlothCraftElements.ModElement.Tag
-public class SlothCraftGearsCreativeTabItemGroup extends SlothCraftElements.ModElement {
-	public SlothCraftGearsCreativeTabItemGroup(SlothCraftElements instance) {
+@SlothcraftModElements.ModElement.Tag
+public class SlothCraftGearsCreativeTabItemGroup extends SlothcraftModElements.ModElement {
+	public SlothCraftGearsCreativeTabItemGroup(SlothcraftModElements instance) {
 		super(instance, 1);
 	}
 

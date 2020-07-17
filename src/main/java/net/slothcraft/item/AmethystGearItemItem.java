@@ -2,7 +2,7 @@
 package net.slothcraft.item;
 
 import net.slothcraft.itemgroup.SlothCraftGearsCreativeTabItemGroup;
-import net.slothcraft.SlothCraftElements;
+import net.slothcraft.SlothcraftModElements;
 
 import net.minecraftforge.registries.ObjectHolder;
 
@@ -10,11 +10,11 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.item.Item;
 import net.minecraft.block.BlockState;
 
-@SlothCraftElements.ModElement.Tag
-public class AmethystGearItemItem extends SlothCraftElements.ModElement {
+@SlothcraftModElements.ModElement.Tag
+public class AmethystGearItemItem extends SlothcraftModElements.ModElement {
 	@ObjectHolder("slothcraft:amethystgearitem")
 	public static final Item block = null;
-	public AmethystGearItemItem(SlothCraftElements instance) {
+	public AmethystGearItemItem(SlothcraftModElements instance) {
 		super(instance, 2);
 	}
 

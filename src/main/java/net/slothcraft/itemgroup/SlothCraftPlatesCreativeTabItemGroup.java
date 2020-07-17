@@ -2,7 +2,7 @@
 package net.slothcraft.itemgroup;
 
 import net.slothcraft.item.AluminumGearItemItem;
-import net.slothcraft.SlothCraftElements;
+import net.slothcraft.SlothcraftModElements;
 
 import net.minecraftforge.api.distmarker.OnlyIn;
 import net.minecraftforge.api.distmarker.Dist;
@@ -10,9 +10,9 @@ import net.minecraftforge.api.distmarker.Dist;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.ItemGroup;
 
-@SlothCraftElements.ModElement.Tag
-public class SlothCraftPlatesCreativeTabItemGroup extends SlothCraftElements.ModElement {
-	public SlothCraftPlatesCreativeTabItemGroup(SlothCraftElements instance) {
+@SlothcraftModElements.ModElement.Tag
+public class SlothCraftPlatesCreativeTabItemGroup extends SlothcraftModElements.ModElement {
+	public SlothCraftPlatesCreativeTabItemGroup(SlothcraftModElements instance) {
 		super(instance, 74);
 	}
 

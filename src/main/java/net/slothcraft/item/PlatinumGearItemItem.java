@@ -2,7 +2,7 @@
 package net.slothcraft.item;
 
 import net.slothcraft.itemgroup.SlothCraftGearsCreativeTabItemGroup;
-import net.slothcraft.SlothCraftElements;
+import net.slothcraft.SlothcraftModElements;
 
 import net.minecraftforge.registries.ObjectHolder;
 
@@ -10,11 +10,11 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.item.Item;
 import net.minecraft.block.BlockState;
 
-@SlothCraftElements.ModElement.Tag
-public class PlatinumGearItemItem extends SlothCraftElements.ModElement {
+@SlothcraftModElements.ModElement.Tag
+public class PlatinumGearItemItem extends SlothcraftModElements.ModElement {
 	@ObjectHolder("slothcraft:platinumgearitem")
 	public static final Item block = null;
-	public PlatinumGearItemItem(SlothCraftElements instance) {
+	public PlatinumGearItemItem(SlothcraftModElements instance) {
 		super(instance, 21);
 	}
 
