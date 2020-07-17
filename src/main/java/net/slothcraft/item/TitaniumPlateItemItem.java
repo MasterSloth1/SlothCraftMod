@@ -15,7 +15,7 @@ public class TitaniumPlateItemItem extends SlothcraftModElements.ModElement {
 	@ObjectHolder("slothcraft:titaniumplateitem")
 	public static final Item block = null;
 	public TitaniumPlateItemItem(SlothcraftModElements instance) {
-		super(instance, 102);
+		super(instance, 63);
 	}
 
 	@Override

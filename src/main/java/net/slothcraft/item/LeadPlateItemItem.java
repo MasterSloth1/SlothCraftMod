@@ -15,7 +15,7 @@ public class LeadPlateItemItem extends SlothcraftModElements.ModElement {
 	@ObjectHolder("slothcraft:leadplateitem")
 	public static final Item block = null;
 	public LeadPlateItemItem(SlothcraftModElements instance) {
-		super(instance, 90);
+		super(instance, 50);
 	}
 
 	@Override

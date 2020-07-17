@@ -15,7 +15,7 @@ public class IridiumPlateItemItem extends SlothcraftModElements.ModElement {
 	@ObjectHolder("slothcraft:iridiumplateitem")
 	public static final Item block = null;
 	public IridiumPlateItemItem(SlothcraftModElements instance) {
-		super(instance, 86);
+		super(instance, 46);
 	}
 
 	@Override

@@ -15,7 +15,7 @@ public class QuartzPlateItemItem extends SlothcraftModElements.ModElement {
 	@ObjectHolder("slothcraft:quartzplateitem")
 	public static final Item block = null;
 	public QuartzPlateItemItem(SlothcraftModElements instance) {
-		super(instance, 96);
+		super(instance, 56);
 	}
 
 	@Override

@@ -77,7 +77,7 @@ public class PlatesMakerBlockBlock extends SlothcraftModElements.ModElement {
 	@ObjectHolder("slothcraft:platesmakerblock")
 	public static final TileEntityType<CustomTileEntity> tileEntityType = null;
 	public PlatesMakerBlockBlock(SlothcraftModElements instance) {
-		super(instance, 141);
+		super(instance, 68);
 		FMLJavaModLoadingContext.get().getModEventBus().register(this);
 	}
 

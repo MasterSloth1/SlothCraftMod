@@ -15,7 +15,7 @@ public class AmethystPlateItemItem extends SlothcraftModElements.ModElement {
 	@ObjectHolder("slothcraft:amethystplateitem")
 	public static final Item block = null;
 	public AmethystPlateItemItem(SlothcraftModElements instance) {
-		super(instance, 76);
+		super(instance, 36);
 	}
 
 	@Override

@@ -50,7 +50,7 @@ import java.util.Random;
 @SlothcraftModElements.ModElement.Tag
 public class GearsMakerBlockUpdateTickProcedure extends SlothcraftModElements.ModElement {
 	public GearsMakerBlockUpdateTickProcedure(SlothcraftModElements instance) {
-		super(instance, 35);
+		super(instance, 82);
 	}
 
 	public static void executeProcedure(java.util.HashMap<String, Object> dependencies) {

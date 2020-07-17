@@ -14,7 +14,7 @@
       "item": "minecraft:flint"
     },
     "4": {
-      "item": "slothcraft:woodengearitem"
+      "tag": "forge:gears/wood"
     },
     "5": {
       "item": "minecraft:flint"

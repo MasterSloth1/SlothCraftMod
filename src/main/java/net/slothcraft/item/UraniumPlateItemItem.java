@@ -15,7 +15,7 @@ public class UraniumPlateItemItem extends SlothcraftModElements.ModElement {
 	@ObjectHolder("slothcraft:uraniumplateitem")
 	public static final Item block = null;
 	public UraniumPlateItemItem(SlothcraftModElements instance) {
-		super(instance, 103);
+		super(instance, 64);
 	}
 
 	@Override

@@ -24,7 +24,7 @@ import java.util.Random;
 @SlothcraftModElements.ModElement.Tag
 public class PlatesMakerBlockUpdateTickProcedure extends SlothcraftModElements.ModElement {
 	public PlatesMakerBlockUpdateTickProcedure(SlothcraftModElements instance) {
-		super(instance, 141);
+		super(instance, 155);
 	}
 
 	public static void executeProcedure(java.util.HashMap<String, Object> dependencies) {

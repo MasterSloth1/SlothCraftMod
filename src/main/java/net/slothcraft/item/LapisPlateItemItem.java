@@ -15,7 +15,7 @@ public class LapisPlateItemItem extends SlothcraftModElements.ModElement {
 	@ObjectHolder("slothcraft:lapisplateitem")
 	public static final Item block = null;
 	public LapisPlateItemItem(SlothcraftModElements instance) {
-		super(instance, 89);
+		super(instance, 49);
 	}
 
 	@Override

@@ -15,7 +15,7 @@ public class JadePlateItemItem extends SlothcraftModElements.ModElement {
 	@ObjectHolder("slothcraft:jadeplateitem")
 	public static final Item block = null;
 	public JadePlateItemItem(SlothcraftModElements instance) {
-		super(instance, 88);
+		super(instance, 48);
 	}
 
 	@Override

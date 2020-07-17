@@ -15,7 +15,7 @@ public class CopperPlateItemItem extends SlothcraftModElements.ModElement {
 	@ObjectHolder("slothcraft:copperplateitem")
 	public static final Item block = null;
 	public CopperPlateItemItem(SlothcraftModElements instance) {
-		super(instance, 78);
+		super(instance, 38);
 	}
 
 	@Override

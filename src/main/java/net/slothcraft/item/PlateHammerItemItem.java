@@ -15,7 +15,7 @@ public class PlateHammerItemItem extends SlothcraftModElements.ModElement {
 	@ObjectHolder("slothcraft:platehammeritem")
 	public static final Item block = null;
 	public PlateHammerItemItem(SlothcraftModElements instance) {
-		super(instance, 139);
+		super(instance, 67);
 	}
 
 	@Override
@@ -24,7 +24,7 @@ public class PlateHammerItemItem extends SlothcraftModElements.ModElement {
 	}
 	public static class ItemCustom extends Item {
 		public ItemCustom() {
-			super(new Item.Properties().group(SlothCraftPlatesCreativeTabItemGroup.tab).maxDamage(64));
+			super(new Item.Properties().group(SlothCraftPlatesCreativeTabItemGroup.tab).maxStackSize(1));
 			setRegistryName("platehammeritem");
 		}
 
@@ -45,7 +45,7 @@ public class PlateHammerItemItem extends SlothcraftModElements.ModElement {
 
 		@Override
 		public int getUseDuration(ItemStack itemstack) {
-			return 0;
+			return 64;
 		}
 
 		@Override

@@ -15,7 +15,7 @@ public class PlatinumPlateItemItem extends SlothcraftModElements.ModElement {
 	@ObjectHolder("slothcraft:platinumplateitem")
 	public static final Item block = null;
 	public PlatinumPlateItemItem(SlothcraftModElements instance) {
-		super(instance, 95);
+		super(instance, 55);
 	}
 
 	@Override

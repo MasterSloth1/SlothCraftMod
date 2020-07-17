@@ -14,7 +14,7 @@
       "tag": "forge:stone"
     },
     "4": {
-      "item": "slothcraft:flintgearitem"
+      "tag": "forge:gears/flint"
     },
     "5": {
       "tag": "forge:stone"

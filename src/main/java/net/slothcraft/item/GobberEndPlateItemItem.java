@@ -15,7 +15,7 @@ public class GobberEndPlateItemItem extends SlothcraftModElements.ModElement {
 	@ObjectHolder("slothcraft:gobberendplateitem")
 	public static final Item block = null;
 	public GobberEndPlateItemItem(SlothcraftModElements instance) {
-		super(instance, 82);
+		super(instance, 42);
 	}
 
 	@Override

@@ -15,7 +15,7 @@ public class DiamondPlateItemItem extends SlothcraftModElements.ModElement {
 	@ObjectHolder("slothcraft:diamondplateitem")
 	public static final Item block = null;
 	public DiamondPlateItemItem(SlothcraftModElements instance) {
-		super(instance, 79);
+		super(instance, 39);
 	}
 
 	@Override

@@ -15,7 +15,7 @@ public class RubyPlateItemItem extends SlothcraftModElements.ModElement {
 	@ObjectHolder("slothcraft:rubyplateitem")
 	public static final Item block = null;
 	public RubyPlateItemItem(SlothcraftModElements instance) {
-		super(instance, 98);
+		super(instance, 58);
 	}
 
 	@Override

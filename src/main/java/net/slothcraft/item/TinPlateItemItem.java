@@ -15,7 +15,7 @@ public class TinPlateItemItem extends SlothcraftModElements.ModElement {
 	@ObjectHolder("slothcraft:tinplateitem")
 	public static final Item block = null;
 	public TinPlateItemItem(SlothcraftModElements instance) {
-		super(instance, 101);
+		super(instance, 62);
 	}
 
 	@Override

@@ -15,7 +15,7 @@ public class ChromiumPlateItemItem extends SlothcraftModElements.ModElement {
 	@ObjectHolder("slothcraft:chromiumplateitem")
 	public static final Item block = null;
 	public ChromiumPlateItemItem(SlothcraftModElements instance) {
-		super(instance, 77);
+		super(instance, 37);
 	}
 
 	@Override

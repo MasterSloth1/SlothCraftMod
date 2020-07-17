@@ -15,7 +15,7 @@ public class EmeraldPlateItemItem extends SlothcraftModElements.ModElement {
 	@ObjectHolder("slothcraft:emeraldplateitem")
 	public static final Item block = null;
 	public EmeraldPlateItemItem(SlothcraftModElements instance) {
-		super(instance, 80);
+		super(instance, 40);
 	}
 
 	@Override

@@ -13,7 +13,7 @@ import net.minecraft.item.ItemGroup;
 @SlothcraftModElements.ModElement.Tag
 public class SlothCraftPlatesCreativeTabItemGroup extends SlothcraftModElements.ModElement {
 	public SlothCraftPlatesCreativeTabItemGroup(SlothcraftModElements instance) {
-		super(instance, 74);
+		super(instance, 121);
 	}
 
 	@Override

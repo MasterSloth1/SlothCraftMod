@@ -4,7 +4,7 @@
     {
       "name": "SlothCraftGearsCreativeTab",
       "type": "tab",
-      "sortid": 1,
+      "sortid": 80,
       "compiles": true,
       "locked_code": false,
       "ids": {}
@@ -276,7 +276,7 @@
     {
       "name": "GearsMakerGui",
       "type": "gui",
-      "sortid": 34,
+      "sortid": 81,
       "compiles": true,
       "locked_code": false,
       "ids": {}
@@ -292,7 +292,7 @@
     {
       "name": "GearsMakerBlockUpdateTick",
       "type": "procedure",
-      "sortid": 35,
+      "sortid": 82,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -320,7 +320,7 @@
     {
       "name": "WoodenGearRecipe",
       "type": "recipe",
-      "sortid": 36,
+      "sortid": 83,
       "compiles": true,
       "locked_code": false,
       "ids": {}
@@ -328,7 +328,7 @@
     {
       "name": "FlintGearRecipe",
       "type": "recipe",
-      "sortid": 37,
+      "sortid": 84,
       "compiles": true,
       "locked_code": false,
       "ids": {}
@@ -336,7 +336,7 @@
     {
       "name": "StoneGearRecipe",
       "type": "recipe",
-      "sortid": 38,
+      "sortid": 85,
       "compiles": true,
       "locked_code": false,
       "ids": {}
@@ -344,7 +344,7 @@
     {
       "name": "GearsMakerRecipe",
       "type": "recipe",
-      "sortid": 39,
+      "sortid": 86,
       "compiles": true,
       "locked_code": false,
       "ids": {}
@@ -352,7 +352,7 @@
     {
       "name": "GearsTag",
       "type": "tag",
-      "sortid": 40,
+      "sortid": 87,
       "compiles": true,
       "locked_code": false,
       "ids": {}
@@ -360,7 +360,7 @@
     {
       "name": "GearsAluminumTag",
       "type": "tag",
-      "sortid": 41,
+      "sortid": 88,
       "compiles": true,
       "locked_code": false,
       "ids": {}
@@ -368,7 +368,7 @@
     {
       "name": "GearsAmethystTag",
       "type": "tag",
-      "sortid": 42,
+      "sortid": 89,
       "compiles": true,
       "locked_code": false,
       "ids": {}
@@ -376,7 +376,7 @@
     {
       "name": "GearsChromiumTag",
       "type": "tag",
-      "sortid": 43,
+      "sortid": 90,
       "compiles": true,
       "locked_code": false,
       "ids": {}
@@ -384,7 +384,7 @@
     {
       "name": "GearsCopperTag",
       "type": "tag",
-      "sortid": 44,
+      "sortid": 91,
       "compiles": true,
       "locked_code": false,
       "ids": {}
@@ -392,7 +392,7 @@
     {
       "name": "GearsDiamondTag",
       "type": "tag",
-      "sortid": 45,
+      "sortid": 92,
       "compiles": true,
       "locked_code": false,
       "ids": {}
@@ -400,7 +400,7 @@
     {
       "name": "GearsEmeraldTag",
       "type": "tag",
-      "sortid": 46,
+      "sortid": 93,
       "compiles": true,
       "locked_code": false,
       "ids": {}
@@ -408,7 +408,7 @@
     {
       "name": "GearsFlintTag",
       "type": "tag",
-      "sortid": 47,
+      "sortid": 94,
       "compiles": true,
       "locked_code": false,
       "ids": {}
@@ -416,7 +416,7 @@
     {
       "name": "GearsGobberEndTag",
       "type": "tag",
-      "sortid": 48,
+      "sortid": 95,
       "compiles": true,
       "locked_code": false,
       "ids": {}
@@ -424,7 +424,7 @@
     {
       "name": "GearsGobberTag",
       "type": "tag",
-      "sortid": 49,
+      "sortid": 96,
       "compiles": true,
       "locked_code": false,
       "ids": {}
@@ -432,7 +432,7 @@
     {
       "name": "GearsGobberNetherTag",
       "type": "tag",
-      "sortid": 50,
+      "sortid": 97,
       "compiles": true,
       "locked_code": false,
       "ids": {}
@@ -440,7 +440,7 @@
     {
       "name": "GearsGoldTag",
       "type": "tag",
-      "sortid": 51,
+      "sortid": 98,
       "compiles": true,
       "locked_code": false,
       "ids": {}
@@ -448,7 +448,7 @@
     {
       "name": "GearsIridiumTag",
       "type": "tag",
-      "sortid": 52,
+      "sortid": 99,
       "compiles": true,
       "locked_code": false,
       "ids": {}
@@ -456,7 +456,7 @@
     {
       "name": "GearsIronTag",
       "type": "tag",
-      "sortid": 53,
+      "sortid": 100,
       "compiles": true,
       "locked_code": false,
       "ids": {}
@@ -464,7 +464,7 @@
     {
       "name": "GearsJadeTag",
       "type": "tag",
-      "sortid": 54,
+      "sortid": 101,
       "compiles": true,
       "locked_code": false,
       "ids": {}
@@ -472,7 +472,7 @@
     {
       "name": "GearsLapisTag",
       "type": "tag",
-      "sortid": 55,
+      "sortid": 102,
       "compiles": true,
       "locked_code": false,
       "ids": {}
@@ -480,7 +480,7 @@
     {
       "name": "GearsLeadTag",
       "type": "tag",
-      "sortid": 56,
+      "sortid": 103,
       "compiles": true,
       "locked_code": false,
       "ids": {}
@@ -488,7 +488,7 @@
     {
       "name": "GearsMithrilTag",
       "type": "tag",
-      "sortid": 57,
+      "sortid": 104,
       "compiles": true,
       "locked_code": false,
       "ids": {}
@@ -496,7 +496,7 @@
     {
       "name": "GearsNickelTag",
       "type": "tag",
-      "sortid": 58,
+      "sortid": 105,
       "compiles": true,
       "locked_code": false,
       "ids": {}
@@ -504,7 +504,7 @@
     {
       "name": "GearsObsidianTag",
       "type": "tag",
-      "sortid": 59,
+      "sortid": 106,
       "compiles": true,
       "locked_code": false,
       "ids": {}
@@ -512,7 +512,7 @@
     {
       "name": "GearsOsmiumTag",
       "type": "tag",
-      "sortid": 60,
+      "sortid": 107,
       "compiles": true,
       "locked_code": false,
       "ids": {}
@@ -520,7 +520,7 @@
     {
       "name": "GearsPlatinumTag",
       "type": "tag",
-      "sortid": 61,
+      "sortid": 108,
       "compiles": true,
       "locked_code": false,
       "ids": {}
@@ -528,7 +528,7 @@
     {
       "name": "GearsQuartzTag",
       "type": "tag",
-      "sortid": 62,
+      "sortid": 109,
       "compiles": true,
       "locked_code": false,
       "ids": {}
@@ -536,7 +536,7 @@
     {
       "name": "GearsRedstoneTag",
       "type": "tag",
-      "sortid": 63,
+      "sortid": 110,
       "compiles": true,
       "locked_code": false,
       "ids": {}
@@ -544,7 +544,7 @@
     {
       "name": "GearsRubyTag",
       "type": "tag",
-      "sortid": 64,
+      "sortid": 111,
       "compiles": true,
       "locked_code": false,
       "ids": {}
@@ -552,7 +552,7 @@
     {
       "name": "GearsSilverTag",
       "type": "tag",
-      "sortid": 65,
+      "sortid": 112,
       "compiles": true,
       "locked_code": false,
       "ids": {}
@@ -560,7 +560,7 @@
     {
       "name": "GearsSteelTag",
       "type": "tag",
-      "sortid": 66,
+      "sortid": 113,
       "compiles": true,
       "locked_code": false,
       "ids": {}
@@ -568,7 +568,7 @@
     {
       "name": "GearsStoneTag",
       "type": "tag",
-      "sortid": 67,
+      "sortid": 114,
       "compiles": true,
       "locked_code": false,
       "ids": {}
@@ -576,7 +576,7 @@
     {
       "name": "GearsTinTag",
       "type": "tag",
-      "sortid": 68,
+      "sortid": 115,
       "compiles": true,
       "locked_code": false,
       "ids": {}
@@ -584,7 +584,7 @@
     {
       "name": "GearsTitaniumTag",
       "type": "tag",
-      "sortid": 69,
+      "sortid": 116,
       "compiles": true,
       "locked_code": false,
       "ids": {}
@@ -592,7 +592,7 @@
     {
       "name": "GearsUraniumTag",
       "type": "tag",
-      "sortid": 70,
+      "sortid": 117,
       "compiles": true,
       "locked_code": false,
       "ids": {}
@@ -600,7 +600,7 @@
     {
       "name": "GearsWoodTag",
       "type": "tag",
-      "sortid": 71,
+      "sortid": 118,
       "compiles": true,
       "locked_code": false,
       "ids": {}
@@ -608,7 +608,7 @@
     {
       "name": "GearsZincTag",
       "type": "tag",
-      "sortid": 72,
+      "sortid": 119,
       "compiles": true,
       "locked_code": false,
       "ids": {}
@@ -616,7 +616,7 @@
     {
       "name": "GearMoldRecipe",
       "type": "recipe",
-      "sortid": 73,
+      "sortid": 120,
       "compiles": true,
       "locked_code": false,
       "ids": {}
@@ -624,7 +624,7 @@
     {
       "name": "SlothCraftPlatesCreativeTab",
       "type": "tab",
-      "sortid": 74,
+      "sortid": 121,
       "compiles": true,
       "locked_code": false,
       "ids": {}
@@ -632,7 +632,7 @@
     {
       "name": "AluminumPlateItem",
       "type": "item",
-      "sortid": 75,
+      "sortid": 35,
       "compiles": true,
       "locked_code": false,
       "ids": {}
@@ -640,7 +640,7 @@
     {
       "name": "AmethystPlateItem",
       "type": "item",
-      "sortid": 76,
+      "sortid": 36,
       "compiles": true,
       "locked_code": false,
       "ids": {}
@@ -648,7 +648,7 @@
     {
       "name": "ChromiumPlateItem",
       "type": "item",
-      "sortid": 77,
+      "sortid": 37,
       "compiles": true,
       "locked_code": false,
       "ids": {}
@@ -656,7 +656,7 @@
     {
       "name": "CopperPlateItem",
       "type": "item",
-      "sortid": 78,
+      "sortid": 38,
       "compiles": true,
       "locked_code": false,
       "ids": {}
@@ -664,7 +664,7 @@
     {
       "name": "DiamondPlateItem",
       "type": "item",
-      "sortid": 79,
+      "sortid": 39,
       "compiles": true,
       "locked_code": false,
       "ids": {}
@@ -672,7 +672,7 @@
     {
       "name": "EmeraldPlateItem",
       "type": "item",
-      "sortid": 80,
+      "sortid": 40,
       "compiles": true,
       "locked_code": false,
       "ids": {}
@@ -680,7 +680,7 @@
     {
       "name": "FlintPlateItem",
       "type": "item",
-      "sortid": 81,
+      "sortid": 41,
       "compiles": true,
       "locked_code": false,
       "ids": {}
@@ -688,7 +688,7 @@
     {
       "name": "GobberEndPlateItem",
       "type": "item",
-      "sortid": 82,
+      "sortid": 42,
       "compiles": true,
       "locked_code": false,
       "ids": {}
@@ -696,7 +696,7 @@
     {
       "name": "GobberNetherPlateItem",
       "type": "item",
-      "sortid": 83,
+      "sortid": 43,
       "compiles": true,
       "locked_code": false,
       "ids": {}
@@ -704,7 +704,7 @@
     {
       "name": "GobberPlateItem",
       "type": "item",
-      "sortid": 84,
+      "sortid": 44,
       "compiles": true,
       "locked_code": false,
       "ids": {}
@@ -712,7 +712,7 @@
     {
       "name": "GoldPlateItem",
       "type": "item",
-      "sortid": 85,
+      "sortid": 45,
       "compiles": true,
       "locked_code": false,
       "ids": {}
@@ -720,7 +720,7 @@
     {
       "name": "IridiumPlateItem",
       "type": "item",
-      "sortid": 86,
+      "sortid": 46,
       "compiles": true,
       "locked_code": false,
       "ids": {}
@@ -728,7 +728,7 @@
     {
       "name": "IronPlateItem",
       "type": "item",
-      "sortid": 87,
+      "sortid": 47,
       "compiles": true,
       "locked_code": false,
       "ids": {}
@@ -736,7 +736,7 @@
     {
       "name": "JadePlateItem",
       "type": "item",
-      "sortid": 88,
+      "sortid": 48,
       "compiles": true,
       "locked_code": false,
       "ids": {}
@@ -744,7 +744,7 @@
     {
       "name": "LapisPlateItem",
       "type": "item",
-      "sortid": 89,
+      "sortid": 49,
       "compiles": true,
       "locked_code": false,
       "ids": {}
@@ -752,7 +752,7 @@
     {
       "name": "LeadPlateItem",
       "type": "item",
-      "sortid": 90,
+      "sortid": 50,
       "compiles": true,
       "locked_code": false,
       "ids": {}
@@ -760,7 +760,7 @@
     {
       "name": "MithrilPlateItem",
       "type": "item",
-      "sortid": 91,
+      "sortid": 51,
       "compiles": true,
       "locked_code": false,
       "ids": {}
@@ -768,7 +768,7 @@
     {
       "name": "NickelPlateItem",
       "type": "item",
-      "sortid": 92,
+      "sortid": 52,
       "compiles": true,
       "locked_code": false,
       "ids": {}
@@ -776,7 +776,7 @@
     {
       "name": "ObsidianPlateItem",
       "type": "item",
-      "sortid": 93,
+      "sortid": 53,
       "compiles": true,
       "locked_code": false,
       "ids": {}
@@ -784,7 +784,7 @@
     {
       "name": "OsmiumPlateItem",
       "type": "item",
-      "sortid": 94,
+      "sortid": 54,
       "compiles": true,
       "locked_code": false,
       "ids": {}
@@ -792,7 +792,7 @@
     {
       "name": "PlatinumPlateItem",
       "type": "item",
-      "sortid": 95,
+      "sortid": 55,
       "compiles": true,
       "locked_code": false,
       "ids": {}
@@ -800,7 +800,7 @@
     {
       "name": "QuartzPlateItem",
       "type": "item",
-      "sortid": 96,
+      "sortid": 56,
       "compiles": true,
       "locked_code": false,
       "ids": {}
@@ -808,7 +808,7 @@
     {
       "name": "RedstonePlateItem",
       "type": "item",
-      "sortid": 97,
+      "sortid": 57,
       "compiles": true,
       "locked_code": false,
       "ids": {}
@@ -816,7 +816,7 @@
     {
       "name": "RubyPlateItem",
       "type": "item",
-      "sortid": 98,
+      "sortid": 58,
       "compiles": true,
       "locked_code": false,
       "ids": {}
@@ -824,7 +824,7 @@
     {
       "name": "SilverPlateItem",
       "type": "item",
-      "sortid": 99,
+      "sortid": 59,
       "compiles": true,
       "locked_code": false,
       "ids": {}
@@ -832,7 +832,7 @@
     {
       "name": "SteelPlateItem",
       "type": "item",
-      "sortid": 100,
+      "sortid": 60,
       "compiles": true,
       "locked_code": false,
       "ids": {}
@@ -840,7 +840,7 @@
     {
       "name": "TinPlateItem",
       "type": "item",
-      "sortid": 101,
+      "sortid": 62,
       "compiles": true,
       "locked_code": false,
       "ids": {}
@@ -848,7 +848,7 @@
     {
       "name": "TitaniumPlateItem",
       "type": "item",
-      "sortid": 102,
+      "sortid": 63,
       "compiles": true,
       "locked_code": false,
       "ids": {}
@@ -856,7 +856,7 @@
     {
       "name": "UraniumPlateItem",
       "type": "item",
-      "sortid": 103,
+      "sortid": 64,
       "compiles": true,
       "locked_code": false,
       "ids": {}
@@ -864,7 +864,7 @@
     {
       "name": "WoodPlateItem",
       "type": "item",
-      "sortid": 104,
+      "sortid": 65,
       "compiles": true,
       "locked_code": false,
       "ids": {}
@@ -872,7 +872,7 @@
     {
       "name": "ZincPlateItem",
       "type": "item",
-      "sortid": 105,
+      "sortid": 66,
       "compiles": true,
       "locked_code": false,
       "ids": {}
@@ -880,7 +880,7 @@
     {
       "name": "PlatesTag",
       "type": "tag",
-      "sortid": 106,
+      "sortid": 122,
       "compiles": true,
       "locked_code": false,
       "ids": {}
@@ -888,7 +888,7 @@
     {
       "name": "PlatesAluminumTag",
       "type": "tag",
-      "sortid": 107,
+      "sortid": 123,
       "compiles": true,
       "locked_code": false,
       "ids": {}
@@ -896,7 +896,7 @@
     {
       "name": "PlatesAmethystTag",
       "type": "tag",
-      "sortid": 108,
+      "sortid": 124,
       "compiles": true,
       "locked_code": false,
       "ids": {}
@@ -904,7 +904,7 @@
     {
       "name": "PlatesChromiumTag",
       "type": "tag",
-      "sortid": 109,
+      "sortid": 125,
       "compiles": true,
       "locked_code": false,
       "ids": {}
@@ -912,7 +912,7 @@
     {
       "name": "PlatesCopperTag",
       "type": "tag",
-      "sortid": 110,
+      "sortid": 126,
       "compiles": true,
       "locked_code": false,
       "ids": {}
@@ -920,7 +920,7 @@
     {
       "name": "PlatesDiamondTag",
       "type": "tag",
-      "sortid": 111,
+      "sortid": 127,
       "compiles": true,
       "locked_code": false,
       "ids": {}
@@ -928,7 +928,7 @@
     {
       "name": "PlatesEmeraldTag",
       "type": "tag",
-      "sortid": 112,
+      "sortid": 128,
       "compiles": true,
       "locked_code": false,
       "ids": {}
@@ -936,7 +936,7 @@
     {
       "name": "PlatesFlintTag",
       "type": "tag",
-      "sortid": 113,
+      "sortid": 129,
       "compiles": true,
       "locked_code": false,
       "ids": {}
@@ -944,7 +944,7 @@
     {
       "name": "PlatesGobberEndTag",
       "type": "tag",
-      "sortid": 114,
+      "sortid": 130,
       "compiles": true,
       "locked_code": false,
       "ids": {}
@@ -952,7 +952,7 @@
     {
       "name": "PlatesGobberNetherTag",
       "type": "tag",
-      "sortid": 115,
+      "sortid": 131,
       "compiles": true,
       "locked_code": false,
       "ids": {}
@@ -960,7 +960,7 @@
     {
       "name": "PlatesGobberTag",
       "type": "tag",
-      "sortid": 116,
+      "sortid": 132,
       "compiles": true,
       "locked_code": false,
       "ids": {}
@@ -968,7 +968,7 @@
     {
       "name": "PlatesGoldTag",
       "type": "tag",
-      "sortid": 117,
+      "sortid": 133,
       "compiles": true,
       "locked_code": false,
       "ids": {}
@@ -976,7 +976,7 @@
     {
       "name": "PlatesIridiumTag",
       "type": "tag",
-      "sortid": 118,
+      "sortid": 134,
       "compiles": true,
       "locked_code": false,
       "ids": {}
@@ -984,7 +984,7 @@
     {
       "name": "PlatesIronTag",
       "type": "tag",
-      "sortid": 119,
+      "sortid": 135,
       "compiles": true,
       "locked_code": false,
       "ids": {}
@@ -992,7 +992,7 @@
     {
       "name": "PlatesJadeTag",
       "type": "tag",
-      "sortid": 120,
+      "sortid": 136,
       "compiles": true,
       "locked_code": false,
       "ids": {}
@@ -1000,7 +1000,7 @@
     {
       "name": "PlatesLapisTag",
       "type": "tag",
-      "sortid": 121,
+      "sortid": 137,
       "compiles": true,
       "locked_code": false,
       "ids": {}
@@ -1008,7 +1008,7 @@
     {
       "name": "PlatesLeadTag",
       "type": "tag",
-      "sortid": 122,
+      "sortid": 138,
       "compiles": true,
       "locked_code": false,
       "ids": {}
@@ -1016,7 +1016,7 @@
     {
       "name": "PlatesMithrilTag",
       "type": "tag",
-      "sortid": 123,
+      "sortid": 139,
       "compiles": true,
       "locked_code": false,
       "ids": {}
@@ -1024,7 +1024,7 @@
     {
       "name": "PlatesNickelTag",
       "type": "tag",
-      "sortid": 124,
+      "sortid": 140,
       "compiles": true,
       "locked_code": false,
       "ids": {}
@@ -1032,7 +1032,7 @@
     {
       "name": "PlatesObsidianTag",
       "type": "tag",
-      "sortid": 125,
+      "sortid": 141,
       "compiles": true,
       "locked_code": false,
       "ids": {}
@@ -1040,7 +1040,7 @@
     {
       "name": "PlatesOsmiumTag",
       "type": "tag",
-      "sortid": 126,
+      "sortid": 142,
       "compiles": true,
       "locked_code": false,
       "ids": {}
@@ -1048,7 +1048,7 @@
     {
       "name": "PlatesPlatinumTag",
       "type": "tag",
-      "sortid": 127,
+      "sortid": 143,
       "compiles": true,
       "locked_code": false,
       "ids": {}
@@ -1056,7 +1056,7 @@
     {
       "name": "PlatesQuartzTag",
       "type": "tag",
-      "sortid": 128,
+      "sortid": 144,
       "compiles": true,
       "locked_code": false,
       "ids": {}
@@ -1064,7 +1064,7 @@
     {
       "name": "PlatesRedstoneTag",
       "type": "tag",
-      "sortid": 129,
+      "sortid": 145,
       "compiles": true,
       "locked_code": false,
       "ids": {}
@@ -1072,7 +1072,7 @@
     {
       "name": "PlatesRubyTag",
       "type": "tag",
-      "sortid": 130,
+      "sortid": 146,
       "compiles": true,
       "locked_code": false,
       "ids": {}
@@ -1080,7 +1080,7 @@
     {
       "name": "PlatesSilverTag",
       "type": "tag",
-      "sortid": 131,
+      "sortid": 147,
       "compiles": true,
       "locked_code": false,
       "ids": {}
@@ -1088,7 +1088,7 @@
     {
       "name": "PlatesSteelTag",
       "type": "tag",
-      "sortid": 132,
+      "sortid": 148,
       "compiles": true,
       "locked_code": false,
       "ids": {}
@@ -1096,7 +1096,7 @@
     {
       "name": "PlatesTinTag",
       "type": "tag",
-      "sortid": 133,
+      "sortid": 149,
       "compiles": true,
       "locked_code": false,
       "ids": {}
@@ -1104,7 +1104,7 @@
     {
       "name": "PlatesTitaniumTag",
       "type": "tag",
-      "sortid": 134,
+      "sortid": 150,
       "compiles": true,
       "locked_code": false,
       "ids": {}
@@ -1112,7 +1112,7 @@
     {
       "name": "PlatesUraniumTag",
       "type": "tag",
-      "sortid": 135,
+      "sortid": 151,
       "compiles": true,
       "locked_code": false,
       "ids": {}
@@ -1120,7 +1120,7 @@
     {
       "name": "PlatesWoodTag",
       "type": "tag",
-      "sortid": 136,
+      "sortid": 152,
       "compiles": true,
       "locked_code": false,
       "ids": {}
@@ -1128,7 +1128,7 @@
     {
       "name": "PlatesZincTag",
       "type": "tag",
-      "sortid": 137,
+      "sortid": 153,
       "compiles": true,
       "locked_code": false,
       "ids": {}
@@ -1136,7 +1136,7 @@
     {
       "name": "PlateHammerItem",
       "type": "item",
-      "sortid": 139,
+      "sortid": 67,
       "compiles": true,
       "locked_code": false,
       "ids": {}
@@ -1144,7 +1144,7 @@
     {
       "name": "PlatesMakerGui",
       "type": "gui",
-      "sortid": 140,
+      "sortid": 154,
       "compiles": true,
       "locked_code": false,
       "ids": {}
@@ -1152,7 +1152,7 @@
     {
       "name": "PlatesMakerBlockUpdateTick",
       "type": "procedure",
-      "sortid": 141,
+      "sortid": 155,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -1180,7 +1180,7 @@
     {
       "name": "PlatesMakerBlock",
       "type": "block",
-      "sortid": 141,
+      "sortid": 68,
       "compiles": true,
       "locked_code": false,
       "ids": {}
@@ -1188,7 +1188,7 @@
     {
       "name": "ItemMoverPlatesMakerProcedure",
       "type": "procedure",
-      "sortid": 142,
+      "sortid": 156,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -1216,7 +1216,7 @@
     {
       "name": "ItemMoverGearsMakerProcedure",
       "type": "procedure",
-      "sortid": 147,
+      "sortid": 157,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -1240,6 +1240,258 @@
           }
         ]
       }
+    },
+    {
+      "name": "SlothCraftFoodCreativeTab",
+      "type": "tab",
+      "sortid": 158,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "sloth_craft_food_creative_tab"
+    },
+    {
+      "name": "BaconFood",
+      "type": "food",
+      "sortid": 69,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "bacon_food"
+    },
+    {
+      "name": "OrangeFood",
+      "type": "food",
+      "sortid": 70,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "orange_food"
+    },
+    {
+      "name": "BananaFood",
+      "type": "food",
+      "sortid": 71,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "banana_food"
+    },
+    {
+      "name": "CheeseFood",
+      "type": "food",
+      "sortid": 72,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "cheese_food"
+    },
+    {
+      "name": "DoughFood",
+      "type": "food",
+      "sortid": 73,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "dough_food"
+    },
+    {
+      "name": "FlourFood",
+      "type": "food",
+      "sortid": 74,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "flour_food"
+    },
+    {
+      "name": "ButterFood",
+      "type": "food",
+      "sortid": 75,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "butter_food"
+    },
+    {
+      "name": "CreamFood",
+      "type": "food",
+      "sortid": 76,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "cream_food"
+    },
+    {
+      "name": "SaltFood",
+      "type": "food",
+      "sortid": 77,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "salt_food"
+    },
+    {
+      "name": "MinceFood",
+      "type": "food",
+      "sortid": 78,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "mince_food"
+    },
+    {
+      "name": "PieFood",
+      "type": "food",
+      "sortid": 79,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "pie_food"
+    },
+    {
+      "name": "StonePlateItem",
+      "type": "item",
+      "sortid": 61,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "stone_plate_item"
+    },
+    {
+      "name": "BaconRecipe",
+      "type": "recipe",
+      "sortid": 159,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "bacon_recipe"
+    },
+    {
+      "name": "CheeseRecipe",
+      "type": "recipe",
+      "sortid": 160,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "cheese_recipe"
+    },
+    {
+      "name": "DoughRecipe",
+      "type": "recipe",
+      "sortid": 161,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "dough_recipe"
+    },
+    {
+      "name": "FlourRecipe",
+      "type": "recipe",
+      "sortid": 162,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "flour_recipe"
+    },
+    {
+      "name": "ButterRecipe",
+      "type": "recipe",
+      "sortid": 164,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "butter_recipe"
+    },
+    {
+      "name": "KnifeRecipe",
+      "type": "recipe",
+      "sortid": 165,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "knife_recipe"
+    },
+    {
+      "name": "PieRecipe",
+      "type": "recipe",
+      "sortid": 166,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "pie_recipe"
+    },
+    {
+      "name": "MinceRecipe",
+      "type": "recipe",
+      "sortid": 167,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "mince_recipe"
+    },
+    {
+      "name": "KnifeItem",
+      "type": "item",
+      "sortid": 169,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "knife_item"
+    },
+    {
+      "name": "WhiskItem",
+      "type": "item",
+      "sortid": 170,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "whisk_item"
+    },
+    {
+      "name": "WhiskRecipe",
+      "type": "recipe",
+      "sortid": 171,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "whisk_recipe"
+    },
+    {
+      "name": "PlateHammerRecipe",
+      "type": "recipe",
+      "sortid": 172,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "plate_hammer_recipe"
+    },
+    {
+      "name": "PlateMakerRecipe",
+      "type": "recipe",
+      "sortid": 173,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "plate_maker_recipe"
+    },
+    {
+      "name": "CreamRecipe",
+      "type": "recipe",
+      "sortid": 174,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "cream_recipe"
+    },
+    {
+      "name": "SaltRecipe",
+      "type": "recipe",
+      "sortid": 175,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "salt_recipe"
     }
   ],
   "variable_elements": [],
@@ -1254,21 +1506,30 @@
       "item.slothcraft.lapisgearitem": "Lapis Gear",
       "item.slothcraft.coppergearitem": "Copper Gear",
       "item.slothcraft.irongearitem": "Iron Gear",
+      "item.slothcraft.cream_food": "Cream",
       "item.slothcraft.quartzgearitem": "Quartz Gear",
+      "item.slothcraft.whisk_item": "Whisk",
       "item.slothcraft.copperplateitem": "Copper Plate",
+      "item.slothcraft.dough_food": "Dough",
+      "item.slothcraft.cheese_food": "Cheese",
+      "item.slothcraft.salt_food": "Salt",
       "item.slothcraft.leadplateitem": "Lead Plate",
       "item.slothcraft.steelplateitem": "Steel Plate",
       "item.slothcraft.diamondplateitem": "Diamond Plate",
       "item.slothcraft.tingearitem": "Tin Gear",
+      "item.slothcraft.bacon_food": "Bacon",
+      "itemGroup.tabsloth_craft_food_creative_tab": "SlothCraft Food",
       "item.slothcraft.gobbernethergearitem": "Gobber Nether Gear",
       "item.slothcraft.mithrilgearitem": "Mithril Gear",
       "item.slothcraft.obsidiangearitem": "Obsidian Gear",
       "item.slothcraft.quartzplateitem": "Quartz Plate",
+      "item.slothcraft.knife_item": "Knife",
       "item.slothcraft.tinplateitem": "Tin Plate",
       "item.slothcraft.flintgearitem": "Flint Gear",
       "block.slothcraft.gearsmakerblock": "Gear\u0027s Maker",
       "item.slothcraft.uraniumplateitem": "Uranium Plate",
       "item.slothcraft.chromiumgearitem": "Chromium Gear",
+      "item.slothcraft.orange_food": "Orange",
       "item.slothcraft.goldplateitem": "Gold Plate",
       "item.slothcraft.titaniumgearitem": "Titanium Gear",
       "item.slothcraft.chromiumplateitem": "Chromium Plate",
@@ -1278,13 +1539,16 @@
       "item.slothcraft.platehammeritem": "Plate Hammer",
       "item.slothcraft.nickelgearitem": "Nickel Gear",
       "item.slothcraft.stonegearitem": "Stone Gear",
+      "item.slothcraft.butter_food": "Butter",
       "item.slothcraft.nickelplateitem": "Nickel Plate",
+      "item.slothcraft.mince_food": "Mince",
       "item.slothcraft.emeraldgearitem": "Emerald Gear",
       "item.slothcraft.mithrilplateitem": "Mithril Plate",
       "item.slothcraft.platinumgearitem": "Platinum Gear",
       "item.slothcraft.gobberplateitem": "Gobber Plate",
       "item.slothcraft.ironplateitem": "Iron Plate",
       "item.slothcraft.titaniumplateitem": "Titanium Plate",
+      "item.slothcraft.stone_plate_item": "Stone Plate",
       "item.slothcraft.woodplateitem": "Wooden Plate",
       "item.slothcraft.amethystgearitem": "Amethyst Gear",
       "item.slothcraft.jadeplateitem": "Jade Plate",
@@ -1303,10 +1567,12 @@
       "item.slothcraft.osmiumplateitem": "Osmium Plate",
       "item.slothcraft.silverplateitem": "Silver Plate",
       "item.slothcraft.amethystplateitem": "Amethyst Plate",
+      "item.slothcraft.pie_food": "Beef, Bacon and Cheese Pie",
       "item.slothcraft.goldgearitem": "Gold Gear",
       "item.slothcraft.gobberendgearitem": "Gobber End Gear",
       "item.slothcraft.zincgearitem": "Zinc Gear",
       "block.slothcraft.platesmakerblock": "Plate\u0027s Maker",
+      "item.slothcraft.flour_food": "Flour",
       "item.slothcraft.redstoneplateitem": "Redstone Plate",
       "itemGroup.tabslothcraftplatescreativetab": "Sloth Craft Plates",
       "item.slothcraft.osmiumgearitem": "Osmium Gear",
@@ -1314,22 +1580,25 @@
       "item.slothcraft.platinumplateitem": "Platinum Plate",
       "item.slothcraft.silvergearitem": "Silver Gear",
       "item.slothcraft.steelgearitem": "Steel Gear",
-      "item.slothcraft.woodengearitem": "Wooden Gear"
+      "item.slothcraft.woodengearitem": "Wooden Gear",
+      "item.slothcraft.banana_food": "Banana"
     }
   },
   "workspaceSettings": {
     "modid": "slothcraft",
     "modName": "SlothCraft",
     "version": "1.0.0",
+    "description": "A small mod I made to add plates, gears and more to the game",
     "author": "MasterSloth, MCreator",
-    "websiteURL": "https://mcreator.net",
+    "websiteURL": "https://discord.gg/wFtUTgZ",
     "disableForgeVersionCheck": true,
     "serverSideOnly": false,
     "requiredMods": [],
     "dependencies": [],
     "dependants": [],
     "mcreatorDependencies": [],
-    "currentGenerator": "1.14.4",
+    "currentGenerator": "forge-1.14.4",
+    "credits": "MasterSloth - Developer",
     "modElementsPackage": "net.slothcraft",
     "lockBaseModFiles": false
   },

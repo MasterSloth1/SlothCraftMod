@@ -15,7 +15,7 @@ public class MithrilPlateItemItem extends SlothcraftModElements.ModElement {
 	@ObjectHolder("slothcraft:mithrilplateitem")
 	public static final Item block = null;
 	public MithrilPlateItemItem(SlothcraftModElements instance) {
-		super(instance, 91);
+		super(instance, 51);
 	}
 
 	@Override

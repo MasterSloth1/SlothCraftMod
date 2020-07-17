@@ -5,9 +5,12 @@ loaderVersion="[28,)"
 modId="slothcraft"
 version="1.0.0"
 displayName="SlothCraft"
-credits="Created using mod maker MCreator - https://mcreator.net/about"
-displayURL="https://mcreator.net"
+credits="MasterSloth - Developer"
+displayURL="https://discord.gg/wFtUTgZ"
 authors="MasterSloth, MCreator"
+description='''
+A small mod I made to add plates, gears and more to the game
+'''
 
 [[dependencies.slothcraft]]
     modId="minecraft"

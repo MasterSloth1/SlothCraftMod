@@ -15,7 +15,7 @@ public class RedstonePlateItemItem extends SlothcraftModElements.ModElement {
 	@ObjectHolder("slothcraft:redstoneplateitem")
 	public static final Item block = null;
 	public RedstonePlateItemItem(SlothcraftModElements instance) {
-		super(instance, 97);
+		super(instance, 57);
 	}
 
 	@Override

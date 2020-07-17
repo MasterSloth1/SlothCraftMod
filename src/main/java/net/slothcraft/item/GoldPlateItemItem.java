@@ -15,7 +15,7 @@ public class GoldPlateItemItem extends SlothcraftModElements.ModElement {
 	@ObjectHolder("slothcraft:goldplateitem")
 	public static final Item block = null;
 	public GoldPlateItemItem(SlothcraftModElements instance) {
-		super(instance, 85);
+		super(instance, 45);
 	}
 
 	@Override

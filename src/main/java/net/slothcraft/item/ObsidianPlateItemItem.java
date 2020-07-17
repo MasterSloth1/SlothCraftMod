@@ -15,7 +15,7 @@ public class ObsidianPlateItemItem extends SlothcraftModElements.ModElement {
 	@ObjectHolder("slothcraft:obsidianplateitem")
 	public static final Item block = null;
 	public ObsidianPlateItemItem(SlothcraftModElements instance) {
-		super(instance, 93);
+		super(instance, 53);
 	}
 
 	@Override

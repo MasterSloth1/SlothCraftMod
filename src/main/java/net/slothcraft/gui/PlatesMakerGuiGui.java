@@ -47,7 +47,7 @@ public class PlatesMakerGuiGui extends SlothcraftModElements.ModElement {
 	public static HashMap guistate = new HashMap();
 	private static ContainerType<GuiContainerMod> containerType = null;
 	public PlatesMakerGuiGui(SlothcraftModElements instance) {
-		super(instance, 140);
+		super(instance, 154);
 		elements.addNetworkMessage(ButtonPressedMessage.class, ButtonPressedMessage::buffer, ButtonPressedMessage::new,
 				ButtonPressedMessage::handler);
 		elements.addNetworkMessage(GUISlotChangedMessage.class, GUISlotChangedMessage::buffer, GUISlotChangedMessage::new,

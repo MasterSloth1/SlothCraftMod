@@ -15,7 +15,7 @@ public class NickelPlateItemItem extends SlothcraftModElements.ModElement {
 	@ObjectHolder("slothcraft:nickelplateitem")
 	public static final Item block = null;
 	public NickelPlateItemItem(SlothcraftModElements instance) {
-		super(instance, 92);
+		super(instance, 52);
 	}
 
 	@Override

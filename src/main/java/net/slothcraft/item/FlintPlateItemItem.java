@@ -15,7 +15,7 @@ public class FlintPlateItemItem extends SlothcraftModElements.ModElement {
 	@ObjectHolder("slothcraft:flintplateitem")
 	public static final Item block = null;
 	public FlintPlateItemItem(SlothcraftModElements instance) {
-		super(instance, 81);
+		super(instance, 41);
 	}
 
 	@Override
