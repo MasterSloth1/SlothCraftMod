@@ -1492,96 +1492,449 @@
       "locked_code": false,
       "ids": {},
       "registry_name": "salt_recipe"
+    },
+    {
+      "name": "SlothCraftOtherCreativeTab",
+      "type": "tab",
+      "sortid": 176,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "sloth_craft_other_creative_tab"
+    },
+    {
+      "name": "ShinyDiamond",
+      "type": "item",
+      "sortid": 176,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "shiny_diamond"
+    },
+    {
+      "name": "VioletHazePlant",
+      "type": "plant",
+      "sortid": 177,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "violet_haze_plant"
+    },
+    {
+      "name": "VioletHazeSeedItem",
+      "type": "item",
+      "sortid": 178,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "violet_haze_seed_item"
+    },
+    {
+      "name": "VioletHazeNugItem",
+      "type": "item",
+      "sortid": 179,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "violet_haze_nug_item"
+    },
+    {
+      "name": "VioletHazeKiefItem",
+      "type": "item",
+      "sortid": 180,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "violet_haze_kief_item"
+    },
+    {
+      "name": "GlassReceptacleItem",
+      "type": "item",
+      "sortid": 181,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "glass_receptacle_item"
+    },
+    {
+      "name": "VioletHazeLeafItem",
+      "type": "item",
+      "sortid": 182,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "violet_haze_leaf_item"
+    },
+    {
+      "name": "PackedGlassReceptacleFoodFoodEaten",
+      "type": "procedure",
+      "sortid": 183,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "packed_glass_receptacle_food_food_eaten",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "PackedGlassReceptacleFood",
+      "type": "food",
+      "sortid": 183,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "packed_glass_receptacle_food"
+    },
+    {
+      "name": "VioletHazeSeedRecipe",
+      "type": "recipe",
+      "sortid": 184,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "violet_haze_seed_recipe"
+    },
+    {
+      "name": "VioletHazeGrinderItem",
+      "type": "item",
+      "sortid": 185,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "violet_haze_grinder_item"
+    },
+    {
+      "name": "VioletHazeNugRecipe",
+      "type": "recipe",
+      "sortid": 186,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "violet_haze_nug_recipe"
+    },
+    {
+      "name": "VioletHazeKiefRecipe",
+      "type": "recipe",
+      "sortid": 187,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "violet_haze_kief_recipe"
+    },
+    {
+      "name": "GlassReceptacleRecipe",
+      "type": "recipe",
+      "sortid": 188,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "glass_receptacle_recipe"
+    },
+    {
+      "name": "PackedGlassReceptacleRecipe",
+      "type": "recipe",
+      "sortid": 189,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "packed_glass_receptacle_recipe"
+    },
+    {
+      "name": "VioletHazeGrinderRecipe",
+      "type": "recipe",
+      "sortid": 190,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "violet_haze_grinder_recipe"
+    },
+    {
+      "name": "SlothCraftArmourAndWeaponsCreativeTab",
+      "type": "tab",
+      "sortid": 191,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "sloth_craft_armour_and_weapons_creative_tab"
+    },
+    {
+      "name": "StaffStickItem",
+      "type": "item",
+      "sortid": 191,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "staff_stick_item"
+    },
+    {
+      "name": "StaffStickRecipe",
+      "type": "recipe",
+      "sortid": 192,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "staff_stick_recipe"
+    },
+    {
+      "name": "FireStaffRangedWeaponBulletHitsLivingEntity",
+      "type": "procedure",
+      "sortid": 193,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "fire_staff_ranged_weapon_bullet_hits_living_entity",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "FireStaffRangedWeapon",
+      "type": "gun",
+      "sortid": 193,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "fire_staff_ranged_weapon"
+    },
+    {
+      "name": "PoisonStaffRangedWeapon",
+      "type": "gun",
+      "sortid": 194,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "poison_staff_ranged_weapon"
+    },
+    {
+      "name": "IceStaffRangedWeapon",
+      "type": "gun",
+      "sortid": 195,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "ice_staff_ranged_weapon"
+    },
+    {
+      "name": "WitherStaffRangedWeapon",
+      "type": "gun",
+      "sortid": 196,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "wither_staff_ranged_weapon"
+    },
+    {
+      "name": "PoisonStaffRangedWeaponBulletHitsLivingEntity",
+      "type": "procedure",
+      "sortid": 197,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "poison_staff_ranged_weapon_bullet_hits_living_entity",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "IceStaffRangedWeaponBulletHitsLivingEntity",
+      "type": "procedure",
+      "sortid": 198,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "ice_staff_ranged_weapon_bullet_hits_living_entity",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "WitherStaffRangedWeaponBulletHitsLivingEntity",
+      "type": "procedure",
+      "sortid": 199,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "wither_staff_ranged_weapon_bullet_hits_living_entity",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "FireStaffRecipe",
+      "type": "recipe",
+      "sortid": 200,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "fire_staff_recipe"
+    },
+    {
+      "name": "PoisonStaffRecipe",
+      "type": "recipe",
+      "sortid": 201,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "poison_staff_recipe"
+    },
+    {
+      "name": "IceStaffRecipe",
+      "type": "recipe",
+      "sortid": 202,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "ice_staff_recipe"
+    },
+    {
+      "name": "WitherStaffRecipe",
+      "type": "recipe",
+      "sortid": 203,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "wither_staff_recipe"
+    },
+    {
+      "name": "EnderDragonLootTable",
+      "type": "loottable",
+      "sortid": 204,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "ender_dragon_loot_table"
     }
   ],
   "variable_elements": [],
   "sound_elements": [],
   "language_map": {
     "en_us": {
-      "item.slothcraft.zincplateitem": "Zinc Plate",
-      "item.slothcraft.gobbergearitem": "Gobber Gear",
-      "itemGroup.tabslothcraftgearscreativetab": "Sloth Craft Gears",
+      "itemGroup.tabslothcraftgearscreativetab": "SlothCraft Gears",
       "item.slothcraft.gearmolditem": "Gear Mold",
-      "item.slothcraft.gobbernetherplateitem": "Nether Gobber Plate",
       "item.slothcraft.lapisgearitem": "Lapis Gear",
       "item.slothcraft.coppergearitem": "Copper Gear",
       "item.slothcraft.irongearitem": "Iron Gear",
       "item.slothcraft.cream_food": "Cream",
-      "item.slothcraft.quartzgearitem": "Quartz Gear",
-      "item.slothcraft.whisk_item": "Whisk",
+      "item.slothcraft.violet_haze_kief_item": "Violet Haze Kief",
       "item.slothcraft.copperplateitem": "Copper Plate",
       "item.slothcraft.dough_food": "Dough",
       "item.slothcraft.cheese_food": "Cheese",
       "item.slothcraft.salt_food": "Salt",
+      "item.slothcraft.fire_staff_ranged_weapon": "Fire Staff",
+      "itemGroup.tabsloth_craft_food_creative_tab": "SlothCraft Food",
+      "item.slothcraft.gobbernethergearitem": "Gobber Nether Gear",
+      "item.slothcraft.obsidiangearitem": "Obsidian Gear",
+      "item.slothcraft.quartzplateitem": "Quartz Plate",
+      "item.slothcraft.knife_item": "Knife",
+      "item.slothcraft.violet_haze_nug_item": "Violet Haze Nug",
+      "item.slothcraft.chromiumgearitem": "Chromium Gear",
+      "item.slothcraft.goldplateitem": "Gold Plate",
+      "item.slothcraft.chromiumplateitem": "Chromium Plate",
+      "item.slothcraft.rubygearitem": "Ruby Gear",
+      "item.slothcraft.nickelgearitem": "Nickel Gear",
+      "item.slothcraft.stonegearitem": "Stone Gear",
+      "item.slothcraft.butter_food": "Butter",
+      "item.slothcraft.mince_food": "Mince",
+      "item.slothcraft.mithrilplateitem": "Mithril Plate",
+      "item.slothcraft.platinumgearitem": "Platinum Gear",
+      "item.slothcraft.gobberplateitem": "Gobber Plate",
+      "item.slothcraft.ironplateitem": "Iron Plate",
+      "block.slothcraft.violet_haze_plant": "Violet Haze Plant",
+      "item.slothcraft.titaniumplateitem": "Titanium Plate",
+      "item.slothcraft.stone_plate_item": "Stone Plate",
+      "itemGroup.tabsloth_craft_armour_and_weapons_creative_tab": "SlothCraft Armour And Weapons",
+      "item.slothcraft.woodplateitem": "Wooden Plate",
+      "item.slothcraft.jadeplateitem": "Jade Plate",
+      "item.slothcraft.jadegearitem": "Jade Gear",
+      "item.slothcraft.diamondgearitem": "Diamond Gear",
+      "item.slothcraft.uraniumgearitem": "Uranium Gear",
+      "item.slothcraft.lapisplateitem": "Lapis Plate",
+      "item.slothcraft.iridiumgearitem": "Iridium Gear",
+      "item.slothcraft.emeraldplateitem": "Emerald Plate",
+      "item.slothcraft.iridiumplateitem": "Iridium Plate",
+      "item.slothcraft.gobberendplateitem": "Ender Gobber Plate",
+      "item.slothcraft.osmiumplateitem": "Osmium Plate",
+      "item.slothcraft.silverplateitem": "Silver Plate",
+      "item.slothcraft.amethystplateitem": "Amethyst Plate",
+      "itemGroup.tabsloth_craft_other_creative_tab": "SlothCraft Other",
+      "item.slothcraft.pie_food": "Beef, Bacon and Cheese Pie",
+      "item.slothcraft.goldgearitem": "Gold Gear",
+      "item.slothcraft.zincgearitem": "Zinc Gear",
+      "block.slothcraft.platesmakerblock": "Plate\u0027s Maker",
+      "item.slothcraft.packed_glass_receptacle_food": "Packed Glass Receptacle",
+      "itemGroup.tabslothcraftplatescreativetab": "SlothCraft Plates",
+      "item.slothcraft.platinumplateitem": "Platinum Plate",
+      "item.slothcraft.wither_staff_ranged_weapon": "Wither Staff",
+      "item.slothcraft.glass_receptacle_item": "Glass Receptacle",
+      "item.slothcraft.steelgearitem": "Steel Gear",
+      "item.slothcraft.woodengearitem": "Wooden Gear",
+      "item.slothcraft.banana_food": "Banana",
+      "item.slothcraft.gobbergearitem": "Gobber Gear",
+      "item.slothcraft.zincplateitem": "Zinc Plate",
+      "item.slothcraft.gobbernetherplateitem": "Nether Gobber Plate",
+      "item.slothcraft.quartzgearitem": "Quartz Gear",
+      "item.slothcraft.whisk_item": "Whisk",
+      "item.slothcraft.poison_staff_ranged_weapon": "Poison Staff",
       "item.slothcraft.leadplateitem": "Lead Plate",
       "item.slothcraft.steelplateitem": "Steel Plate",
       "item.slothcraft.diamondplateitem": "Diamond Plate",
       "item.slothcraft.tingearitem": "Tin Gear",
       "item.slothcraft.bacon_food": "Bacon",
-      "itemGroup.tabsloth_craft_food_creative_tab": "SlothCraft Food",
-      "item.slothcraft.gobbernethergearitem": "Gobber Nether Gear",
       "item.slothcraft.mithrilgearitem": "Mithril Gear",
-      "item.slothcraft.obsidiangearitem": "Obsidian Gear",
-      "item.slothcraft.quartzplateitem": "Quartz Plate",
-      "item.slothcraft.knife_item": "Knife",
       "item.slothcraft.tinplateitem": "Tin Plate",
       "item.slothcraft.flintgearitem": "Flint Gear",
       "block.slothcraft.gearsmakerblock": "Gear\u0027s Maker",
       "item.slothcraft.uraniumplateitem": "Uranium Plate",
-      "item.slothcraft.chromiumgearitem": "Chromium Gear",
       "item.slothcraft.orange_food": "Orange",
-      "item.slothcraft.goldplateitem": "Gold Plate",
+      "item.slothcraft.shiny_diamond": "Shiny Diamond",
       "item.slothcraft.titaniumgearitem": "Titanium Gear",
-      "item.slothcraft.chromiumplateitem": "Chromium Plate",
       "item.slothcraft.aluminumplateitem": "Aluminum Plate",
-      "item.slothcraft.rubygearitem": "Ruby Gear",
       "item.slothcraft.aluminumgearitem": "Aluminum Gear",
       "item.slothcraft.platehammeritem": "Plate Hammer",
-      "item.slothcraft.nickelgearitem": "Nickel Gear",
-      "item.slothcraft.stonegearitem": "Stone Gear",
-      "item.slothcraft.butter_food": "Butter",
+      "item.slothcraft.staff_stick_item": "Staff Stick",
       "item.slothcraft.nickelplateitem": "Nickel Plate",
-      "item.slothcraft.mince_food": "Mince",
       "item.slothcraft.emeraldgearitem": "Emerald Gear",
-      "item.slothcraft.mithrilplateitem": "Mithril Plate",
-      "item.slothcraft.platinumgearitem": "Platinum Gear",
-      "item.slothcraft.gobberplateitem": "Gobber Plate",
-      "item.slothcraft.ironplateitem": "Iron Plate",
-      "item.slothcraft.titaniumplateitem": "Titanium Plate",
-      "item.slothcraft.stone_plate_item": "Stone Plate",
-      "item.slothcraft.woodplateitem": "Wooden Plate",
       "item.slothcraft.amethystgearitem": "Amethyst Gear",
-      "item.slothcraft.jadeplateitem": "Jade Plate",
       "item.slothcraft.leadgearitem": "Lead Gear",
-      "item.slothcraft.jadegearitem": "Jade Gear",
-      "item.slothcraft.diamondgearitem": "Diamond Gear",
       "item.slothcraft.rubyplateitem": "Ruby Plate",
-      "item.slothcraft.uraniumgearitem": "Uranium Gear",
-      "item.slothcraft.lapisplateitem": "Lapis Plate",
-      "item.slothcraft.iridiumgearitem": "Iridium Gear",
-      "item.slothcraft.emeraldplateitem": "Emerald Plate",
       "item.slothcraft.obsidianplateitem": "Obsidian Plate",
-      "item.slothcraft.iridiumplateitem": "Iridium Plate",
-      "item.slothcraft.gobberendplateitem": "Ender Gobber Plate",
       "item.slothcraft.redstonegearitem": "Redstone Gear",
-      "item.slothcraft.osmiumplateitem": "Osmium Plate",
-      "item.slothcraft.silverplateitem": "Silver Plate",
-      "item.slothcraft.amethystplateitem": "Amethyst Plate",
-      "item.slothcraft.pie_food": "Beef, Bacon and Cheese Pie",
-      "item.slothcraft.goldgearitem": "Gold Gear",
+      "item.slothcraft.violet_haze_grinder_item": "Grinder",
+      "item.slothcraft.violet_haze_leaf_item": "Violet Haze Leaf",
+      "item.slothcraft.violet_haze_seed_item": "Violet Haze Seed",
+      "item.slothcraft.ice_staff_ranged_weapon": "Ice Staff",
       "item.slothcraft.gobberendgearitem": "Gobber End Gear",
-      "item.slothcraft.zincgearitem": "Zinc Gear",
-      "block.slothcraft.platesmakerblock": "Plate\u0027s Maker",
       "item.slothcraft.flour_food": "Flour",
       "item.slothcraft.redstoneplateitem": "Redstone Plate",
-      "itemGroup.tabslothcraftplatescreativetab": "Sloth Craft Plates",
       "item.slothcraft.osmiumgearitem": "Osmium Gear",
       "item.slothcraft.flintplateitem": "Flint Plate",
-      "item.slothcraft.platinumplateitem": "Platinum Plate",
-      "item.slothcraft.silvergearitem": "Silver Gear",
-      "item.slothcraft.steelgearitem": "Steel Gear",
-      "item.slothcraft.woodengearitem": "Wooden Gear",
-      "item.slothcraft.banana_food": "Banana"
+      "item.slothcraft.silvergearitem": "Silver Gear"
     }
   },
   "workspaceSettings": {

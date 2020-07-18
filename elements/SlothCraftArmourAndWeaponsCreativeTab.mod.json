@@ -2,9 +2,9 @@
   "_fv": 8,
   "_type": "tab",
   "definition": {
-    "name": "SlothCraft Gears",
+    "name": "SlothCraft Armour And Weapons",
     "icon": {
-      "value": "CUSTOM:AmethystGearItem"
+      "value": "CUSTOM:KnifeItem"
     },
     "showSearch": true
   }

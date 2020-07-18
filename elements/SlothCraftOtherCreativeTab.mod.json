@@ -2,9 +2,9 @@
   "_fv": 8,
   "_type": "tab",
   "definition": {
-    "name": "SlothCraft Gears",
+    "name": "SlothCraft Other",
     "icon": {
-      "value": "CUSTOM:AmethystGearItem"
+      "value": "CUSTOM:ShinyDiamond"
     },
     "showSearch": true
   }
