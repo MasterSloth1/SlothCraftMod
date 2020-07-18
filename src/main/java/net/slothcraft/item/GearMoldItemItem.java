@@ -45,7 +45,7 @@ public class GearMoldItemItem extends SlothcraftModElements.ModElement {
 
 		@Override
 		public int getUseDuration(ItemStack itemstack) {
-			return 0;
+			return 64;
 		}
 
 		@Override

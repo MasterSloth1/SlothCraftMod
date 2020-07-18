@@ -414,25 +414,9 @@
       "ids": {}
     },
     {
-      "name": "GearsGobberEndTag",
-      "type": "tag",
-      "sortid": 95,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {}
-    },
-    {
       "name": "GearsGobberTag",
       "type": "tag",
       "sortid": 96,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {}
-    },
-    {
-      "name": "GearsGobberNetherTag",
-      "type": "tag",
-      "sortid": 97,
       "compiles": true,
       "locked_code": false,
       "ids": {}
@@ -937,22 +921,6 @@
       "name": "PlatesFlintTag",
       "type": "tag",
       "sortid": 129,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {}
-    },
-    {
-      "name": "PlatesGobberEndTag",
-      "type": "tag",
-      "sortid": 130,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {}
-    },
-    {
-      "name": "PlatesGobberNetherTag",
-      "type": "tag",
-      "sortid": 131,
       "compiles": true,
       "locked_code": false,
       "ids": {}
@@ -1829,6 +1797,42 @@
       "locked_code": false,
       "ids": {},
       "registry_name": "ender_dragon_loot_table"
+    },
+    {
+      "name": "GearsEndGobberTag",
+      "type": "tag",
+      "sortid": 205,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "gears_end_gobber_tag"
+    },
+    {
+      "name": "GearsNetherGobberTag",
+      "type": "tag",
+      "sortid": 206,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "gears_nether_gobber_tag"
+    },
+    {
+      "name": "PlatesEndGobberTag",
+      "type": "tag",
+      "sortid": 207,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "plates_end_gobber_tag"
+    },
+    {
+      "name": "PlatesNetherGobberTag",
+      "type": "tag",
+      "sortid": 208,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "plates_nether_gobber_tag"
     }
   ],
   "variable_elements": [],

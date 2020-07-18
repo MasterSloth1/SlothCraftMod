@@ -5,12 +5,12 @@
     "type": "Items",
     "items": [
       {
-        "value": "CUSTOM:GobberNetherPlateItem"
+        "value": "CUSTOM:GobberEndGearItem"
       }
     ],
     "blocks": [],
     "functions": [],
-    "name": "plates/gobber/nether",
+    "name": "gears/end_gobber",
     "namespace": "forge"
   }
 }

@@ -24,7 +24,7 @@ public class PlateHammerItemItem extends SlothcraftModElements.ModElement {
 	}
 	public static class ItemCustom extends Item {
 		public ItemCustom() {
-			super(new Item.Properties().group(SlothCraftPlatesCreativeTabItemGroup.tab).maxStackSize(1));
+			super(new Item.Properties().group(SlothCraftPlatesCreativeTabItemGroup.tab).maxDamage(64));
 			setRegistryName("platehammeritem");
 		}
 
