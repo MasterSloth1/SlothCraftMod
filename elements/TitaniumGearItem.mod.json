@@ -18,8 +18,11 @@
     "stayInGridWhenCrafting": false,
     "enableMeleeDamage": false,
     "damageVsEntity": 0.0,
-    "specialInfo": [],
+    "specialInfo": [
+      "add 4 Titanium ingots + 1 stone gear to the Gear's Maker"
+    ],
     "hasGlow": false,
+    "guiBoundTo": "<NONE>",
     "inventorySize": 9,
     "inventoryStackSize": 64
   }
